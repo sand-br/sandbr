@@ -1,4 +1,4 @@
-# Sand-br
+# sandbr
 Bem-vindo(a) à **Sandbr**, a enciclopédia brasileira dedicada às obras do **Brandon Sanderson** (ou tio Sand, para os intímos).
 
 Aqui você encontrará um vasto repositório de informações sobre os mundos, personagens, sistemas mágicos e tudo mais que compõe o Cosmere (e além). 
@@ -33,4 +33,6 @@ Em casos relacionados a questões técnicas ou problemas na navegação do site,
 
 Agradecemos seu interesse em contribuir para a Sandbr e ajudar a expandir esta enciclopédia. 
 
-Juntos, continuamos esta jornada.
+Juntos, continuremos esta jornada.
+
+A Sandbr é um projeto iniciado por [@raave-aires](https://github.com/raave-aires).
