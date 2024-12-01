@@ -33,4 +33,4 @@ Em casos relacionados a questões técnicas ou problemas na navegação do site,
 
 Agradecemos seu interesse em contribuir para a Sandbr e ajudar a expandir esta enciclopédia. 
 
-Juntos, continuamos a jornada!
+Juntos, continuamos esta jornada.
