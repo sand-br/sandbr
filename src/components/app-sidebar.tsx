@@ -3,11 +3,9 @@ import * as React from "react";
 import Link from "next/link";
 
 // importação de componentes:
-import { Button } from "./ui/button";
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarGroup,
   SidebarHeader,
   SidebarMenu,
@@ -17,11 +15,9 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/src/components/ui/sidebar";
-import { ThemeToggle } from "./theme-toggle";
 
 // importação de ícones:
-import { House, Scale } from "lucide-react";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { House } from "lucide-react";
 
 // This is sample data.
 const data = {

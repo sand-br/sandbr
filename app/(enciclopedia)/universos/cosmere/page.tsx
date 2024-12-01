@@ -4,13 +4,6 @@ import { ItemDoCaminho } from "@/src/components/caminho/caminho";
 import { Cabecalho } from "../../../../src/components/posts/cabecalho";
 import { Conteudo } from "@/src/components/posts/conteudo";
 
-const caminho = ()=>{
-  <>
-    <ItemDoCaminho pronde="/universos" pagina="Universos"/>
-    <Aqui pagina="Cosmere"/>
-  </>
-}
-
 export default function Page() {
   return (
     <>

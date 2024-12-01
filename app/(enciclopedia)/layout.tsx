@@ -6,11 +6,10 @@ import { AppSidebar } from "@/src/components/app-sidebar";
 import { SidebarInset, SidebarProvider } from "@/src/components/ui/sidebar";
 
 interface Pages {
-  caminho: ReactNode,
   children: ReactNode,
 }
 
-export default function Post({ caminho, children }: Pages){
+export default function Post({ children }: Pages){
   return (
     <SidebarProvider
       style={
