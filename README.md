@@ -20,7 +20,7 @@ Tem dúvidas, sugestões ou encontrou algum erro em nosso conteúdo? Queremos ou
 
 Você pode entrar em contato conosco através dos seguintes canais:
 
-- E-mail: sandbr@duck.com.
+- E-mail: sandbr@proton.me.
 - Comunidade [Sandbr no Discord](https://discord.gg/wsMb237Fj8)
 - Aba de [Contato](https://sandbr.vercel.app/contato).
 
