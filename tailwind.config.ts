@@ -9,6 +9,7 @@ export default {
   theme: {
   	extend: {
   		colors: {
+				destaque: 'hsl(var(--cor-de-destaque))',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
