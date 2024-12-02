@@ -2,7 +2,7 @@
 import React, { ReactNode } from "react";
 
 // importação de componentes da shadcn:
-import { AppSidebar } from "@/src/components/app-sidebar";
+import { AppSidebar } from "@/src/components/ui/app-sidebar";
 import { SidebarInset, SidebarProvider } from "@/src/components/ui/sidebar";
 
 interface Pages {

@@ -4,7 +4,7 @@ import React, { ReactNode } from "react";
 // importação de componentes da shadcn:
 import { Button } from "@/src/components/ui/button";
 import { Separator } from "@/src/components/ui/separator";
-import { ThemeToggle } from "@/src/components/theme-toggle";
+import { ThemeToggle } from "@/src/components/ui/theme-toggle";
 import { SidebarTrigger } from "@/src/components/ui/sidebar";
 
 // importação de componentes meus:
