@@ -34,7 +34,7 @@ interface Significados {
 // Citar é usado para criar um campo formatado de citação
 const Citar: React.FC<Citação> = ({ citacao, children }) => {
   return (
-    <p className="text-zinc-400 text-base italic">
+    <p className="text-citacao text-base italic">
       “{citacao}” {children}
     </p>
   );
@@ -43,7 +43,7 @@ const Citar: React.FC<Citação> = ({ citacao, children }) => {
 // Discorrer é uma elemento que linka uma versão mais completa do assunto de um tópico
 const Discorrer: React.FC<Detalhes> = ({destino, assunto}) =>{
   return(
-    <div className="flex items-center gap-1 text-zinc-400">
+    <div className="flex items-center gap-1 text-citacao">
       <Eye size={18}/>
       <p className="text-sm italic">Para mais detalhes, consulte a página sobre <Link href={destino} className={estilo_de_link} target="_blank">{assunto}</Link>.</p>
     </div>
