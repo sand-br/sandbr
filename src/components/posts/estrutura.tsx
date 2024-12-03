@@ -13,6 +13,7 @@ import { Caminho } from "@/src/components/caminho/caminho";
 // importação de ícones:
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { AppSidebar, ItemsDoIndice } from "../ui/app-sidebar";
+import { Rodape } from "../footer";
 
 interface Posts {
   indice: ItemsDoIndice[],
@@ -32,7 +33,7 @@ const Post: React.FC<Posts> = ({ indice, children }) => {
   return(
     <>
       <AppSidebar indice={indice}/>
-      <SidebarInset>{children}</SidebarInset>
+      <SidebarInset>{children}<Rodape/></SidebarInset>
     </>
   ); 
 }
@@ -76,7 +77,7 @@ const Conteudo: React.FC<Estruturas> = ({ children })=>{
 
 const Topico: React.FC<Topicos> = ({ titulo, children }) => {
   return (
-    <section className="flex flex-col gap-2 text-justify hyphens-auto mb-5">
+    <section className="flex flex-col gap-2 text-justify hyphens-auto mb-2">
       <h1 className="text-xl hidden lg:block md:text-2xl font-medium scroll-mt-[84px]" id={titulo.toLowerCase().replace(/\s/g, '-')}>
         {titulo}
       </h1>
@@ -87,7 +88,7 @@ const Topico: React.FC<Topicos> = ({ titulo, children }) => {
 
 const Subtopico: React.FC<Topicos> = ({ titulo, children }) => {
   return (
-    <div className="flex flex-col gap-3 mt-5 text-justify hyphens-auto">
+    <div className="flex flex-col gap-2 mb-2 text-justify hyphens-auto">
       <h3 className="text-lg font-medium scroll-mt-[84px]" id={titulo.toLowerCase().replace(/\s/g, '-')}>
         {titulo}
       </h3>
