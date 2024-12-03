@@ -5,13 +5,19 @@ import React, { ReactNode } from "react";
 import { Button } from "@/src/components/ui/button";
 import { Separator } from "@/src/components/ui/separator";
 import { ThemeToggle } from "@/src/components/ui/theme-toggle";
-import { SidebarTrigger } from "@/src/components/ui/sidebar";
+import { SidebarInset, SidebarTrigger } from "@/src/components/ui/sidebar";
 
 // importação de componentes meus:
 import { Caminho } from "@/src/components/caminho/caminho";
 
 // importação de ícones:
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { AppSidebar, ItemsDoIndice } from "../ui/app-sidebar";
+
+interface Posts {
+  indice: ItemsDoIndice[],
+  children: ReactNode
+}
 
 interface Estruturas {
   children: ReactNode,
@@ -20,6 +26,15 @@ interface Estruturas {
 interface Topicos {
   titulo: string;
   children: string | ReactNode;
+}
+
+const Post: React.FC<Posts> = ({ indice, children }) => {
+  return(
+    <>
+      <AppSidebar indice={indice}/>
+      <SidebarInset>{children}</SidebarInset>
+    </>
+  ); 
 }
 
 const Cabecalho: React.FC<Estruturas> = ({ children })=>{
@@ -62,7 +77,7 @@ const Conteudo: React.FC<Estruturas> = ({ children })=>{
 const Topico: React.FC<Topicos> = ({ titulo, children }) => {
   return (
     <section className="flex flex-col gap-2 text-justify hyphens-auto mb-5">
-      <h1 className="text-xl hidden lg:block md:text-2xl font-medium scroll-mt-[84px]" id={titulo.toLowerCase().replace(/\s/g, '_')}>
+      <h1 className="text-xl hidden lg:block md:text-2xl font-medium scroll-mt-[84px]" id={titulo.toLowerCase().replace(/\s/g, '-')}>
         {titulo}
       </h1>
       {children}
@@ -73,7 +88,7 @@ const Topico: React.FC<Topicos> = ({ titulo, children }) => {
 const Subtopico: React.FC<Topicos> = ({ titulo, children }) => {
   return (
     <div className="flex flex-col gap-3 mt-5 text-justify hyphens-auto">
-      <h3 className="text-lg font-medium scroll-mt-[84px]" id={titulo.toLowerCase().replace(/\s/g, '_')}>
+      <h3 className="text-lg font-medium scroll-mt-[84px]" id={titulo.toLowerCase().replace(/\s/g, '-')}>
         {titulo}
       </h3>
       {children}
@@ -85,4 +100,4 @@ const P: React.FC<Estruturas> = ({ children }) => {
   return <p className="mb-2 leading-snug hyphens-auto text-justify">{children}</p>
 }
 
-export { Cabecalho, Conteudo, Topico, Subtopico, P }
+export { Post, Cabecalho, Conteudo, Topico, Subtopico, P }
