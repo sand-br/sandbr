@@ -767,7 +767,6 @@ export default function Page() {
           </Topico>
         </Conteudo>
       </>
-      <Rodape />
     </Post>
   );
 }
