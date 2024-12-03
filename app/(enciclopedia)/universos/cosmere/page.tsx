@@ -21,7 +21,7 @@ import {
   Mencionar,
   CriarReferencia,
 } from "@/src/components/posts/ligacoes";
-import { Imagem } from "@/src/components/posts/imagens";
+import { ContainerDeImagem } from "@/src/components/posts/imagens";
 import Image from "next/image";
 
 export default function Page() {
@@ -41,12 +41,17 @@ export default function Page() {
           </Citar>
 
           <div>
-            <Imagem
-              fonte="https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/images/cosmere/constelacoes_da_cosmere.jpg"
-              descricao="Constelações do Cosmere"
-              artista="Isaac Stewart"
-              link_do_artista="https://x.com/izykstewart"
-            />
+            <div className="float-right">
+              <ContainerDeImagem artista="Isaac Stewart" link_do_artista="https://x.com/izykstewart" descricao="Mapa estelar do Cosmere.">
+                <Image
+                  src="https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/images/cosmere/constelacoes_da_cosmere.jpg"
+                  alt="Constelações do Cosmere"
+                  width={500}
+                  height={500}
+                />
+              </ContainerDeImagem>
+            </div>
+            
             <P>
               O Cosmere é um universo fictício compartilhado, criado por <Enlaçar destino="/brandon-sanderson" texto="Brandon Sanderson" />, que serve como cenário para muitas de suas obras literárias. As histórias ambientadas no Cosmere estão interligadas por uma <Significado palavra="cosmologia" significado="Isto é, por uma mesma origem, estrutura e evolução do universo."/> comum e por regras consistentes que governam os sistemas de magia. Além disso, certos personagens e elementos narrativos transitam entre os diferente mundos do cosmere ou aparecem em mais de um deles.
             </P>
@@ -100,12 +105,17 @@ export default function Page() {
           </div>
 
           <div>
-            <Imagem 
-              fonte="https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/images/cosmere/constelacoes_da_cosmere.jpg"
-              descricao="Símbolo da Cosmere"
-              artista="Isaac Stewart"
-              link_do_artista="https://x.com/izykstewart"
-            />
+          <div className="float-left">
+              <ContainerDeImagem artista="Isaac Stewart" link_do_artista="https://x.com/izykstewart" descricao="Símbolo (logo) do Cosmere.">
+                <Image
+                  src="https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/images/cosmere/simbolo_da_cosmere.svg"
+                  alt="Constelações do Cosmere"
+                  width={150}
+                  height={150}
+                />
+              </ContainerDeImagem>
+            </div>
+            
             <P>
               A <Significado palavra="cosmogonia" significado="Isto é, a teoria sobre a origem e evolução do universo."/> do Cosmere começa com <Enlaçar destino="/adonalsium" texto="Adonalsium" />, descrito como uma força ou entidade primordial que pode ser comparada a um “deus original”. Sua verdadeira natureza é envolta em mistério; ainda não se sabe ao certo se Adonalsium era uma consciência, uma energia divina ou algo completamente diferente.
             </P>
