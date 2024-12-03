@@ -7,7 +7,7 @@ export default {
     extend: {
       colors: {
         destaque: "hsl(var(--cor-de-destaque))",
-		citacao: "hsl(var(--cor-da-citacao))",
+		    citacao: "hsl(var(--cor-da-citacao))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
