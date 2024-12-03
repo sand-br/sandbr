@@ -108,7 +108,7 @@ export default function Page() {
           <div className="float-left">
               <ContainerDeImagem artista="Isaac Stewart" link_do_artista="https://x.com/izykstewart" descricao="Símbolo (logo) do Cosmere.">
                 <Image
-                  src="https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/images/cosmere/simbolo_da_cosmere.svg"
+                  src="https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/sec/public/images/cosmere/simbolo_da_cosmere.svg"
                   alt="Constelações do Cosmere"
                   width={150}
                   height={150}
