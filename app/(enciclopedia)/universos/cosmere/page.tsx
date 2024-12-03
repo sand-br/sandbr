@@ -1,13 +1,32 @@
+// importação de dependências:
+
 // importação de componentes:
 import { Aqui } from "@/src/components/caminho/aqui";
 import { ItemDoCaminho } from "@/src/components/caminho/caminho";
-import { Cabecalho, Conteudo, Topico, Subtopico } from "@/src/components/posts/estrutura";
-import { Citar, Discorrer, Significado } from "@/src/components/posts/destaques";
-import { Enlaçar, Listar, Mencionar, CriarReferencia } from "@/src/components/posts/ligacoes";
+import {
+  Cabecalho,
+  Conteudo,
+  Topico,
+  Subtopico,
+  P,
+} from "@/src/components/posts/estrutura";
+import {
+  Citar,
+  Discorrer,
+  Significado,
+} from "@/src/components/posts/destaques";
+import {
+  Enlaçar,
+  Listar,
+  Mencionar,
+  CriarReferencia,
+} from "@/src/components/posts/ligacoes";
+import { Imagem } from "@/src/components/posts/imagens";
+import Image from "next/image";
 
 export default function Page() {
-  const id_props = "scroll-mt-[76px]"
-  
+  const id_props = "scroll-mt-[76px]";
+
   return (
     <>
       <Cabecalho>
@@ -21,124 +40,103 @@ export default function Page() {
             - <Mencionar quem="Khriss" /> para <Mencionar quem="Kelsier" />.
           </Citar>
 
-          <p>
-            O Cosmere é um universo fictício compartilhado, criado por{" "}
-            <Enlaçar destino="/brandon-sanderson" texto="Brandon Sanderson" />,
-            que serve como cenário para muitas de suas obras literárias. As
-            histórias ambientadas no Cosmere estão interligadas por uma{" "}
-            <Significado
-              palavra="cosmologia"
-              significado="Isto é, por uma mesma origem, estrutura e evolução do universo."
-            />{" "}
-            comum e por regras consistentes que governam os sistemas de magia.
-            Além disso, certos personagens e elementos narrativos transitam
-            entre os diferentes mundos do cosmere ou aparecem em mais de um
-            deles.
-          </p>
-
-          <p>
-            Apesar dessas conexões, Sanderson enfatiza que não é necessário
-            compreender toda a cosmologia para ler, entender e apreciar os
-            livros ambientados nesse universo.
-          </p>
-
-          <p>Atualmente, o Cosmere abrange as seguintes sagas literárias:</p>
-          <ul className="list-disc list-inside">
-            <li>
-              <Listar qual="Dragonsteel" /> (Dragão de Aço) - Não lançado.
-            </li>
-            <li>
-              <Listar qual="Elantris" />.
-            </li>
-            <li>
-              <Listar qual="Nascidos da Bruma" />.
-            </li>
-            <li>
-              <Listar qual="Os relatos da Guerra das Tempestades" />.
-            </li>
-          </ul>
-
-          <p>Os livros autônomos:</p>
-          <ul className="list-disc list-inside">
-            <li>
-              <Listar qual="Warbreaker - O alento dos deuses" />.
-            </li>
-            <li>
-              <Listar qual="Tress, a Garota do Mar Esmeralda" />.
-            </li>
-            <li>
-              <Listar qual="Yumi and the Nightmare Painter" /> - Não traduzido.
-            </li>
-            <li>
-              <Listar qual="The Sunlit Man" /> - Não traduzido.
-            </li>
-            <li>
-              <Listar qual="Isles of the Emberdark" /> - Não traduzido.
-            </li>
-          </ul>
-
-          <p>E a novela gráfica:</p>
-          <ul className="list-disc list-inside">
-            <li>
-              <Listar qual="White Sand" /> - Não traduzida.
-            </li>
-          </ul>
-
-          <p>
-            A{" "}
-            <Significado
-              palavra="cosmogonia"
-              significado="Isto é, a teoria sobre a origem e evolução do universo."
-            />{" "}
-            do Cosmere começa com{" "}
-            <Enlaçar destino="/adonalsium" texto="Adonalsium" />,
-            descrito como uma força ou entidade primordial que pode ser
-            comparada a um “deus original”. Sua verdadeira natureza é envolta em
-            mistério; ainda não se sabe ao certo se Adonalsium era uma
-            consciência, uma energia divina ou algo completamente diferente.
-          </p>
-
-          <p>
-            Em um evento conhecido como a{" "}
-            <Enlaçar
-              destino="/eventos/ruptura-de-adonalsium"
-              texto="Ruptura de Adonalsium"
+          <div>
+            <Imagem
+              fonte="https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/images/cosmere/constelacoes_da_cosmere.jpg"
+              descricao="Constelações do Cosmere"
+              artista="Isaac Stewart"
+              link_do_artista="https://x.com/izykstewart"
             />
-            , essa entidade foi despedaçada em dezesseis partes, chamadas de{" "}
-            <Enlaçar
-              destino="/conceitos/fractais-de-adonalsium"
-              texto="Fractais"
+            <P>
+              O Cosmere é um universo fictício compartilhado, criado por <Enlaçar destino="/brandon-sanderson" texto="Brandon Sanderson" />, que serve como cenário para muitas de suas obras literárias. As histórias ambientadas no Cosmere estão interligadas por uma <Significado palavra="cosmologia" significado="Isto é, por uma mesma origem, estrutura e evolução do universo."/> comum e por regras consistentes que governam os sistemas de magia. Além disso, certos personagens e elementos narrativos transitam entre os diferente mundos do cosmere ou aparecem em mais de um deles.
+            </P>
+
+            <P>
+              Apesar dessas conexões, Sanderson enfatiza que não é necessário compreender toda a cosmologia para ler, entender e apreciar os livros ambientados nesse universo.
+            </P>
+
+            <P>Atualmente, o Cosmere abrange as seguintes sagas literárias:</P>
+            <ul className="list-disc list-inside">
+              <li>
+                <Listar qual="Dragonsteel" /> (Dragão de Aço) - Não lançado.
+              </li>
+              <li>
+                <Listar qual="Elantris" />.
+              </li>
+              <li>
+                <Listar qual="Nascidos da Bruma" />.
+              </li>
+              <li>
+                <Listar qual="Os relatos da Guerra das Tempestades" />.
+              </li>
+            </ul>
+
+            <P>Os livros autônomos:</P>
+            <ul className="list-disc list-inside">
+              <li>
+                <Listar qual="Warbreaker - O alento dos deuses" />.
+              </li>
+              <li>
+                <Listar qual="Tress, a Garota do Mar Esmeralda" />.
+              </li>
+              <li>
+                <Listar qual="Yumi and the Nightmare Painter" /> - Não
+                traduzido.
+              </li>
+              <li>
+                <Listar qual="The Sunlit Man" /> - Não traduzido.
+              </li>
+              <li>
+                <Listar qual="Isles of the Emberdark" /> - Não traduzido.
+              </li>
+            </ul>
+
+            <P>E a novela gráfica:</P>
+            <ul className="list-disc list-inside">
+              <li>
+                <Listar qual="White Sand" /> - Não traduzida.
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <Imagem 
+              fonte="https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/images/cosmere/constelacoes_da_cosmere.jpg"
+              descricao="Símbolo da Cosmere"
+              artista="Isaac Stewart"
+              link_do_artista="https://x.com/izykstewart"
             />
-            . cada fractal representa um aspecto específico do que era
-            Adonalsium, e carregam um enorme poder.
-          </p>
+            <P>
+              A <Significado palavra="cosmogonia" significado="Isto é, a teoria sobre a origem e evolução do universo."/> do Cosmere começa com <Enlaçar destino="/adonalsium" texto="Adonalsium" />, descrito como uma força ou entidade primordial que pode ser comparada a um “deus original”. Sua verdadeira natureza é envolta em mistério; ainda não se sabe ao certo se Adonalsium era uma consciência, uma energia divina ou algo completamente diferente.
+            </P>
 
-          <p>
-            Após a Ruptura, os Fractais se ligaram a indivíduos que assumiram
-            esses fragmentos de poder, transformando-se em uma espécie de
-            “deuses menores” no Cosmere
-          </p>
+            <P>
+              Em um evento conhecido como a <Enlaçar destino="/eventos/ruptura-de-adonalsium" texto="Ruptura de Adonalsium" />, essa entidade foi despedaçada em dezesseis partes, chamadas de <Enlaçar destino="/conceitos/fractais-de-adonalsium" texto="Fractais" />. cada fractal representa um aspecto específico do que era Adonalsium, e carregam um enorme poder.
+            </P>
 
-          <p>
-            Esses novos portadores do poder de Adonalsium eventualmente deixaram
-            seu planeta natal e migraram para diferentes mundos dentro do
-            Cosmere. Em cada planeta, os Fractais interagiram com as
-            características únicas do local, dando origem a formas distintas de
-            magia. Essa interação entre o poder dos Fractais e os ambientes
-            moldou a realidade de cada mundo e influenciou profundamente a vida
-            e a cultura de seus habitantes.
-          </p>
+            <P>
+              Após a Ruptura, os Fractais se ligaram a indivíduos que assumiram
+              esses fragmentos de poder, transformando-se em uma espécie de
+              “deuses menores” no Cosmere
+            </P>
+
+            <P>
+              Esses novos portadores do poder de Adonalsium eventualmente deixaram
+              seu planeta natal e migraram para diferentes mundos dentro do
+              Cosmere. Em cada planeta, os Fractais interagiram com as
+              características únicas do local, dando origem a formas distintas de
+              magia. Essa interação entre o poder dos Fractais e os ambientes
+              moldou a realidade de cada mundo e influenciou profundamente a vida
+              e a cultura de seus habitantes.
+            </P>
+          </div>
         </Topico>
 
         <Topico titulo="Reinos do Cosmere">
           <p>
             No Cosmere, toda existência é dividida em três reinos fundamentais
             que coexistem e interagem entre si: o{" "}
-            <Enlaçar
-              destino="/reinos/reino-fisico"
-              texto="Reino Físico"
-            />
-            , o{" "}
+            <Enlaçar destino="/reinos/reino-fisico" texto="Reino Físico" />, o{" "}
             <Enlaçar
               destino="/reinos/reino-cognitivo"
               texto="Reino Cognitivo"
@@ -173,15 +171,11 @@ export default function Page() {
             />{" "}
             surge no Reino Cognitivo, carregando a percepção e os traços dessa
             pessoa. Para a maioria dos indivíduos, essa sombra é efêmera e logo
-            segue para o{" "}
-            <Enlaçar destino="/lugares/alem" texto="Além" />, enquanto
-            sua{" "}
-            <Enlaçar
-              destino="/conceitos/investidura"
-              texto="Investidura"
-            />{" "}
-            (a energia espiritual que conecta todas as coisas no Cosmere)
-            retorna ao Reino Espiritual.
+            segue para o <Enlaçar destino="/lugares/alem" texto="Além" />,
+            enquanto sua{" "}
+            <Enlaçar destino="/conceitos/investidura" texto="Investidura" /> (a
+            energia espiritual que conecta todas as coisas no Cosmere) retorna
+            ao Reino Espiritual.
           </p>
 
           <p>
@@ -205,10 +199,7 @@ export default function Page() {
               destino="/objetos/espadas-fractais"
               texto="espada fractal"
             />{" "}
-            <Enlaçar
-              destino="/objetos/sangue-noturno"
-              texto="Sangue Noturno"
-            />
+            <Enlaçar destino="/objetos/sangue-noturno" texto="Sangue Noturno" />
             , pela{" "}
             <Enlaçar
               destino="/conceitos/anti-investidura"
@@ -216,9 +207,8 @@ export default function Page() {
             />
             , ou consumidos pelo{" "}
             <Enlaçar destino="/seres/esprenos" texto="espreno" />{" "}
-            <Enlaçar destino="/seres/yelig-nar" texto="Yelig-nar" /> têm
-            suas almas completamente destruídas, impossibilitando qualquer
-            retorno.
+            <Enlaçar destino="/seres/yelig-nar" texto="Yelig-nar" /> têm suas
+            almas completamente destruídas, impossibilitando qualquer retorno.
           </p>
 
           <p>
@@ -256,19 +246,15 @@ export default function Page() {
             <p>
               O Reino Físico no Cosmere é o plano da existência que percebemos
               diretamente, formado por partículas fundamentais chamadas{" "}
-              <Enlaçar destino="/materiais/axi" texto="axi" />. Essas
-              partículas compõem toda a matéria e energia no Cosmere. O Reino
-              Físico segue as leis comuns da física — exceto quando sofre
-              influência ou interferência de um dos outros reinos (
+              <Enlaçar destino="/materiais/axi" texto="axi" />. Essas partículas
+              compõem toda a matéria e energia no Cosmere. O Reino Físico segue
+              as leis comuns da física — exceto quando sofre influência ou
+              interferência de um dos outros reinos (
               <Enlaçar
                 destino="/reinos/reino-cognitivo"
                 texto="Cognitivo"
-              />{" "}
-              ou{" "}
-              <Enlaçar
-                destino="/reinos/reino-espiritual"
-                texto="Espiritual"
-              />
+              /> ou{" "}
+              <Enlaçar destino="/reinos/reino-espiritual" texto="Espiritual" />
               .), o que pode alterar sua dinâmica natural.
             </p>
 
@@ -313,10 +299,10 @@ export default function Page() {
             <p>
               Algumas entidades existem naturalmente no Reino Cognitivo ou são
               nativas dele, como os{" "}
-              <Enlaçar destino="/seres/esprenos" texto="esprenos" />,
-              que personificam pensamentos, emoções e características naturais,
-              e as sombras cognitivas, que são remanescentes de seres que já
-              viveram no Reino Físico.
+              <Enlaçar destino="/seres/esprenos" texto="esprenos" />, que
+              personificam pensamentos, emoções e características naturais, e as
+              sombras cognitivas, que são remanescentes de seres que já viveram
+              no Reino Físico.
             </p>
 
             <p>
@@ -336,9 +322,9 @@ export default function Page() {
             <p>
               Há também algumas entidades que são nativas do Reino Cognitivo ou
               que existem naturalmente nele, como é o caso dos{" "}
-              <Enlaçar destino="/seres/esprenos" texto="esprenos" />,
-              que personificam pensamentos, emoções e características naturais;
-              e das{" "}
+              <Enlaçar destino="/seres/esprenos" texto="esprenos" />, que
+              personificam pensamentos, emoções e características naturais; e
+              das{" "}
               <Enlaçar
                 destino="/conceitos/sombra-cognitiva"
                 texto="Sombras Cognitivas"
@@ -354,8 +340,8 @@ export default function Page() {
             <ul className="list-disc list-inside">
               <li>
                 O Reino Cognitivo de{" "}
-                <Enlaçar destino="/mundos/scadrial" texto="Scadrial" />{" "}
-                (planeta de{" "}
+                <Enlaçar destino="/mundos/scadrial" texto="Scadrial" /> (planeta
+                de{" "}
                 <Enlaçar
                   destino="/livros/nascidos-da-bruma"
                   texto="Nascidos da Bruma"
@@ -363,8 +349,8 @@ export default function Page() {
                 ) é composto por névoa/bruma.
               </li>
               <li>
-                Em <Enlaçar destino="/mundos/roshar" texto="Roshar" />{" "}
-                (planeta de{" "}
+                Em <Enlaçar destino="/mundos/roshar" texto="Roshar" /> (planeta
+                de{" "}
                 <Enlaçar
                   destino="/livros/os-relatos-da-guerra-das-tempestades/"
                   texto="Os relatos da Guerra das Tempestades"
@@ -401,11 +387,7 @@ export default function Page() {
             <p>Os conceitos fundamentais do Reino Espiritual incluem:</p>
             <ul className="list-decimal list-inside flex flex-col gap-3">
               <li id="intenção" className={id_props}>
-                <Enlaçar
-                  destino="/conceitos/intencao"
-                  texto="Intenção"
-                />
-                :
+                <Enlaçar destino="/conceitos/intencao" texto="Intenção" />:
                 <div className="flex flex-col gap-3 mt-3">
                   <p>
                     No Cosmere, a Intenção é uma propriedade espiritual que
@@ -421,11 +403,7 @@ export default function Page() {
 
                   <p>
                     Entidades de Investidura, como os{" "}
-                    <Enlaçar
-                      destino="/seres/esprenos"
-                      texto="esprenos"
-                    />
-                    , as{" "}
+                    <Enlaçar destino="/seres/esprenos" texto="esprenos" />, as{" "}
                     <Enlaçar
                       destino="/conceitos/sombra-cognitiva"
                       texto="Sombras Cognitivas"
@@ -439,29 +417,22 @@ export default function Page() {
 
                   <p>
                     Um exemplo extremo é{" "}
-                    <Enlaçar destino="/personagens/ati" texto="Ati" />,
-                    o portador original do Fractal{" "}
+                    <Enlaçar destino="/personagens/ati" texto="Ati" />, o
+                    portador original do Fractal{" "}
                     <Enlaçar destino="/fractais/ruina" texto="Ruína" />.
                     Inicialmente, Ati era descrito como gentil e generoso, mas,
                     ao longo do tempo, foi completamente consumido pela Intenção
                     do Fractal Ruína. Essa transformação o levou a desejar a
                     destruição total de{" "}
-                    <Enlaçar
-                      destino="/mundos/scadrial"
-                      texto="Scadrial"
-                    />
-                    , pois ele acreditava que a ruína era uma parte essencial do
+                    <Enlaçar destino="/mundos/scadrial" texto="Scadrial" />,
+                    pois ele acreditava que a ruína era uma parte essencial do
                     ciclo natural do Cosmere.
                   </p>
                 </div>
               </li>
 
               <li id="identidade" className={id_props}>
-                <Enlaçar
-                  destino="/conceitos/identidade"
-                  texto="Identidade"
-                />
-                :
+                <Enlaçar destino="/conceitos/identidade" texto="Identidade" />:
                 <div className="flex flex-col gap-3 mt-3">
                   <p>
                     No Cosmere, a Identidade é uma propriedade espiritual que
@@ -571,11 +542,11 @@ export default function Page() {
 
                   <p>
                     Um exemplo icônico de Sorte em ação são as sombras de{" "}
-                    <Enlaçar destino="/materiais/atium" texto="atium" />{" "}
-                    em Nascidos da Bruma. Quando um usuário consome atium, ele
-                    pode prever o futuro imediato, visualizando as possíveis
-                    ações de seus oponentes em combate. Esse é um uso direto de
-                    Sorte para antecipar eventos de curto prazo.
+                    <Enlaçar destino="/materiais/atium" texto="atium" /> em
+                    Nascidos da Bruma. Quando um usuário consome atium, ele pode
+                    prever o futuro imediato, visualizando as possíveis ações de
+                    seus oponentes em combate. Esse é um uso direto de Sorte
+                    para antecipar eventos de curto prazo.
                   </p>
 
                   <p>
@@ -621,11 +592,8 @@ export default function Page() {
                 texto="Reino Espiritual"
               />
               , mas pode se manifestar nos outros Reinos. Quando aparece no{" "}
-              <Enlaçar
-                destino="/reinos/reino-fisico"
-                texto="Reino Físico"
-              />
-              , ela geralmente se condensa em um dos estados da matéria: sólido,
+              <Enlaçar destino="/reinos/reino-fisico" texto="Reino Físico" />,
+              ela geralmente se condensa em um dos estados da matéria: sólido,
               líquido ou gás. Ao interagir com o Físico, a Investidura obedece
               às leis de conservação de energia e termodinâmica, reforçando sua
               conexão com os conceitos físicos do Cosmere.
@@ -635,9 +603,8 @@ export default function Page() {
           <Subtopico titulo="Origem e ruptura">
             <p>
               Toda a Investidura no Cosmere estava originalmente ligada
-              diretamente a{" "}
-              <Enlaçar destino="/adonalsium" texto="Adonalsium" />. Com
-              a{" "}
+              diretamente a <Enlaçar destino="/adonalsium" texto="Adonalsium" />
+              . Com a{" "}
               <Enlaçar
                 destino="/eventos/ruptura-de-adonalsium"
                 texto="Ruptura"
@@ -687,23 +654,14 @@ export default function Page() {
 
             <p>
               Um exemplo disso é a névoa vermelha de{" "}
-              <Enlaçar destino="/personagens/trell" texto="Trell" />,
-              uma representação do Fractal{" "}
-              <Enlaçar
-                destino="/fractais/autonomia"
-                texto="Autonomia"
-              />{" "}
+              <Enlaçar destino="/personagens/trell" texto="Trell" />, uma
+              representação do Fractal{" "}
+              <Enlaçar destino="/fractais/autonomia" texto="Autonomia" />{" "}
               tentando invadir Scadrial, planeta protegido por{" "}
-              <Enlaçar
-                destino="/personagens/harmonia"
-                texto="Harmonia"
-              />
-              , o portador dos Fractais{" "}
-              <Enlaçar
-                destino="/fractais/preservacao"
-                texto="Preservação"
-              />{" "}
-              e <Enlaçar destino="/fractais/ruina" texto="Ruína" />.
+              <Enlaçar destino="/personagens/harmonia" texto="Harmonia" />, o
+              portador dos Fractais{" "}
+              <Enlaçar destino="/fractais/preservacao" texto="Preservação" /> e{" "}
+              <Enlaçar destino="/fractais/ruina" texto="Ruína" />.
             </p>
           </Subtopico>
         </Topico>

@@ -61,7 +61,7 @@ const Conteudo: React.FC<Estruturas> = ({ children })=>{
 
 const Topico: React.FC<Topicos> = ({ titulo, children }) => {
   return (
-    <section className="flex flex-col gap-3 text-justify hyphens-auto mb-5">
+    <section className="flex flex-col gap-2 text-justify hyphens-auto mb-5">
       <h1 className="text-xl hidden lg:block md:text-2xl font-medium scroll-mt-[84px]" id={titulo.toLowerCase().replace(/\s/g, '_')}>
         {titulo}
       </h1>
@@ -81,4 +81,8 @@ const Subtopico: React.FC<Topicos> = ({ titulo, children }) => {
   );
 };
 
-export { Cabecalho, Conteudo, Topico, Subtopico }
+const P: React.FC<Estruturas> = ({ children }) => {
+  return <p className="mb-2 leading-snug hyphens-auto text-justify">{children}</p>
+}
+
+export { Cabecalho, Conteudo, Topico, Subtopico, P }
