@@ -27,7 +27,7 @@ const Caminho: React.FC<Caminhos> = ({ children }) => {
       <BreadcrumbList>
         <BreadcrumbItem className="hidden lg:block">
             <BreadcrumbLink asChild>
-                <Link href="/">Enciclopédia</Link>
+                <Link href="/assuntos">Enciclopédia</Link>
             </BreadcrumbLink>
         </BreadcrumbItem>
 
