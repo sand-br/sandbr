@@ -1,5 +1,5 @@
 // importação de dependências:
-import React from "react";
+import React, { ReactNode } from "react";
 import Image from "next/image";
 
 //importação de componentes:
@@ -11,19 +11,14 @@ import {
   TooltipTrigger,
 } from "@/src/components/ui/tooltip";
 
-interface Imagens {
-  fonte: string;
-  descricao: string;
-  artista?: string;
-  link_do_artista?: string;
+interface Container {
+  children: ReactNode,
+  link_do_artista?: string,
+  artista?: string,
+  descricao: string, 
 }
 
-const Imagem: React.FC<Imagens> = ({
-  fonte,
-  descricao,
-  artista,
-  link_do_artista,
-}) => {
+function ContainerDeImagem({ children, link_do_artista, artista, descricao }: Container){
   const credito = () => {
     return (
       <>
@@ -43,24 +38,19 @@ const Imagem: React.FC<Imagens> = ({
     );
   };
 
-  return (
-      <div className="flex flex-col items-center border border-border rounded-md p-1 lg:p-2 gap-2 box-content float-none sm:float-right max-w-screen sm:max-w-[300px] lg:max-w-[500px] mx-5 mb-2 text-sm">
-        <Image
-          src={fonte}
-          alt={descricao}
-          width={500}
-          height={500}
-          priority
-          className="rounded-md"
-        />
-
-        {artista == undefined ? null : (
-          <p className="text-xs text-citacao">Feita por {credito()}.</p>
-        )}
-
-        <p>{descricao}</p>
+  return(
+    <div className="border border-border flex flex-col items-center mx-5 my-3 gap-2 p-2 rounded-md sm:max-w-[300px] md:max-w-[400px]">
+      <div className="rounded-md overflow-hidden">
+        {children}
       </div>
-  );
-};
 
-export { Imagem };
+      {artista == undefined ? null : (
+        <p className="text-xs text-citacao">Feita por {credito()}.</p>
+      )}
+      <p className="text-xs text-citacao">{descricao}</p>
+    </div>
+
+  ) 
+}
+
+export { ContainerDeImagem };
