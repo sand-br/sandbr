@@ -1,0 +1,50 @@
+<svg width="720" xmlns="http://www.w3.org/2000/svg" height="720" fill="none">
+    <g style="fill: rgb(0, 0, 0);">
+        <g style="opacity: 1;">
+            <path
+                d="M205.5 114s48.997-84.003 155.002-84.003C466.507 29.997 514.5 114 514.5 114S482.504 0 360.502 0 205.5 114 205.5 114Z"
+                style="stroke-opacity: 1; stroke: none; fill-rule: evenodd; stroke-width: 1px; stroke-linejoin: miter; display: inline; fill: rgb(255, 255, 255); fill-opacity: 1;"
+                class="fills" />
+        </g>
+        <g style="opacity: 1;">
+            <path
+                d="M514.5 606s-48.997 84.003-155.002 84.003C253.493 690.003 205.5 606 205.5 606s31.996 114 153.998 114S514.5 606 514.5 606Z"
+                style="stroke-opacity: 1; stroke: none; fill-rule: evenodd; stroke-width: 1px; stroke-linejoin: miter; display: inline; fill: rgb(255, 255, 255); fill-opacity: 1;"
+                class="fills" />
+        </g>
+        <g style="opacity: 1;">
+            <path
+                d="M606 205.5s84.003 48.997 84.003 155.002C690.003 466.507 606 514.5 606 514.5s114-31.996 114-153.998S606 205.5 606 205.5Z"
+                style="stroke-opacity: 1; stroke: none; fill-rule: evenodd; stroke-width: 1px; stroke-linejoin: miter; display: inline; fill: rgb(255, 255, 255); fill-opacity: 1;"
+                class="fills" />
+        </g>
+        <g style="opacity: 1;">
+            <path
+                d="M114 514.5s-84.003-48.997-84.003-155.002C29.997 253.493 114 205.5 114 205.5S0 237.496 0 359.498 114 514.5 114 514.5Z"
+                style="stroke-opacity: 1; stroke: none; fill-rule: evenodd; stroke-width: 1px; stroke-linejoin: miter; display: inline; fill: rgb(255, 255, 255); fill-opacity: 1;"
+                class="fills" />
+        </g>
+        <g style="opacity: 1;">
+            <path
+                d="M360.006 326.99 347.504 298v31.998l.121-.05-22.626-22.626 11.675 29.337-29.352-11.661 22.626 22.626.05-.121H298l29.007 12.484L298 372.501h31.998l-.051-.122-22.626 22.625 29.349-11.683-11.672 29.36 22.626-22.626-.127-.053V422l12.507-29.015L372.496 422l-.001-31.998-.131.055 22.626 22.626-11.653-29.36 29.33 11.683-22.627-22.626-.039.114H422l-28.997-12.505L422 347.496h-31.999l.052.126 22.627-22.626-29.346 11.664 11.669-29.34-22.626 22.626.125.052V298Zm0 8c13.827-.019 24.994 11.205 25.001 25.002.01 13.797-11.176 24.984-25.002 25.001-13.826.017-24.998-11.207-25.001-25.002 0-13.796 11.175-24.981 25.002-25.001Z"
+                style="font-variant: normal; stroke-opacity: 1; stroke: none; word-spacing: normal; text-decoration: none solid; isolation: auto; baseline-shift: baseline; color: rgb(0, 0, 0); fill-rule: nonzero; text-transform: none; overflow: visible; image-rendering: auto; stroke-dashoffset: 0; font-stretch: normal; text-anchor: start; text-indent: 0px; font-family: sans-serif; writing-mode: lr-tb; letter-spacing: normal; color-rendering: auto; stroke-width: 10; stroke-linejoin: miter; font-style: normal; font-weight: normal; stroke-dasharray: none; white-space: normal; stroke-miterlimit: 4; text-align: start; display: inline; shape-rendering: auto; line-height: normal; font-size: medium; text-rendering: auto; visibility: visible; direction: ltr; color-interpolation: srgb; clip-rule: nonzero; color-interpolation-filters: linearrgb; fill: rgb(255, 255, 255); fill-opacity: 1;"
+                class="fills" />
+        </g>
+        <g style="opacity: 1;">
+            <path
+                d="M360.705 63c0 223.496-73.675 296.996-297.705 297 224.03-.004 297.705 73.496 297.705 297 0-223.504 73.674-297.004 296.295-299.781C434.379 359.996 360.705 286.496 360.705 63Zm0 166c6.511 51 80.194 124.492 131.311 131-51.117 6.5-124.792 80-131.271 130.673C354.186 440 280.511 366.5 229.394 360c51.117-6.508 124.799-80 131.311-131Z"
+                style="font-variant: normal; stroke-opacity: 1; stroke: none; word-spacing: normal; text-decoration: none solid; isolation: auto; baseline-shift: baseline; color: rgb(0, 0, 0); fill-rule: nonzero; text-transform: none; overflow: visible; image-rendering: auto; stroke-dashoffset: 0; font-stretch: normal; text-anchor: start; text-indent: 0px; font-family: sans-serif; writing-mode: lr-tb; letter-spacing: normal; color-rendering: auto; stroke-width: 1; stroke-linejoin: miter; font-style: normal; font-weight: normal; stroke-dasharray: none; white-space: normal; stroke-miterlimit: 4; text-align: start; display: inline; shape-rendering: auto; line-height: normal; font-size: medium; text-rendering: auto; visibility: visible; direction: ltr; color-interpolation: srgb; clip-rule: nonzero; color-interpolation-filters: linearrgb; fill: rgb(255, 255, 255); fill-opacity: 1;"
+                class="fills" />
+        </g>
+        <g style="opacity: 1;">
+            <circle cx="360" cy="360"
+                style="fill: none; stroke-miterlimit: 4; stroke-dasharray: none;" r="142.503"
+                class="fills" />
+            <g class="strokes" style="fill: none; stroke-miterlimit: 4; stroke-dasharray: none;">
+                <circle cx="360" cy="360"
+                    style="fill: none; stroke-width: 19.9945; stroke: rgb(255, 255, 255); stroke-opacity: 1;"
+                    r="142.503" class="stroke-shape" />
+            </g>
+        </g>
+    </g>
+</svg>
