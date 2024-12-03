@@ -10,7 +10,7 @@ body {
   :root {
     --cor-de-destaque: 240 100% 50%;
     --cor-da-citacao: 180 1% 25%;
-    --cor-de-svg: 0 0 100%;
+    --cor-de-svg: #000;
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
@@ -48,7 +48,7 @@ body {
   .dark {
     --cor-de-destaque: 209.64 100% 51.18%;
     --cor-da-citacao: 206 4% 64%;
-    --cor-de-svg: 0 0 0%;
+    --cor-de-svg: #fff;
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
     --card: 0 0% 3.9%;
