@@ -1,5 +1,6 @@
 "use client"
 
+// importação de dependências:
 import { useToast } from "@/src/hooks/use-toast";
 
 // importação de componentes:
@@ -10,6 +11,9 @@ import {
   TooltipTrigger,
 } from "@/src/components/ui/tooltip";
 import { BreadcrumbItem, BreadcrumbPage } from "@/src/components/ui/breadcrumb";
+
+// importação de ícones:
+import { Check, X } from "lucide-react";
 
 interface Final {
   pagina: string;
@@ -22,12 +26,11 @@ const Aqui: React.FC<Final> = ({ pagina }) => {
     navigator.clipboard
       .writeText(url)
       .then(() => {
-        toast({ description: "O link da página foi copiado." });
+        toast({ description: <p className="flex gap-3 items-center"><Check className="text-destaque" size={30}/> O link da página foi copiado.</p> });
       })
       .catch((err) => {
         toast({
-          description:
-            "Houve um erro ao copiar o link. Se ele persistir, tente recarregar a página.",
+          description: <p className="flex gap-3 items-center"><X className="text-red-600" size={40}/>Houve um erro ao copiar o link. Se ele persistir, tente recarregar a página.</p>
         });
         console.error(err);
       });
