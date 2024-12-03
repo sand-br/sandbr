@@ -1,5 +1,5 @@
 // importação de componentes:
-import { Spinner } from "@/components/pecas_soltas/spinner";
+import { Spinner } from "@/src/components/spinner";
 
 export default function Construindo(){
     return (
