@@ -28,7 +28,6 @@ import {
 } from "@/src/components/posts/imagens";
 import Image from "next/image";
 import { Rodape } from "@/src/components/footer";
-import { AppSidebar } from "@/src/components/ui/app-sidebar";
 
 export default function Page() {
   const id_props = "scroll-mt-[76px]";
