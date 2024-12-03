@@ -23,7 +23,7 @@ export function Rodape() {
     <footer className="bg-background border-t">
       <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span className="text-sm text-gray-600 dark:text-gray-400 sm:text-center">
-          © <Enlaçar destino="/sobre/calendario-holoceno" texto={`12.${ano}`} />{" "}
+          © <Enlaçar destino="/calendario-holoceno" texto={`12.${ano}`} />{" "}
           EH,{" "}
           <Link href="/" className="hover:underline">
             Sandbr
