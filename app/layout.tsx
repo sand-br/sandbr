@@ -1,9 +1,15 @@
+// importação de dependências:
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+
+// importação de provedores
 import { ThemeProvider } from "@/src/components/ui/theme-provider"
 import { Toaster } from "@/src/components/ui/toaster"
 
+// importação de arquivos:
+import localFont from "next/font/local";
+
+// importação de estilos:
+import "./globals.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning className="scroll-smooth">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
