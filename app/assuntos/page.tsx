@@ -4,11 +4,12 @@ import Image from "next/image";
 
 // importação de componentes:
 import { Button } from "@/src/components/ui/button";
+import { Baixar } from "@/src/components/partes/botao-baixar";
 import { Dialog, DialogClose, DialogContent, DialogTitle, DialogTrigger } from "@/src/components/ui/dialog-edited"
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
 // importação de ícones:
-import { ArrowDownToLine, X } from "lucide-react";
+import { X } from "lucide-react";
 
 export default function Page() {
   return (
@@ -21,7 +22,7 @@ export default function Page() {
           <p className="h-16 flex items-center">Teste de título</p>
 
           <div className="flex gap-3 items-center h-16">
-            <Button variant="outline" size="icon"><ArrowDownToLine /></Button>
+            <Baixar src="https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/images/testes/flores-de-cereja.jpg"/>
             <DialogClose asChild><Button variant="outline" size="icon"><X /></Button></DialogClose>
           </div>
         </header>
