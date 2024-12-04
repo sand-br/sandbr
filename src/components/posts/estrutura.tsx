@@ -76,7 +76,7 @@ const Cabecalho: React.FC<Estruturas> = ({ children })=>{
 }
 
 const Conteudo: React.FC<Estruturas> = ({ children })=>{
-  return <main className="flex flex-col px-4 lg:pr-5 leading-snug">{children}</main>;
+  return <main className="flex flex-col px-5 lg:pr-5 leading-snug">{children}</main>;
 }
 
 const Topico: React.FC<Topicos> = ({ titulo, children }) => {
@@ -110,15 +110,15 @@ const Lista: React.FC<Estruturas> = ({ children }) => {
 }
 
 const T1: React.FC<Escritos> = ({ texto }) => {
-  return <h1 className="text-base lg:text-2xl scroll-mt-[84px]" id={`${texto.toLowerCase().replace(/\s+/g, '-')}`}>{texto}</h1>
+  return <h1 className="text-base lg:text-2xl scroll-mt-[84px] self-center md:self-start" id={`${texto.toLowerCase().replace(/\s+/g, '-')}`}><strong>{texto}</strong></h1>
 };
 
 const T2: React.FC<Escritos> = ({ texto }) => {
-  return <h2 className="text-base lg:text-xl pt-2 scroll-mt-[84px]" id={`${texto.toLowerCase().replace(/\s+/g, '-')}`}>{texto}</h2>
+  return <h2 className="text-base lg:text-xl pt-2 scroll-mt-[84px]" id={`${texto.toLowerCase().replace(/\s+/g, '-')}`}><strong>{texto}</strong></h2>
 };
 
 const T3: React.FC<Escritos> = ({ texto }) => {
-  return <h3 className="text-base lg:text-lg scroll-mt-[84px]" id={`${texto.toLowerCase().replace(/\s+/g, '-')}`}>{texto}</h3>
+  return <h3 className="text-base lg:text-lg scroll-mt-[84px]" id={`${texto.toLowerCase().replace(/\s+/g, '-')}`}><strong>{texto}</strong></h3>
 };
 
 
