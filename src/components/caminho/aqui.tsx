@@ -26,11 +26,11 @@ const Aqui: React.FC<Final> = ({ pagina }) => {
     navigator.clipboard
       .writeText(url)
       .then(() => {
-        toast({ description: <p className="flex gap-3 items-center"><Check className="text-destaque" size={30}/> O link da página foi copiado.</p> });
+        toast({ description: <p className="flex gap-3 items-center"><Check className="text-destaque" size={22}/> O link da página foi copiado.</p> });
       })
       .catch((err) => {
         toast({
-          description: <p className="flex gap-3 items-center"><X className="text-red-600" size={40}/>Houve um erro ao copiar o link. Se ele persistir, tente recarregar a página.</p>
+          description: <p className="flex gap-3 items-center"><X className="text-red-600" size={22}/>Houve um erro ao copiar o link. Se ele persistir, tente recarregar a página.</p>
         });
         console.error(err);
       });
