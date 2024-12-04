@@ -15,8 +15,8 @@ export default function Page() {
     <Dialog>
       <DialogTrigger className="m-10" asChild><Button size="lg">Abrir</Button></DialogTrigger>
 
-      <DialogContent className="w-full h-full flex flex-col gap-0 focus:outline-none focus:ring-transparent focus:border-none">
-        <header className="sticky top-0 w-full flex items-center px-5 justify-between bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b z-50">
+      <DialogContent className="w-full h-full flex flex-col-reverse md:flex-col gap-0 focus:outline-none focus:ring-transparent focus:border-none">
+        <header className="relative w-full flex items-center px-5 justify-between bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b z-50">
           <VisuallyHidden.Root><DialogTitle>Imagem aberta.</DialogTitle></VisuallyHidden.Root>
           <p className="h-16 flex items-center">Teste de título</p>
 
