@@ -5,7 +5,7 @@ import { Aqui } from "@/src/components/caminho/aqui";
 import { Enlaçar, Ir, Referenciar } from "@/src/components/posts/ligacoes";
 import { Revisado } from "@/src/components/posts/destaques";
 import { Copiavel } from "@/src/components/posts/copiavel";
-import { ContainerDeImagem } from "@/src/components/posts/imagens";
+import { ContainerDeImagem } from "@/src/components/imagens/container";
 
 export default function Pagina(){
   const ano = new Date().getFullYear().toString();
@@ -36,7 +36,7 @@ export default function Pagina(){
         <T1 texto="A Sandbr"/>
 
         <div>
-          <div className="float-right">
+          <div className="float-right max-w-[400px] md:max-w-[300px]">
             <ContainerDeImagem 
               descricao="Um Inquisidor de Aço. Durante o Império Final, os inquisidores eram responsáveis por executar algumas das leis do Senhor Soberano." 
               artista="Rho_Concepts" 
@@ -51,7 +51,7 @@ export default function Pagina(){
 
           <P>Em alinhamento com esse compromisso, adotamos os modelos de licenciamento listados abaixo.</P>
 
-          <T2 texto="Licença do conteúdo"/>
+          <T2 texto="Licença de conteúdo"/>
           <P>Todo o conteúdo documental da Sandbr é disponibilizado sob a licença <Ir destino="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.pt" texto="CC BY-NC-SA 4.0 Internacional"/> (Atribuição - Não Comercial - Compartilha Igual). Isso significa que:</P>
 
           <Lista>
