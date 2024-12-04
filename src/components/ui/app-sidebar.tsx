@@ -69,7 +69,7 @@ function AppSidebar({ indice, ...props }: AppSidebarProps) {
 
       <SidebarContent>
         <SidebarGroup>
-          <SidebarMenu className="gap-2">
+          <SidebarMenu>
             {montarIndice.map((item) => (
               <SidebarMenuItem key={item.topico}>
                 <SidebarMenuButton asChild>
@@ -96,4 +96,5 @@ function AppSidebar({ indice, ...props }: AppSidebarProps) {
     </Sidebar>
   );
 }
+
 export { type ItemsDoIndice, AppSidebar }
