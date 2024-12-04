@@ -1,5 +1,3 @@
-// importação de dependências:
-
 // importação de componentes:
 import { Post, Cabecalho, Conteudo, Topico } from "@/src/components/posts/estrutura";
 import { ItemDoCaminho } from "@/src/components/caminho/caminho";
@@ -92,6 +90,6 @@ export default function Pagina(){
         />
       </Conteudo>
     </Post>
-  )
-}
+  );
+};
 
