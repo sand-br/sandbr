@@ -41,11 +41,11 @@ const Aqui: React.FC<Final> = ({ pagina }) => {
       <BreadcrumbItem>
         <TooltipProvider>
           <Tooltip>
-            <TooltipTrigger onClick={copiar_link}>
+            <TooltipTrigger className="cursor-help" onClick={copiar_link}>
               <BreadcrumbPage>{pagina}</BreadcrumbPage>
             </TooltipTrigger>
             <TooltipContent>
-              <p className="w-40 text-center">
+              <p className="w-40 text-center cursor-help">
                 Parece que você já está aqui. Clique para copiar o link.
               </p>
             </TooltipContent>
