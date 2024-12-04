@@ -47,7 +47,7 @@ interface Revisao {
 // Citar é usado para criar um campo formatado de citação
 const Citar: React.FC<Citação> = ({ citacao, children }) => {
   return (
-    <p className="text-citacao text-base italic">
+    <p className="text-citacao text-base italic my-4">
       “{citacao}” {children}
     </p>
   );
@@ -113,7 +113,7 @@ const Revisado: React.FC<Revisao> = ({ quando, quem, link }) => {
 
   return (
     <>  
-      <p className="text-citacao text-sm mb-4">
+      <p className="text-citacao text-sm mt-3 mb-5">
         {dia() < 0 ? null : dia() === 0 ? (
           <span>Esta página foi revisada hoje</span>
         ) : dia() === 1 ? (
