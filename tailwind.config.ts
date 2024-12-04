@@ -9,6 +9,7 @@ export default {
         destaque: "hsl(var(--cor-de-destaque))",
 		    citacao: "hsl(var(--cor-da-citacao))",
         copiavel: "hsl(var(--copiavel))",
+        spinner: "hsl(var(--spinner))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
