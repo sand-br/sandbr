@@ -4,7 +4,7 @@ import Image from "next/image";
 
 // importação de componentes:
 import { Button } from "@/src/components/ui/button";
-import { Dialog, DialogClose, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/src/components/ui/dialog"
+import { Dialog, DialogClose, DialogContent, DialogTitle, DialogTrigger } from "@/src/components/ui/dialog-edited"
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
 // importação de ícones:

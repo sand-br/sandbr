@@ -1,6 +1,3 @@
-// importação de dependências:
-import Image from "next/image";
-
 // importação de componentes:
 import { Post, Cabecalho, Conteudo, P, Lista, T1, T2, T3 } from "@/src/components/posts/estrutura";
 import { ItemDoCaminho } from "@/src/components/caminho/caminho";
@@ -11,41 +8,6 @@ import { Copiavel } from "@/src/components/posts/copiavel";
 import { ContainerDeImagem } from "@/src/components/posts/imagens";
 
 export default function Pagina(){
-  const hoje = (): string => {
-    const data = new Date()
-    const saudacao = (): string => {
-      const agora = data.getHours();
-  
-      if (agora >= 0 && agora < 6) {
-        return "Boa madrugada";
-      } else if (agora >= 6 && agora < 12) {
-        return "Bom dia";
-      } else if (agora >= 12 && agora < 18) {
-        return "Boa tarde";
-      } else {
-        return "Boa noite";
-      }
-    }
-    const meses = [
-      "Janeiro",
-      "Fevereiro",
-      "Março",
-      "Abril",
-      "Maio",
-      "Junho",
-      "Julho",
-      "Agosto",
-      "Setembro",
-      "Outubro",
-      "Novembro",
-      "Dezembro"
-    ];
-    const mes = data.getMonth();
-
-
-    return `${saudacao()}! Hoje é dia ${data.getDate().toString()} de ${meses[mes]} de 12.${data.getFullYear().toString().slice(1)} da Era Humana.`
-  }
-
   const ano = new Date().getFullYear().toString();
 
   const indice = [

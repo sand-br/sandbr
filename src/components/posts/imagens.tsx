@@ -1,7 +1,7 @@
 "use client"
 
 // importação de dependências:
-import React, { ReactNode } from "react";
+import React from "react";
 import Image, { StaticImageData } from "next/image";
 
 //importação de componentes:
