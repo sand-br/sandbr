@@ -1,7 +1,7 @@
 // importação de dependências:
 import React, { ReactNode } from "react";
 
-// importação de componentes da shadcn:
+// importação de componentes:
 import { Button } from "@/src/components/ui/button";
 import { Separator } from "@/src/components/ui/separator";
 import { ThemeToggle } from "@/src/components/ui/theme-toggle";
@@ -27,6 +27,10 @@ interface Estruturas {
 interface Topicos {
   titulo: string;
   children: string | ReactNode;
+}
+
+interface Escritos {
+  texto: string;
 }
 
 const Post: React.FC<Posts> = ({ indice, children }) => {
@@ -72,7 +76,7 @@ const Cabecalho: React.FC<Estruturas> = ({ children })=>{
 }
 
 const Conteudo: React.FC<Estruturas> = ({ children })=>{
-  return <main className="flex flex-col gap-2 px-4 mt-2">{children}</main>;
+  return <main className="flex flex-col px-4 lg:pr-5 leading-snug">{children}</main>;
 }
 
 const Topico: React.FC<Topicos> = ({ titulo, children }) => {
@@ -98,7 +102,25 @@ const Subtopico: React.FC<Topicos> = ({ titulo, children }) => {
 };
 
 const P: React.FC<Estruturas> = ({ children }) => {
-  return <p className="mb-2 leading-snug hyphens-auto text-justify">{children}</p>
+  return <p className="pb-2 leading-snug hyphens-auto text-justify">{children}</p>
 }
 
-export { Post, Cabecalho, Conteudo, Topico, Subtopico, P }
+const Lista: React.FC<Estruturas> = ({ children }) => {
+  return <ul className="flex flex-col pb-2 list-disc list-inside leading-snug">{children}</ul>
+}
+
+const T1: React.FC<Escritos> = ({ texto }) => {
+  return <h1 className="text-base lg:text-2xl scroll-mt-[84px]" id={`${texto.toLowerCase().replace(/\s+/g, '-')}`}>{texto}</h1>
+};
+
+const T2: React.FC<Escritos> = ({ texto }) => {
+  return <h2 className="text-base lg:text-xl pt-2 scroll-mt-[84px]" id={`${texto.toLowerCase().replace(/\s+/g, '-')}`}>{texto}</h2>
+};
+
+const T3: React.FC<Escritos> = ({ texto }) => {
+  return <h3 className="text-base lg:text-lg scroll-mt-[84px]" id={`${texto.toLowerCase().replace(/\s+/g, '-')}`}>{texto}</h3>
+};
+
+
+
+export { Post, Cabecalho, Conteudo, Topico, Subtopico, P, Lista, T1, T2, T3 }
