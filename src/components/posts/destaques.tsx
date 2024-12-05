@@ -80,7 +80,7 @@ const Significado: React.FC<Significados> = ({ palavra, significado }) => {
 // YouTube cria um campo com um vídeo do YouTube
 const YouTube: React.FC<Videos_YouTube> = ({ titulo, subtitulo, idDoVideo }) => {
   return (
-    <div className="border rounded-md aspect-video flex flex-col justify-center">
+    <div className="border rounded-md aspect-video flex flex-col justify-center lg:w-3/4">
       <div className="border-b p-3 select-none flex items-center justify-between">
         {titulo === undefined ? <p>Vídeo no YouTube</p> : <p className="flex flex-col">{titulo}{subtitulo === undefined ? null : <span className="text-sm text-citacao">{subtitulo}</span>}</p>}
       </div>
@@ -113,7 +113,7 @@ const Revisado: React.FC<Revisao> = ({ quando, quem, link }) => {
 
   return (
     <>  
-      <p className="text-citacao text-sm mt-3 mb-5">
+      <p className="text-citacao text-sm mt-3 mb-4">
         {dia() < 0 ? null : dia() === 0 ? (
           <span>Esta página foi revisada hoje</span>
         ) : dia() === 1 ? (
