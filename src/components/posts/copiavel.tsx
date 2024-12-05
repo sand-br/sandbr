@@ -6,22 +6,30 @@ import React, { ReactNode, useRef } from "react";
 // importação de componentes:
 import { Button } from "@/src/components/ui/button";
 import { useToast } from "@/src/hooks/use-toast"
-import { Copy } from "lucide-react";
 
 // importação de ícones:
-import { Check, X } from "lucide-react";
+import { Check, X, Copy } from "lucide-react";
 
-interface Copiaveis {
-  titulo: string | ReactNode;
-  children: ReactNode; // Permitir qualquer nó React
+interface TextosCopiaveis {
+  texto: string
 }
 
-const Copiavel: React.FC<Copiaveis> = ({ titulo, children }) => {
+interface EmailsCopiaveis {
+  email: string
+}
+
+interface CamposCopiaveis {
+  titulo: string | ReactNode;
+  children: ReactNode;
+  aviso: string;
+}
+
+const TextoCopiavel: React.FC<TextosCopiaveis> = ({ texto }) => {
   const { toast } = useToast()
-  const preRef = useRef<HTMLDivElement>(null); // referência ao elemento que será copiado
+  const preRef = useRef<HTMLSpanElement>(null);
 
   // função para copiar o conteúdo renderizado dentro do <pre>
-  const handleCopy = () => {
+  const copiar = () => {
     if (preRef.current) {
       // seleciona o texto renderizado dentro do elemento
       const content = preRef.current.innerText;
@@ -30,13 +38,97 @@ const Copiavel: React.FC<Copiaveis> = ({ titulo, children }) => {
         .then(() => {
           toast({
             duration: 5000,
-            description: <p className="flex gap-3 items-center"><Check className="text-destaque" size={30}/> O atribuição foi copiada.</p>,
+            description: <p className="flex gap-3 items-center"><Check className="text-destaque" size={22}/>O texto foi copiado.</p>,
           })
         })
         .catch(() => {
           toast({
             duration: 5000,
-            description: <p className="flex gap-3 items-center"><X className="text-red-600" size={40}/>Houve um erro ao copiar o link. Se ele persistir, tente recarregar a página.</p>
+            description: <p className="flex gap-3 items-center"><X className="text-red-600" size={22}/>Houve um erro ao copiar o texto. Se ele persistir, tente recarregar a página.</p>
+          })
+        });
+    }
+  };
+
+  return(
+      <Button
+        variant="outline"
+        className="h-[30px] p-0 gap-0 inline-flex items-center group hover:bg-background"
+        onClick={copiar}
+      >
+        <span className="h-full w-full px-1 inline-flex items-center group-hover:bg-background">“<span ref={preRef}>{texto}</span>”</span>
+        <span 
+          className="border-l h-full w-full inline-flex items-center justify-center px-2 group-hover:bg-accent group-hover:text-accent-foreground"
+        >
+          <Copy/>
+        </span>
+      </Button>
+  )
+}
+
+const EmailCopiavel: React.FC<EmailsCopiaveis> = ({ email }) => {
+  const { toast } = useToast()
+  const preRef = useRef<HTMLSpanElement>(null);
+
+  // função para copiar o conteúdo renderizado dentro do <pre>
+  const copiar = () => {
+    if (preRef.current) {
+      // seleciona o texto renderizado dentro do elemento
+      const content = preRef.current.innerText;
+      navigator.clipboard
+        .writeText(content)
+        .then(() => {
+          toast({
+            duration: 5000,
+            description: <p className="flex gap-3 items-center"><Check className="text-destaque" size={22}/>O e-mail foi copiado.</p>,
+          })
+        })
+        .catch(() => {
+          toast({
+            duration: 5000,
+            description: <p className="flex gap-3 items-center"><X className="text-red-600" size={22}/>Houve um erro ao copiar o e-mail. Se ele persistir, tente recarregar a página.</p>
+          })
+        });
+    }
+  };
+
+  return(
+      <Button
+        variant="outline"
+        className="h-[30px] p-0 gap-0 inline-flex items-center group hover:bg-background"
+        onClick={copiar}
+      >
+        <span className="h-full w-full px-1 inline-flex items-center group-hover:bg-background text-destaque hover:underline"><a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer"><span ref={preRef}>{email}</span></a></span>
+        <span 
+          className="border-l h-full w-full inline-flex items-center justify-center px-2 group-hover:bg-accent group-hover:text-accent-foreground"
+        >
+          <Copy/>
+        </span>
+      </Button>
+  )
+}
+
+const CampoCopiavel: React.FC<CamposCopiaveis> = ({ titulo, children, aviso }) => {
+  const { toast } = useToast()
+  const preRef = useRef<HTMLDivElement>(null); // referência ao elemento que será copiado
+
+  // função para copiar o conteúdo renderizado dentro do <pre>
+  const copiar = () => {
+    if (preRef.current) {
+      // seleciona o texto renderizado dentro do elemento
+      const content = preRef.current.innerText;
+      navigator.clipboard
+        .writeText(content)
+        .then(() => {
+          toast({
+            duration: 5000,
+            description: <p className="flex gap-3 items-center"><Check className="text-destaque" size={22}/>{aviso}</p>,
+          })
+        })
+        .catch(() => {
+          toast({
+            duration: 5000,
+            description: <p className="flex gap-3 items-center"><X className="text-red-600" size={22}/>Houve um erro ao copiar. Se ele persistir, tente recarregar a página.</p>
           })
         });
     }
@@ -46,7 +138,7 @@ const Copiavel: React.FC<Copiaveis> = ({ titulo, children }) => {
     <div className="border rounded-md mb-2 lg:max-w-[66%]">
       <div className="border-b p-3 select-none flex items-center justify-between">
         {titulo === undefined ? <p>Copie</p> : <p>{titulo}</p>}
-        <Button variant="outline" onClick={handleCopy}>
+        <Button variant="outline" onClick={copiar}>
           Copiar <Copy />
         </Button>
       </div>
@@ -63,4 +155,4 @@ const Copiavel: React.FC<Copiaveis> = ({ titulo, children }) => {
   );
 };
 
-export { Copiavel };
+export { CampoCopiavel, EmailCopiavel, TextoCopiavel };
