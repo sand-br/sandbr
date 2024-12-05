@@ -102,11 +102,11 @@ const Subtopico: React.FC<Topicos> = ({ titulo, children }) => {
 };
 
 const P: React.FC<Estruturas> = ({ children }) => {
-  return <p className="pb-2 leading-snug hyphens-auto text-justify">{children}</p>
+  return <p className="pb-2 leading-snug hyphens-auto">{children}</p>
 }
 
 const Lista: React.FC<Estruturas> = ({ children }) => {
-  return <ul className="flex flex-col pb-2 list-disc list-inside leading-snug">{children}</ul>
+  return <ul className="flex flex-col pb-2 gap-1 list-disc list-inside leading-snug">{children}</ul>
 }
 
 const T1: React.FC<Escritos> = ({ texto }) => {
