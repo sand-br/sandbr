@@ -73,9 +73,10 @@ const Referenciar: React.FC<AncReferencias> = ({ qual }) => {
 // CriarReferencia usado para criar uma referência e uma âncora que leva de volta ao conteúdo ao qual a refêrencia se relaciona.
 const CriarReferencia: React.FC<Referencias> = ({ qual, children }) => {
   return (
-    <div className="flex gap-3">
-      <Link href={`#nota_rev_${qual}`} className="text-citacao hover:text-destaque hover:underline"><ArrowUp size={16} /></Link>
-      <p className="text-xs text-citacao" id={`nota_${qual}`}>{`[${qual}]`} {children}</p>
+    <div>
+      <Link href={`#nota_rev_${qual}`} className="text-citacao hover:text-destaque hover:underline flex gap-3"><ArrowUp size={16} />
+        <p className="text-xs text-citacao" id={`nota_${qual}`}>{`[${qual}]`} {children}</p>
+      </Link>
     </div>
 
   );
