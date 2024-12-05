@@ -6,7 +6,8 @@ import { ItemDoCaminho } from "@/src/components/caminho/caminho";
 import { Post, Cabecalho, Conteudo, Topico, P, Lista, T1, T2, T3 } from "@/src/components/posts/estrutura";
 import { Citar, Discorrer, Significado } from "@/src/components/posts/destaques";
 import { Enlaçar, Listar, Mencionar, CriarReferencia } from "@/src/components/posts/ligacoes";
-import { ContainerDeImagem, ImagemTematica } from "@/src/components/posts/imagens";
+import { ContainerDeImagem } from "@/src/components/imagens/container";
+import { ImagemTematica } from "@/src/components/imagens/imagens-tematica";
 
 export default function Page() {
   const id_props = "scroll-mt-[76px]";
