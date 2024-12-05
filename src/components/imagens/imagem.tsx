@@ -4,6 +4,7 @@ import Image from "next/image";
 
 // importação de componentes:
 import { Button } from "@/src/components/ui/button";
+import { BotaoInfo } from "../partes/botao-info";
 import { Baixar } from "@/src/components/partes/botao-baixar";
 import { Dialog, DialogClose, DialogContent, DialogTitle, DialogTrigger } from "@/src/components/ui/dialog-edited"
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
@@ -33,7 +34,8 @@ export const Imagem: React.FC<Imagens> = ({src, width, height, alt}) => {
           </div>
 
           <div className="flex gap-3 items-center h-16 pl-5 z-50">
-            <Baixar src={src}/>
+            <BotaoInfo />
+            <Baixar src={src} />
             <DialogClose asChild><Button variant="outline" size="icon"><X /></Button></DialogClose>
           </div>
         </header>
