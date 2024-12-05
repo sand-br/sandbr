@@ -1,6 +1,5 @@
 // importação de dependências:
 import React from "react";
-import Image from "next/image";
 
 // importação de componentes:
 import { Button } from "@/src/components/ui/button";
