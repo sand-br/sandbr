@@ -9,7 +9,6 @@ import { ContainerDeImagem } from "@/src/components/imagens/container";
 
 export default function Pagina(){
   const ano = new Date().getFullYear().toString();
-const liint_props = "pl-6"
   const indice = [
     { topico: "A Sandbr" },
     { topico: "Licença de conteúdo",

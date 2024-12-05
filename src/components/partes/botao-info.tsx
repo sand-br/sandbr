@@ -16,9 +16,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/src/components/ui/tooltip"
-import { Baixar } from "@/src/components/partes/botao-baixar";
-import { Dialog, DialogClose, DialogContent, DialogTitle, DialogTrigger } from "@/src/components/ui/dialog-edited"
-import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
 // importação de ícones:
 import { Info } from "lucide-react";

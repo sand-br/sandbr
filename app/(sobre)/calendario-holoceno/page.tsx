@@ -1,5 +1,5 @@
 // importação de componentes:
-import { Post, Cabecalho, Conteudo, Topico, P, Lista, T1, T2, T3 } from "@/src/components/posts/estrutura";
+import { Post, Cabecalho, Conteudo, P, Lista, T1, T2 } from "@/src/components/posts/estrutura";
 import { ItemDoCaminho } from "@/src/components/caminho/caminho";
 import { Aqui } from "@/src/components/caminho/aqui";
 import { Ir } from "@/src/components/posts/ligacoes";
