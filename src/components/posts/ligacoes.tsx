@@ -11,7 +11,6 @@ const estilo_de_link = "text-destaque hover:underline scroll-mt-[84px]"
 // lista de tipagem:
 interface Ancoras {
   o_que: string;
-  titulo: string;
 }
 
 interface Menção {
@@ -37,10 +36,10 @@ interface Referencias {
 }
 
 // Ancorar é usado para criar links entre seções de uma mesma página
-const Ancorar: React.FC<Ancoras> = ({ o_que, titulo }) => {
+const Ancorar: React.FC<Ancoras> = ({ o_que }) => {
   return (
-    <Link href={`#${o_que}`} className={estilo_de_link} scroll={true}>
-      {titulo}
+    <Link href={`#${o_que.toLowerCase().replace(/\s+/g, '-')}`} className={estilo_de_link} scroll={true}>
+      {o_que}
     </Link>
   );
 };
