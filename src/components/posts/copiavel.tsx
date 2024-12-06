@@ -135,7 +135,7 @@ const CampoCopiavel: React.FC<CamposCopiaveis> = ({ titulo, children, aviso }) =
   };
 
   return (
-    <div className="border rounded-md mb-2 lg:max-w-[66%]">
+    <div className="border rounded-md max-w-[90vw] mb-2 lg:max-w-[66%]">
       <div className="border-b p-3 select-none flex items-center justify-between">
         {titulo === undefined ? <p>Copie</p> : <p>{titulo}</p>}
         <Button variant="outline" onClick={copiar}>
@@ -147,7 +147,7 @@ const CampoCopiavel: React.FC<CamposCopiaveis> = ({ titulo, children, aviso }) =
         className="bg-copiavel py-3 px-5 rounded-md"
         ref={preRef} // referência para o elemento
       >
-        <pre className="max-h-72 flex flex-col gap-3 overflow-y-auto overflow-x-hidden font-mono whitespace-pre-wrap scrollbar-none">
+        <pre className="max-h-72 flex flex-col gap-3 overflow-y-auto overflow-x-scroll font-mono whitespace-pre-wrap scrollbar-none">
           {children}
         </pre>
       </div>
