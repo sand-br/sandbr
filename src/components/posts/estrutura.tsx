@@ -57,7 +57,7 @@ const Cabecalho: React.FC<Estruturas> = ({ children })=>{
         <div className="flex items-center gap-2">
           <Button
             size="default"
-            className="gap-4 hidden sm:flex"
+            className="gap-4 hidden sm:flex border-borderc"
             variant="outline"
             asChild
           >

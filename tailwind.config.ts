@@ -10,6 +10,7 @@ export default {
 		    citacao: "hsl(var(--cor-da-citacao))",
         copiavel: "hsl(var(--copiavel))",
         spinner: "hsl(var(--spinner))",
+        borderc: "hsl(var(--border-c))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
