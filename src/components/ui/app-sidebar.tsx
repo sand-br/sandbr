@@ -17,7 +17,7 @@ import {
 } from "@/src/components/ui/sidebar";
 
 // importação de ícones:
-import { House } from "lucide-react";
+import { Pyramid } from "lucide-react";
 
 // Definindo o tipo de dados para as props de navegação
 interface ItemsDoIndice {
@@ -51,7 +51,7 @@ function AppSidebar({ indice, ...props }: AppSidebarProps) {
             <SidebarMenuButton size="lg" asChild>
               <Link href="/">
                 <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                  <House className="size-4" />
+                  <Pyramid className="size-4" />
                 </div>
                 <div className="flex flex-col gap-0.5 leading-none">
                   <span>sandbr</span>
