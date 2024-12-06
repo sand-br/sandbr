@@ -6,7 +6,7 @@ import { useToast } from "@/src/hooks/use-toast";
 
 // importação de componentes:
 import { Button } from "@/src/components/ui/button";
-import { Spinner } from "./spinner";
+import { Spinner } from "../partes/spinner";
 
 // importação de ícones:
 import { ArrowDownToLine, Check, X } from "lucide-react";
