@@ -46,7 +46,7 @@ const Cabecalho: React.FC<Estruturas> = ({ children })=>{
   return(
       <header className="sticky top-0 flex items-center justify-between bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 mr-4">
         <div className="flex h-16 shrink-0 items-center gap-2 px-4">
-          <SidebarTrigger className="flex md:hidden -ml-1" />
+          <SidebarTrigger className="flex -ml-1" />
           <Separator orientation="vertical" className="flex md:hidden mr-2 h-4" />
 
           <Caminho>
