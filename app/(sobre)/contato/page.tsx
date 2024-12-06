@@ -32,6 +32,7 @@ export default function Pagina() {
         <P>
           Nosso principal meio de contato é o e-mail <EmailCopiavel email="sandbr@proton.me"/>. <br />Envie sua mensagem para ele que responderemos o mais rápido possível. E para facilitar o atendimento, por favor verifique os assuntos predefinidos listados abaixo.
         </P>
+        
         <T3 texto="Assuntos predefinidos"/>
         <Lista>
           <li>
