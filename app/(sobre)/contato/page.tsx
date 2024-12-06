@@ -1,8 +1,11 @@
 import { Aqui } from "@/src/components/caminho/aqui";
 import { Cabecalho, Conteudo, Post, P, T1, T3, Lista, T2 } from "@/src/components/posts/estrutura";
 import { CampoCopiavel, EmailCopiavel, TextoCopiavel } from "@/src/components/posts/copiavel";
-import { Ir } from "@/src/components/posts/ligacoes";
+import { Ancorar, Ir } from "@/src/components/posts/ligacoes";
 import { Revisado } from "@/src/components/posts/destaques";
+
+import { Check } from "lucide-react";
+import { Arquivo } from "@/src/components/partes/arquivo";
 
 export default function Pagina() {
   const indice = [
@@ -31,20 +34,68 @@ export default function Pagina() {
         </P>
         <T3 texto="Assuntos predefinidos"/>
         <Lista>
-          <li><TextoCopiavel texto="Colaborar com a Sandbr" />, se você deseja contribuir com a enciclopédia, mas não sabe como começar.</li>
-          <li><TextoCopiavel texto="Colaborar no GitHub" />, se você já está familiarizado com GitHub e quer ajudar diretamente no repositório.</li>
-          <li><TextoCopiavel texto="Reporte de erros" />, se você quizer sinalizar problemas ou informações incorretas em nosso conteúdo.</li>
-          <li><TextoCopiavel texto="Proposta de parceria" />, se você quizer estabelecer uma parceria, seja esta colaborativa ou comerciail.</li>
-          <li><TextoCopiavel texto="Ajuste de créditos" />, caso seu trabalho tenha sido creditado a outra pessoa ou fonte.</li>
-          <li><TextoCopiavel texto="Correção de informações"/>, caso alguma informação sobre o seu trabalho tenha sido publicada incorretamente.</li>
-          <li><TextoCopiavel texto="Remoção de conteúdo" />, caso deseje que seu trabalho não seja usado na Sandbr.</li>
+          <li>
+            <TextoCopiavel texto="Contribuir com artigos" />, se você deseja escrever, revisar ou expandir artigos na enciclopédia.
+          </li>
+          <li>
+            <TextoCopiavel texto="Traduzir conteúdos" />, se você sabe outros idiomas e quer enriquecer o acervo da comunidade de língua portuguesa.
+          </li>
+          <li>
+            <TextoCopiavel texto="Ajudar a desenvolver" />, se você tem habilidades em programação ou design e quer ajudar a melhorar o site.
+          </li>
+          <P>
+            <Check size={22} className="inline-block mr-1"/>Para colaboração, por favor, apresente-se e inclua detalhes sobre como deseja contribuir, suas habilidades específicas que possam ajudar no projeto, áreas de interesse, experiência anterior (se houver) e quaisquer outros detalhes que achar relevantes.
+          </P>
         </Lista>
-        <P>
-          Pedimos que você inclua o máximo de detalhes possível em sua mensagem. Informações claras nos ajudam a responder de forma mais rápida e eficiente!
-        </P>
-        <P>
-          Àqueles que quiserem propor parceirias, pedimos que, por favor, inclua detalhes sobre seu projeto ou proposta, como o objetivo principal, o público-alvo, os recursos necessários, as possíveis contrapartidas e como acredita que podemos trabalhar juntos. Quanto mais informações forem fornecidas, mais ágil e eficiente será nossa análise e retorno.
-        </P>
+
+        <Lista>
+          <li>
+            <TextoCopiavel texto="Reportar de erros" />, se você quiser sinalizar erros no conteúdo ou problemas no funcionamento do site.
+          </li>
+          <li>
+            <TextoCopiavel texto="Correção de informações" />, caso alguma informação nesta enciclopédia tenha sido publicada incorretamente.
+          </li>
+          <P>
+          <Check size={22} className="inline-block mr-1"/>Para reportes ou correções, inclua o link do artigo ou página afetada, uma descrição clara do erro ou informação incorreta, e, se possível, a fonte ou evidência que confirme a correção.
+          </P>
+        </Lista>
+
+        <Lista>
+          <li>
+            <TextoCopiavel texto="Proposta de parceria" />, se você quiser estabelecer uma parceria, seja esta colaborativa ou comercial.
+          </li>
+          <P>
+            <Check size={22} className="inline-block mr-1"/>Ao propor uma parceria, inclua detalhes sobre seu projeto ou proposta, como o objetivo principal, o público-alvo, os recursos necessários, as possíveis contrapartidas e como acredita que podemos trabalhar juntos.
+          </P>
+        </Lista>
+
+        <Lista>
+          <li>
+            <TextoCopiavel texto="Ajuste de créditos" />, caso seu trabalho tenha sido creditado a outra pessoa ou fonte.
+          </li>
+          <li>
+            <TextoCopiavel texto="Remoção de conteúdo" />, caso deseje que seu trabalho não seja usado na Sandbr.
+          </li>
+          <P>
+            <Check size={22} className="inline-block mr-1"/>Para ajustes de créditos ou remoção de conteúdo, por favor, inclua links para a(s) página(s) onde seu trabalho está sendo usado, além de qualquer documentação ou contexto que confirme sua solicitação e posse do trabalho.
+          </P>
+        </Lista>
+
+        <Lista>
+          <li>
+            <TextoCopiavel texto="Envio de obras" />, se você é artista e deseja enviar suas obras para inclusão na enciclopédia.
+          </li>
+          <P>
+            <Check size={22} className="inline-block mr-1"/>Ao enviar suas obras, por favor preencha o documento de submição abaixo. Baixe o formato .docx se estiver usando o Word, ou o formato .odt se estiver usando o Google Docs, LibreOffice ou outra suíte de documentos de código-aberto.
+          </P>
+          <div className="flex flex-col md:flex-row gap-2">
+            <Arquivo src="https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/submissao/submissao_de_obras.docx" texto="submissão_de_obras.docx"/>
+            <Arquivo src="https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/submissao/submissao_de_obras.odt" texto="submissão_de_obras.odt"/>
+          </div>
+          <P>
+            Se tiver dúvidas sobre o licenciamento de sua obra, veja o tópico <Ancorar o_que="Ajuda sobre Licenciamento"/> abaixo.
+          </P>
+        </Lista>
 
         <T3 texto="Tempo de resposta"/>
         <P>
@@ -79,6 +130,31 @@ export default function Pagina() {
             -----END PGP PUBLIC KEY BLOCK-----
           </P>
         </CampoCopiavel>
+
+        <T2 texto="Ajuda sobre Licenciamento" />
+        <P>
+         Entendemos que o processo de licenciamento de suas obras pode ser um pouco confuso, então estamos aqui para ajudar! 
+        </P>
+        <P>
+         Pois ao enviar suas criações para a Sandbr, é importante que você defina a licença sob a qual sua obra será compartilhada. Isso garante que seus direitos de autor sejam respeitados e esclarece como a obra pode ser usada. Se você não tem certeza de qual licença aplicar, aqui estão algumas orientações.
+        </P>
+
+        <ul className="flex flex-col gap-2">
+          <li className="flex flex-col gap-2">
+            1. Se você não tem certeza de qual licença escolher, recomendamos as licenças da Creative Commons, que são amplamente usadas e permitem que você mantenha o controle sobre o uso de seu trabalho, enquanto ainda o disponibiliza para os outros sob condições específicas. 
+            <p>Aqui estão as principais licenças Creative Commons que recomendamos a você:</p>
+
+            <Lista>
+              <li><strong>CC BY (Atribuição):</strong> Permite que outros compartilhem, usem e adaptem sua obra, desde que lhe atribuam crédito como artista original.</li>
+              <li><strong>CC BY-NC-SA (Atribuição - Não Comercial - Compartilha Igual):</strong> Permite que outros compartilhem, usem e adaptem sua obra, desde que lhe atribuam crédito, que não usem para fins comerciais e que qualquer nova obra criada a partir da sua deve ser compartilhada sob esta mesma licença.</li>
+              <li><strong>CC BY-NC-ND (Atribuição - Não Comercial - Sem Derivações):</strong> Permite que outros compartilhem e usem sua obra, desde que lhe atribuam crédito, que não usem para fins comerciais e que não a modifiquem ou adaptem de nenhuma forma.</li>
+            </Lista>
+
+            <p>Para outras licenças, consulte o índice de licenças Creative Commons em &lt;<Ir destino="https://br.creativecommons.net/licencas/" texto="br.creativecommons.net/licencas"/>&gt;.</p>
+          </li>
+
+          <li>2. Se você não especificar uma licença ao enviar sua obra, entederemos que você concorda que apliquemos automaticamente a licença <strong>CC BY-NC-ND (Atribuição - Não Comercial - Sem Derivações)</strong>, que permite que outros compartilhem e usem sua obra, desde que lhe atribuam crédito, que não usem para fins comerciais e que não a modifiquem ou adaptem de nenhuma forma. Isso garantirá que sua criação seja compartilhada de forma aberta, mas respeitando os seus direitos como autor.</li>
+        </ul>
 
         <Revisado
           quando="24/11/2024"
