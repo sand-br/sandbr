@@ -1,11 +1,41 @@
+//importação de dependências:
+import crypto from "crypto";
+
+// importação de componentes:
 import { Aqui } from "@/src/components/caminho/aqui";
 import { Cabecalho, Conteudo, Post, P, T1, T3, Lista, T2 } from "@/src/components/posts/estrutura";
 import { CampoCopiavel, EmailCopiavel, TextoCopiavel } from "@/src/components/posts/copiavel";
 import { Ancorar, Ir } from "@/src/components/posts/ligacoes";
 import { Revisado } from "@/src/components/posts/destaques";
 
+// importação de ícones
 import { Check } from "lucide-react";
 import { Arquivo } from "@/src/components/partes/arquivo";
+
+// importação de constantes
+import { submissao } from "@/src/docs/submissao";
+
+const descriptografar_word = async ()=>{
+  const arquivo = submissao.word;
+  const tag = submissao.tag_word;
+  const iv = "uwbfnmL5AVcwt5uA";
+  const senha = process.env.SENHA;
+
+  try {
+    const decifrar = crypto.createDecipheriv('aes-256-gcm', senha!, iv);
+
+    // Setando o authentication tag
+    decifrar.setAuthTag(Buffer.from(tag, 'hex'));
+  
+    // Desencriptando o texto
+    let descriptografado = decifrar.update(arquivo, 'hex', 'utf8');
+    descriptografado += decifrar.final('utf8');
+  
+    return descriptografado;  
+  }
+
+  const codigo = await descriptografar();
+}
 
 export default function Pagina() {
   const indice = [
