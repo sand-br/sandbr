@@ -1,6 +1,3 @@
-//importação de dependências:
-import crypto from "crypto";
-
 // importação de componentes:
 import { Aqui } from "@/src/components/caminho/aqui";
 import { Cabecalho, Conteudo, Post, P, T1, T3, Lista, T2 } from "@/src/components/posts/estrutura";
