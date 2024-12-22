@@ -57,10 +57,10 @@ export default function Pagina() {
         </P>
         <T2 texto="Como contribuir?" />
         <P>
-          Se você já estiver familiarizado com as contribuições via <Ir destino="https://github.com/" texto="GitHub" />, é só fazer um <em>fork</em> e começar a mandar <em>pull requests</em>. Ou, caso deseje, entre em contato pelo nosso e-mail <EmailCopiavel email="sandbr@proton.me"/> com o assunto <TextoCopiavel texto="Colaborar no GitHub" /> e lhe faremos os procedimentos necessários para tornar-lhe um colaborador oficial no GitHub da Sandbr.
+          Se você já estiver familiarizado com as contribuições via <Ir destino="https://github.com/" texto="GitHub" />, é só fazer um <em>fork</em> e começar a mandar <em>pull requests</em>. Ou, caso deseje, entre em contato pelo nosso e-mail <EmailCopiavel email="contribuir@sandbr.org"/> com o assunto <TextoCopiavel texto="Colaborar no GitHub" /> e lhe faremos os procedimentos necessários para tornar-lhe um colaborador oficial no GitHub da Sandbr.
         </P>
         <P>
-          Caso não esteja familiarizado com as contribuições via GitHub, entre em contato conosco pelo nosso e-mail <EmailCopiavel email="sandbr@proton.me"/> com o assunto <TextoCopiavel texto="Colaborar com a Sandbr" />.
+          Caso não esteja familiarizado com as contribuições via GitHub, entre em contato conosco pelo nosso e-mail <EmailCopiavel email="contribuir@sandbr.org"/> com o assunto <TextoCopiavel texto="Colaborar com a Sandbr" />.
         </P>
         <P>
           Juntos, podemos tornar a Sandbr a maior e mais completa referência em língua portuguesa sobre as obras do Brandon Sanderson.

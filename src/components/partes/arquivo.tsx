@@ -71,7 +71,7 @@ const Arquivo: React.FC<Botao> = ({ src, texto }) => {
     <div>
       <Button
         variant="outline"
-        className="h-[30px] p-0 gap-0 inline-flex items-center group hover:bg-background"
+        className="h-[30px] p-0 gap-0 inline-flex items-center group hover:bg-background overflow-hidden"
         onClick={baixar}
       >
         <span className="h-full w-full px-1 inline-flex items-center group-hover:bg-background"><span>{texto}</span></span>

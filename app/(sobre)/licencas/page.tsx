@@ -84,7 +84,7 @@ export default function Pagina(){
 
 
         <CampoCopiavel titulo="Atribuição de conteúdo" aviso="A atribuição foi copiada.">
-          <p>Informações extraídas da Sandbr. Disponível em &lt;sandbr.vercel.app&gt;. Licenciado sob CC BY-NC-SA 4.0 Internacional.</p>
+          <p>Informações extraídas da Sandbr. Disponível em &lt;sandbr.org&gt;. Licenciado sob CC BY-NC-SA 4.0 Internacional.</p>
         </CampoCopiavel>
 
         <T2 texto="Licença do código-fonte"/>
@@ -138,7 +138,7 @@ export default function Pagina(){
           Ademais, essas imagens, sejam oficiais, fanarts ou obras de terceiros, são empregadas exclusivamente para fins educacionais e/ou informativos, como referência visual, análise ou contextualização. A aplicação segue as diretrizes do <Ir destino="https://www.jusbrasil.com.br/topicos/10625543/artigo-46-da-lei-n-9610-de-19-de-fevereiro-de-1998" texto="art. 46 da Lei nº 9.610/1998"/> – a Lei de Direitos Autorais – que permite a reprodução de obras para fins de estudo, crítica ou polêmica, sem fins comerciais e com a devida atribuição de créditos.
         </P>
         <P>
-          Caso você identifique algum uso inadequado de seu trabalho ou deseje solicitar ajustes nos créditos ou remoções, entre em contato pelo e-mail <EmailCopiavel email="sandbr@proton.me"/>. Para facilitar o atendimento, use um destes assuntos predefinidos que melhor corresponda ao seu caso: 
+          Caso você identifique algum uso inadequado de seu trabalho ou deseje solicitar ajustes nos créditos ou remoções, entre em contato por um dos nossos e-mais: <EmailCopiavel email="contato@sandbr.org"/>, <EmailCopiavel email="correcoes@sandbr.org"/> ou <EmailCopiavel email="remocoes@sandbr.org"/>. Para facilitar o atendimento, use um destes assuntos predefinidos que melhor corresponda ao seu caso: 
         </P>
         <Lista>
           <li><TextoCopiavel texto="Ajuste de créditos" />, caso seu trabalho tenha sido creditado a outra pessoa ou fonte.</li>
@@ -159,7 +159,7 @@ export default function Pagina(){
 
         <T2 texto="Outros" />
         <P>
-          Se você tem alguma dúvida sobre as licenças da Sandbr, seus termos ou se deseja usar o conteúdo da enciclopédia de um jeito que não está previsto nos termos das licenças que usamos, entre em contato conosco pelo e-mail <EmailCopiavel email="sandbr@proton.me"/> com o assunto <TextoCopiavel texto="Licenciamento" />.
+          Se você tem alguma dúvida sobre as licenças da Sandbr, seus termos ou se deseja usar o conteúdo da enciclopédia de um jeito que não está previsto nos termos das licenças que usamos, entre em contato conosco pelo e-mail <EmailCopiavel email="licenciamento@sandbr.org"/> com o assunto <TextoCopiavel texto="Licenciamento" />.
         </P>
 
         <T3 texto="Saiba mais" />

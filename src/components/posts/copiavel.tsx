@@ -53,7 +53,7 @@ const TextoCopiavel: React.FC<TextosCopiaveis> = ({ texto }) => {
   return(
       <Button
         variant="outline"
-        className="h-[30px] p-0 gap-0 inline-flex items-center group hover:bg-background"
+        className="h-[30px] p-0 gap-0 inline-flex items-center group hover:bg-background overflow-hidden"
         onClick={copiar}
       >
         <span className="h-full w-full px-1 inline-flex items-center group-hover:bg-background">“<span ref={preRef}>{texto}</span>”</span>
@@ -95,7 +95,7 @@ const EmailCopiavel: React.FC<EmailsCopiaveis> = ({ email }) => {
   return(
       <Button
         variant="outline"
-        className="h-[30px] p-0 gap-0 inline-flex items-center group hover:bg-background"
+        className="h-[30px] p-0 gap-0 inline-flex items-center group hover:bg-background overflow-hidden"
         onClick={copiar}
       >
         <span className="h-full w-full px-1 inline-flex items-center group-hover:bg-background text-destaque hover:underline"><a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer"><span ref={preRef}>{email}</span></a></span>
