@@ -3,7 +3,7 @@ import { Post, Cabecalho, Conteudo, P, Lista, T1, T2, T3 } from "@/src/component
 import { ItemDoCaminho } from "@/src/components/caminho/caminho";
 import { Aqui } from "@/src/components/caminho/aqui";
 import { Enlaçar, Ir, Referenciar, CriarReferencia } from "@/src/components/posts/ligacoes";
-import { Revisado } from "@/src/components/posts/destaques";
+import { Revisado } from "@/src/components/posts/datas";
 import { CampoCopiavel, EmailCopiavel, TextoCopiavel } from "@/src/components/posts/copiavel";
 import { ContainerDeImagem } from "@/src/components/imagens/container";
 
