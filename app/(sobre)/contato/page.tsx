@@ -3,7 +3,7 @@ import { Aqui } from "@/src/components/caminho/aqui";
 import { Cabecalho, Conteudo, Post, P, T1, T3, Lista, T2 } from "@/src/components/posts/estrutura";
 import { CampoCopiavel, EmailCopiavel, TextoCopiavel } from "@/src/components/posts/copiavel";
 import { Ancorar, Ir } from "@/src/components/posts/ligacoes";
-import { Revisado } from "@/src/components/posts/destaques";
+import { Revisado } from "@/src/components/posts/datas";
 
 // importação de ícones
 import { Check } from "lucide-react";
@@ -37,6 +37,9 @@ export default function Pagina() {
         
         <T3 texto="Assuntos predefinidos"/>
         <Lista>
+          <p>
+            Use este e-mail para mandar contribuições: <EmailCopiavel email="contribuir@sandbr.org"/>.
+          </p>
           <li>
             <TextoCopiavel texto="Contribuir com artigos" />, se você deseja escrever, revisar ou expandir artigos na enciclopédia.
           </li>
@@ -47,12 +50,14 @@ export default function Pagina() {
             <TextoCopiavel texto="Ajudar a desenvolver" />, se você tem habilidades em programação ou design e quer ajudar a melhorar o site.
           </li>
           <P>
-            <Check size={22} className="inline-block mr-1"/>Para colaboração, por favor, apresente-se e inclua detalhes sobre como deseja contribuir, suas habilidades específicas que possam ajudar no projeto, áreas de interesse, experiência anterior (se houver) e quaisquer outros detalhes que achar relevantes. Você será atendido mais rapidamente se usar o e-mail <EmailCopiavel email="contribuir@sandbr.org"/>.
+            <Check size={22} className="inline-block mr-1"/>Para colaboração, por favor, apresente-se e inclua detalhes sobre como deseja contribuir, suas habilidades específicas que possam ajudar no projeto, áreas de interesse, experiência anterior (se houver) e quaisquer outros detalhes que achar relevantes.
           </P>
-          
         </Lista>
 
         <Lista>
+        <p>
+            Use este e-mail para mandar pedidos de correção ou reportar erros: <EmailCopiavel email="correcoes@sandbr.org"/>.
+          </p>
           <li>
             <TextoCopiavel texto="Reportar erros" />, se você quiser sinalizar erros no conteúdo ou problemas no funcionamento do site.
           </li>
@@ -63,7 +68,7 @@ export default function Pagina() {
             <TextoCopiavel texto="Ajuste de créditos" />, caso seu trabalho tenha sido creditado a outra pessoa ou fonte.
           </li>
           <P>
-          <Check size={22} className="inline-block mr-1"/>Para reportes ou correções, inclua o link do artigo ou página afetada, uma descrição clara do erro ou informação incorreta, e, se possível, a fonte ou evidência que confirme a correção. Você será atendido mais rapidamente se usar o e-mail <EmailCopiavel email="correcoes@sandbr.org"/>.
+          <Check size={22} className="inline-block mr-1"/>Para reportes ou correções, inclua o link do artigo ou página afetada, uma descrição clara do erro ou informação incorreta, e, se possível, a fonte ou evidência que confirme a correção.
           </P>
         </Lista>
 
