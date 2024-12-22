@@ -1,7 +1,6 @@
 // importação de dependências:
 import { ReactNode } from "react";
 import Link from "next/link";
-import { differenceInDays, parse } from "date-fns";
 
 // importação de componentes:
 import {
@@ -36,12 +35,6 @@ interface Videos_YouTube {
   titulo?: string | ReactNode,
   subtitulo?: string,
   idDoVideo: string,
-}
-
-interface Revisao {
-  quando: string,
-  quem?: string | ReactNode,
-  link?: string
 }
 
 // Citar é usado para criar um campo formatado de citação
@@ -92,44 +85,4 @@ const YouTube: React.FC<Videos_YouTube> = ({ titulo, subtitulo, idDoVideo }) => 
   );
 };
 
-const Revisado: React.FC<Revisao> = ({ quando, quem, link }) => {
-  const dia = () => differenceInDays(new Date(), parse(quando, "dd/MM/yyyy", new Date()));
-  
-  if (isNaN(dia())) {
-    return null; // se dia() for NaN, o componente retorna null, e não renderiza nada na tela
-  }
-
-  const Quem = ()=>{
-    return (
-      <>
-        {link === undefined ? (
-          <span>{quem}</span>
-        ) : (
-          <a href={link} target="_blank" rel="noopener noreferrer" className="text-destaque hover:underline">{quem}</a>
-        )}
-      </>
-    );
-  }
-
-  return (
-    <>  
-      <p className="text-citacao text-sm mt-3 mb-4">
-        {dia() < 0 ? null : dia() === 0 ? (
-          <span>Esta página foi revisada hoje</span>
-        ) : dia() === 1 ? (
-          <span>Esta página foi revisada ontem</span>
-        ) : (
-          <span>Esta página foi revisada {dia()} dias atrás</span>
-        )}
-        {quem === undefined ? (
-          <span>.</span>
-        ) : (
-          <span> por <Quem />.</span>
-        )}
-      </p>
-      
-    </>
-  );
-};
-
-export { Citar, Discorrer, Significado, YouTube, Revisado }
+export { Citar, Discorrer, Significado, YouTube }
