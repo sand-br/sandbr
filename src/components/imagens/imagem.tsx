@@ -26,9 +26,9 @@ export const Imagem: React.FC<Imagens> = ({src, width, height, alt}) => {
         <Image src={src} width={width} height={height} alt={alt} />
       </DialogTrigger>
 
-      <DialogContent className="w-full h-full flex flex-col-reverse md:flex-col gap-0 focus:outline-none focus:ring-transparent focus:border-none">
+      <DialogContent className="w-full h-full flex flex-col-reverse md:flex-col gap-0 focus:outline-hidden focus:ring-transparent focus:border-none">
         <VisuallyHidden.Root><DialogTitle>Imagem aberta.</DialogTitle></VisuallyHidden.Root>
-        <header className="relative w-full flex items-center px-5 justify-between bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-y z-40">
+        <header className="relative w-full flex items-center px-5 justify-between bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/60 border-y z-40">
           <div className="h-16 flex items-center">
             <p className="line-clamp-2 text-justify hyphens-auto z-50">{alt}</p>
           </div>
@@ -40,7 +40,7 @@ export const Imagem: React.FC<Imagens> = ({src, width, height, alt}) => {
           </div>
         </header>
 
-        <main className="relative flex-grow flex justify-center items-center overflow-hidden">
+        <main className="relative grow flex justify-center items-center overflow-hidden">
           <Image
             className="max-w-full max-h-full object-contain"
             src={src}

@@ -21,7 +21,7 @@ export function Rodape() {
   const ano = new Date().getFullYear().toString().slice(1);
   return (
     <footer className="bg-background border-t">
-      <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <div className="w-full mx-auto max-w-(--breakpoint-xl) p-4 md:flex md:items-center md:justify-between">
         <span className="text-sm text-gray-600 dark:text-gray-400 sm:text-center">
           © <Enlaçar destino="/calendario-holoceno" texto={`12.${ano}`} />{" "}
           EH,{" "}

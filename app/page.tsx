@@ -80,7 +80,7 @@ export default function Home() {
               <div className="bg-muted rounded-md aspect-square box-border overflow-hidden">
                 <Image src="https://i.imgur.com/1y5z29V.jpeg" width={300} height={300} alt="Vin"/>
               </div>
-              <div className="bg-muted rounded-md row-span-2 aspect-[9/16] box-border overflow-hidden">
+              <div className="bg-muted rounded-md row-span-2 aspect-9/16 box-border overflow-hidden">
                 <Image src="https://i.imgur.com/dpPAk60.jpeg" width={500} height={1000} alt="Vin"/>
               </div>
               <div className="bg-muted rounded-md aspect-square box-border overflow-hidden">
