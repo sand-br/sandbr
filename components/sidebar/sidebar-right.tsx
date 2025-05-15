@@ -39,7 +39,6 @@ export function SidebarRight() {
     <Sidebar
       collapsible="none"
       className="sticky top-(--header-height) h-[calc(100svh-var(--header-height))]! hidden lg:flex border-l"
-      {...props}
     >
       <SidebarContent>
         <SidebarGroup>
@@ -61,7 +60,7 @@ export function SidebarRight() {
                   <SidebarMenuSub className="ml-2 border-l-0 px-1.5">
                     {item.items.map((sub) => (
                       <SidebarMenuSubItem key={sub.subtopico}>
-                        <SidebarMenuSubButton asChild>
+                        <SidebarMenuSubButton asChild className="min-h-6">
                           <Link href={sub.sub_url} scroll>
                             {sub.subtopico}
                           </Link>

@@ -14,24 +14,24 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import { Separator } from "@/components/ui/separator"
-import { useSidebar } from "@/components/sidebar/sidebar"
+import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
+import { Toggle } from "@/components/ui/toggle"
+import { Logo } from "../logo";
 
 // ↑ FIM DAS IMPORTAÇÕES ↑.
 
 export function SiteHeader() {
   return (
-    <header className="bg-background sticky top-0 z-50 flex w-full items-center border-b">
+    <header className="sticky top-0 z-50 flex w-full items-center bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/60 border-b">
       <div className="flex h-(--header-height) w-full items-center gap-2 px-4">
-        <Link href="/" className="text-2xl font-averia! pr-2 hover:text-orange-500">sandbr</Link>
+        <Logo />
 
         <Separator orientation="vertical" className="mr-2 h-4" />
         <Breadcrumb className="hidden sm:block">
           <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="#">
-                Building Your Application
-              </BreadcrumbLink>
+            <BreadcrumbItem className="select-none">
+              Enciclopédia
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
@@ -40,6 +40,10 @@ export function SiteHeader() {
           </BreadcrumbList>
         </Breadcrumb>
         <SearchForm className="w-full sm:ml-auto sm:w-auto" />
+        <Button asChild variant="outline" className="h-8">
+          <Link href="/docs/contribuir">Contribua</Link>
+        </Button>
+        <Toggle />
       </div>
     </header>
   )

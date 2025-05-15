@@ -1,7 +1,6 @@
 "use client";
 
 // ↓ IMPORTAÇÕES ↓
-// importações de dependências:
 import React, { createContext, useContext, useState, ReactNode } from "react";
 // ↑ FIM DAS IMPORTAÇÕES ↑
 
@@ -25,13 +24,18 @@ interface IndexContextType {
 
 const IndexContext = createContext<IndexContextType | undefined>(undefined);
 
-export function IndexProvider({ children }: { children: ReactNode }) {
+interface IndexProviderProps {
+  children: ReactNode;
+  className?: string;
+}
+
+export function IndexProvider({ children, className }: IndexProviderProps) {
   const [indice, setIndice] = useState<Topico[]>([]);
   const [titulo, setTitulo] = useState<string>("");
 
   return (
     <IndexContext.Provider value={{ indice, setIndice, titulo, setTitulo }}>
-      <div className="[--header-height:calc(--spacing(14))]">
+      <div className={className ?? "[--header-height:calc(--spacing(14))]"}>
         {children}
       </div>
     </IndexContext.Provider>
@@ -41,7 +45,7 @@ export function IndexProvider({ children }: { children: ReactNode }) {
 export function useIndex(): IndexContextType {
   const context = useContext(IndexContext);
   if (!context) {
-    throw new Error("useIndice must be used within an IndexProvider");
+    throw new Error("useIndex must be used within an IndexProvider");
   }
   return context;
 }
