@@ -1,0 +1,132 @@
+{/* importações de componentes: */}
+import { Button } from "@/components/ui/button";
+import { Field, Email } from "@/components/copyable-fields"
+
+{/* importações de ícones */}
+import { MessageCircleQuestion, ThumbsUp } from "lucide-react";
+import { SiCodeberg, SiGithub } from "@icons-pack/react-simple-icons";
+
+# Como contribuir?
+
+Olá! Obrigado pelo seu interesse em colaborar com a <span className="font-averia">sandbr</span>, nossa enciclopédia pública, gratuita e aberta. Sua ajuda é essencial para manter e ampliar este projeto para todos.
+
+Aqui estão as principais formas pelas quais você pode contribuir:
+
+---
+
+## Ajude no desenvolvimento
+
+Se você possui habilidades de programação ou interesse em tecnologia, pode ajudar diretamente no desenvolvimento do <span className="text-2xl font-reenie">piblio</span>:
+
+### Como você pode ajudar
+
+- **Relatando erros:** Caso encontre qualquer problema ao navegar no site, como páginas que não funcionam ou erros visuais, você pode reportá-los diretamente na seção de Issues, seja no [Codeberg](https://codeberg.org/piblio/piblio/issues) ou no [GitHub](https://github.com/o-piblio/piblio/issues).
+
+- **Revisando código:** Se você entende ou trabalha com tecnologias como [Next.js](https://nextjs.org/), [React](https://pt-br.react.dev), [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) ou [Tailwind CSS](https://tailwindcss.com), pode ajudar revisando as contribuições feitas por outros voluntários através de pull requests.
+
+- **Sugerindo novas funcionalidades:** Se tiver ideias para novas ferramentas ou melhorias no site, crie um Issue no [Codeberg](https://codeberg.org/piblio/piblio/issues) ou no [GitHub](https://github.com/o-piblio/piblio/issues) explicando sua ideia detalhadamente ou envie uma contribuição através de pull request.
+
+- **Resolvendo problemas já identificados:** Você pode conferir nossa lista de problemas abertos (Issues) e ajudar a solucioná-los com seu conhecimento técnico.
+
+<div className="mt-4 mb-2 flex gap-2 items-center">
+  <p>Confira nosso repositório no</p>
+  <Button variant="outline" asChild><a href="https://codeberg.org/piblio/piblio" target="_blank"><SiCodeberg />Codeberg</a></Button>
+  <p>ou no</p>
+  <Button variant="outline" asChild><a href="https://github.com/o-piblio/piblio" target="_blank"><SiGithub />GitHub</a></Button>
+</div>
+
+---
+
+## Envie livros
+
+Expandir nosso acervo depende muito das colaborações de usuários como você. Se você tem livros digitais para compartilhar, envie-os para nós!
+- Aceitamos preferencialmente livros nos formatos EPUB (padrão mais aceito pelos aplicativos de livros), PDF, ou MOBI (formato oficial do Kindle).
+
+### Como enviar
+Use o nosso e-mail oficial: <Email email="o-piblio+livros@proton.me"/>.
+- Ao enviar, inclua obrigatoriamente as seguintes informações:
+  - O livro;
+  - O nome do livro;
+  - Nome do(a) autor(a).
+
+Se preferir, você pode enviar os livros através de um link de download (Google Drive, Dropbox, etc.), mas lembre-se de garantir que o link esteja acessível publicamente.
+Caso tenha interesse, você pode incluir uma breve descrição do livro, como sinopse, para ajudar outros leitores a conhecerem melhor a obra.
+
+### Criptografia de e-mail
+Para garantir a segurança e privacidade de suas informações, recomendamos o uso de criptografia de e-mail. Você pode usar o nossa chave pública, disponível abaixo para copiar e para download no [OpenPGP Keyserver](https://keyserver.ubuntu.com/pks/lookup?search=3610fa460ffc72919cfc607677a00b5a4af90a36&fingerprint=on&op=index); para criptografar suas mensagens. Caso não saiba como usar, existem tutoriais disponíveis online que podem te ajudar a configurar a criptografia em seu cliente de e-mail.
+
+<Field titulo="Chave pública">
+  -----BEGIN PGP PUBLIC KEY BLOCK-----
+
+  xjMEZ91TURYJKwYBBAHaRw8BAQdA0IFm/ByNrKxwDEZGTU4c/8q7dlZfmwqu
+  rhrKe4AzvDnNJ28tcGlibGlvQHByb3Rvbi5tZSA8by1waWJsaW9AcHJvdG9u
+  Lm1lPsLAEQQTFgoAgwWCZ91TUQMLCQcJkHegC1pK+Qo2RRQAAAAAABwAIHNh
+  bHRAbm90YXRpb25zLm9wZW5wZ3Bqcy5vcmdVuDvdFC3Of7v2cpXSUoZPDknK
+  tf8zL8PGEpOdIzXnPAMVCggEFgACAQIZAQKbAwIeARYhBDYQ+kYP/HKRnPxg
+  dnegC1pK+Qo2AACggwEA+tzPb8G7wdtmWu9vS2XEg8QUZuP8hL6BYKLKIW6R
+  ZfgBAMMywchMJnDR+blsYMgRbnB7yD+za8IEse5eWuTZf70BzjgEZ91TURIK
+  KwYBBAGXVQEFAQEHQHrEDWzz/kh7I8jXhypWlacLodK+UEYPq/lkkTn8oJRd
+  AwEIB8K+BBgWCgBwBYJn3VNRCZB3oAtaSvkKNkUUAAAAAAAcACBzYWx0QG5v
+  dGF0aW9ucy5vcGVucGdwanMub3JnSRgqA3Fs+yiLO1Z65jemZkMxI8Dwhgb0
+  c3x0R92WlPgCmwwWIQQ2EPpGD/xykZz8YHZ3oAtaSvkKNgAAGmsA/RRs0u5v
+  dczE9V35udie5T85lu9vz4XBrSfsKVomM6k5AP9RAFpf/+o3n/rUq1ClylYe
+  1M7XHQIIHPhZ7WcIciwoBA==
+  =OBC3
+  -----END PGP PUBLIC KEY BLOCK-----
+
+</Field>
+
+Caso não tenha experiência com criptografia, você pode usar o [Proton Mail](https://proton.me/pt-br/), que criptografa automaticamente os e-mails trccados entre usuários do serviço. 
+
+### Processo de revisão
+Todos os livros enviados passarão por uma análise para garantir que estejam em conformidade com nossas políticas, ou seja, livres de vírus, de adulterações e de conteúdo impróprio.
+
+Após a aprovação, o livro será disponibilizado no acervo.
+
+Caso o livro não atenda aos critérios, entraremos em contato para discutir o motivo da recusa e, se possível, sugerir melhorias.
+
+---
+
+## Semeie via Torrent
+
+Manter os livros disponíveis via torrent é essencial para garantir acesso contínuo e descentralizado ao acervo.
+
+### Por que semear?
+- **Preserva o acervo:** Os arquivos permanecem disponíveis mesmo que nosso servidor principal fique temporariamente offline.
+- **Distribuição rápida:** Quanto mais pessoas semearem, mais rápida e eficiente será a disponibilidade dos livros para todos.
+- **Maior estabilidade:** Reduz a dependência do servidor central, fortalecendo a rede.
+
+### Como semear
+- Instale um programa (cliente de torrent) como o [qBittorrent](https://www.qbittorrent.org/) (Windows, macOS e Linux), o [LibreTorrent](https://github.com/proninyaroslav/libretorrent) (Android) ou o [Seedr](https://www.seedr.cc) (iOS e iPadOS) seguindo [este tutorial](https://tecnoblog.net/responde/como-baixar-torrent-no-iphone-e-ipad/) (porque não existem aplicativos torrent na App Store) ou ainda o [iTransmission
+](https://github.com/alexsvitlov/iTransmission), se você tiver conhecimento técnico.
+- Baixe os arquivos desejados pelo site. 
+- Após concluir o download, mantenha os arquivos ativos no seu client Torrent, que automaticamente enviará para outras pessoas que tentem baixar também. Esse processo é chamado de *semeadura*, é seguro e não necessita de configuração adicional.
+- Evite mover ou renomear os arquivos baixados diretamente pelo sistema de arquivos do seu computador ou celular, pois isso fará com que o cliente Torrent não consiga mais localizá-los para continuar a semeadura. Caso precise mover ou renomear os arquivos, utilize as opções disponíveis no próprio cliente Torrent para garantir que o processo de semeadura não seja interrompido.
+
+<div className="flex">
+  <p className="bg-[rgba(15,187,12,0.35)] dark:bg-[rgba(15,187,12,0.10)] rounded-[16px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[5px] border border-[rgba(15,187,12,0.3)] p-4 my-4 w-auto flex items-center gap-2 select-none"><ThumbsUp size={20}/>Recomendamos manter a semeadura ativa pelo máximo de tempo possível.</p>
+</div>
+
+---
+
+## Contribua financeiramente
+
+O <span className="text-2xl font-reenie">piblio</span> nasceu com o propósito de tornar a leitura acessível para todos. Desde o início, nosso compromisso é utilizar exclusivamente softwares e ferramentas gratuitas e open-source, não cobrar por nossos serviços e nem exibir anúncios; garantindo uma experiência limpa e gratuita para todos os usuários. Contudo, manter a plataforma on-line gera custos inevitáveis com hospedagem, domínio e infraestrutura tecnológica. Por isso, precisamos do apoio financeiro de pessoas como você para garantir que o projeto continue ativo, gratuito e acessível a todos.
+
+<div className="flex">
+  <p className="bg-[rgba(15,187,12,0.35)] dark:bg-[rgba(255,183,29,0.2)] rounded-[16px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[5px] border border-[hsla(41, 100.00%, 52.40%, 0.90)] p-4 my-4 w-auto flex items-center gap-2 select-none"><MessageCircleQuestion size={20}/>Ainda não temos uma maneira definida de receber doações.</p>
+</div>
+
+Sua ajuda é essencial para continuarmos promovendo o acesso à leitura para todos. Faça parte dessa missão!
+
+---
+
+## Considerações finais
+Agradecemos sinceramente por considerar contribuir com o <span className="text-2xl font-reenie">piblio</span>. Sua participação é fundamental para o sucesso deste projeto e para a promoção da leitura acessível a todos.
+
+E se você tiver qualquer dúvida ou precisar de suporte, entre em contato conosco através do e-mail <Email email="o-piblio@proton.me"/>.
+
+<div className="text-4xl font-reenie mt-6">
+  <p>Sinceramente,</p>
+  <p>piblio.</p>
+</div>
