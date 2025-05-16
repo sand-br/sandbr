@@ -8,7 +8,7 @@ import Link from "next/link"
 import { SearchForm } from "@/components/sidebar/search-form"
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { Toggle } from "@/components/ui/toggle"
+import { Toggle } from "@/components/ui/theme-toggle"
 import { Logo } from "@/components/logo";
 
 // ↑ FIM DAS IMPORTAÇÕES ↑.

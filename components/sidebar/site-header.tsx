@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/breadcrumb"
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { Toggle } from "@/components/ui/toggle"
+import { Toggle } from "@/components/ui/theme-toggle"
 import { Logo } from "../logo";
 
 // ↑ FIM DAS IMPORTAÇÕES ↑.
