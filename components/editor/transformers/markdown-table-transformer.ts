@@ -23,7 +23,6 @@ import {
 } from '@lexical/table'
 
 import { EMOJI } from '@/components/editor/transformers/markdown-emoji-transformer'
-import { EQUATION } from '@/components/editor/transformers/markdown-equation-transofrmer'
 import { HR } from '@/components/editor/transformers/markdown-hr-transformer'
 import { IMAGE } from '@/components/editor/transformers/markdown-image-transformer'
 import { TWEET } from '@/components/editor/transformers/markdown-tweet-transformer'
@@ -36,7 +35,6 @@ const OTHER_MARKDOWN_TRANSFORMERS = [
   HR,
   IMAGE,
   EMOJI,
-  EQUATION,
   TWEET,
   CHECK_LIST,
   ...ELEMENT_TRANSFORMERS,

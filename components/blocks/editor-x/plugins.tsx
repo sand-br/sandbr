@@ -54,7 +54,6 @@ import { ShareContentPlugin } from '@/components/editor/plugins/actions/share-co
 import { SpeechToTextPlugin } from '@/components/editor/plugins/actions/speech-to-text-plugin'
 import { TreeViewPlugin } from '@/components/editor/plugins/actions/tree-view-plugin'
 import { AutoLinkPlugin } from '@/components/editor/plugins/auto-link-plugin'
-import { AutocompletePlugin } from '@/components/editor/plugins/autocomplete-plugin'
 import { CodeActionMenuPlugin } from '@/components/editor/plugins/code-action-menu-plugin'
 import { CodeHighlightPlugin } from '@/components/editor/plugins/code-highlight-plugin'
 import { CollapsiblePlugin } from '@/components/editor/plugins/collapsible-plugin'
@@ -67,8 +66,6 @@ import { TwitterPlugin } from '@/components/editor/plugins/embeds/twitter-plugin
 import { YouTubePlugin } from '@/components/editor/plugins/embeds/youtube-plugin'
 import { EmojiPickerPlugin } from '@/components/editor/plugins/emoji-picker-plugin'
 import { EmojisPlugin } from '@/components/editor/plugins/emojis-plugin'
-import { EquationsPlugin } from '@/components/editor/plugins/equations-plugin'
-import { ExcalidrawPlugin } from '@/components/editor/plugins/excalidraw-plugin'
 import { FloatingLinkEditorPlugin } from '@/components/editor/plugins/floating-link-editor-plugin'
 import { FloatingTextFormatToolbarPlugin } from '@/components/editor/plugins/floating-text-format-plugin'
 import { ImagesPlugin } from '@/components/editor/plugins/images-plugin'
@@ -77,7 +74,6 @@ import { LayoutPlugin } from '@/components/editor/plugins/layout-plugin'
 import { LinkPlugin } from '@/components/editor/plugins/link-plugin'
 import { ListMaxIndentLevelPlugin } from '@/components/editor/plugins/list-max-indent-level-plugin'
 import { MentionsPlugin } from '@/components/editor/plugins/mentions-plugin'
-import { PageBreakPlugin } from '@/components/editor/plugins/page-break-plugin'
 
 import { TabFocusPlugin } from '@/components/editor/plugins/tab-focus-plugin'
 import { TableActionMenuPlugin } from '@/components/editor/plugins/table-action-menu-plugin'
@@ -97,14 +93,10 @@ import { BulletedListPickerPlugin } from '@/components/editor/plugins/picker/bul
 import { QuotePickerPlugin } from '@/components/editor/plugins/picker/quote-picker-plugin'
 import { CodePickerPlugin } from '@/components/editor/plugins/picker/code-picker-plugin'
 import { DividerPickerPlugin } from '@/components/editor/plugins/picker/divider-picker-plugin'
-import { PageBreakPickerPlugin } from '@/components/editor/plugins/picker/page-break-picker-plugin'
 import { ImagePickerPlugin } from '@/components/editor/plugins/picker/image-picker-plugin'
-import { ExcalidrawPickerPlugin } from '@/components/editor/plugins/picker/excalidraw-picker-plugin'
-import { EquationPickerPlugin } from '@/components/editor/plugins/picker/equation-picker-plugin'
-import { CollapsiblePickerPlugin } from '@/components/editor/plugins/picker/collapsible-picker-plugin'
+
 import { ComponentPickerMenuPlugin } from '@/components/editor/plugins/component-picker-menu-plugin'
 import { EMOJI } from '@/components/editor/transformers/markdown-emoji-transformer'
-import { EQUATION } from '@/components/editor/transformers/markdown-equation-transofrmer'
 import { HR } from '@/components/editor/transformers/markdown-hr-transformer'
 import { IMAGE } from '@/components/editor/transformers/markdown-image-transformer'
 import { TABLE } from '@/components/editor/transformers/markdown-table-transformer'
@@ -191,13 +183,13 @@ export function Plugins({ }) {
         <HistoryPlugin />
 
         <MentionsPlugin />
-        <PageBreakPlugin />
+        
         <DraggableBlockPlugin anchorElem={floatingAnchorElem} />
         <KeywordsPlugin />
         <EmojisPlugin />
         <ImagesPlugin />
         
-        <ExcalidrawPlugin />
+        
         <TableCellResizerPlugin />
         <TableHoverActionsPlugin anchorElem={floatingAnchorElem} />
         <TableActionMenuPlugin
@@ -206,7 +198,7 @@ export function Plugins({ }) {
         />
         
         <LayoutPlugin />
-        <EquationsPlugin />
+        
         <CollapsiblePlugin />
 
         <AutoEmbedPlugin />
@@ -222,7 +214,7 @@ export function Plugins({ }) {
             HR,
             IMAGE,
             EMOJI,
-            EQUATION,
+            
             TWEET,
             CHECK_LIST,
             ...ELEMENT_TRANSFORMERS,
@@ -232,7 +224,7 @@ export function Plugins({ }) {
           ]} 
         />
         <TabFocusPlugin />
-        <AutocompletePlugin />
+        
         <AutoLinkPlugin />
         <LinkPlugin />
 
@@ -249,7 +241,7 @@ export function Plugins({ }) {
             QuotePickerPlugin(),
             CodePickerPlugin(),
             DividerPickerPlugin(),
-            PageBreakPickerPlugin(),
+            
             
             EmbedsPickerPlugin({ embed: 'tweet' }),
             EmbedsPickerPlugin({ embed: 'youtube-video' }),
@@ -289,7 +281,6 @@ export function Plugins({ }) {
                 HR,
                 IMAGE,
                 EMOJI,
-                EQUATION,
                 TWEET,
                 CHECK_LIST,
                 ...ELEMENT_TRANSFORMERS,
