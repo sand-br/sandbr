@@ -1,22 +1,73 @@
 "use client";
+// ↓ IMPORTAÇÕES ↓
+// importações de dependências:
+import React, { useRef, ReactNode } from "react";
 
-import { toast } from "sonner";
-import { useRef, ReactNode } from "react";
+// importações de componentes:
 import { Button } from "@/components/ui/button";
-import { Copy } from "lucide-react";
+import { toast } from "sonner";
 
-// Tipagem das props do Email
+// importações de ícones:
+import { Copy } from "lucide-react";
+// ↑ FIM DAS IMPORTAÇÕES ↑.
+
+// ↓ TIPAGENS ↓
+interface CopyableProps {
+  text: string;
+  symbol?: ReactNode;
+}
+
 interface EmailProps {
   email: string;
 }
 
-const Email: React.FC<EmailProps> = ({ email }) => {
-  const preRef = useRef<HTMLSpanElement>(null);
+interface FieldProps {
+  titulo?: string;
+  children: ReactNode;
+}
+// ↑ FIM DAS TIPAGENS ↑
+
+const Copyable: React.FC<CopyableProps> = ({ text, symbol }) => {
+  const spanRef  = useRef<HTMLSpanElement>(null);
 
   // função para copiar o conteúdo renderizado dentro do <span>
   const copiar = () => {
-    if (preRef.current) {
-      const content = preRef.current.innerText;
+    if (spanRef .current) {
+      const content = spanRef .current.innerText;
+      navigator.clipboard
+        .writeText(content)
+        .then(() => {
+          toast.success("Copiado.");
+        })
+        .catch(() => {
+          toast.error("Houve um erro ao copiar. Se ele persistir, tente recarregar a página.");
+        });
+    }
+  };
+
+  return (
+    <Button
+      variant="outline"
+      className="h-[30px] p-0 gap-0 inline-flex items-center group hover:bg-background overflow-hidden"
+      onClick={copiar}
+    >
+      <span className="h-full w-full px-1 inline-flex items-center group-hover:bg-background text-destaque">
+        <span ref={spanRef } className="px-1">{text}</span>
+      </span>
+      <span className="border-l h-full w-full inline-flex items-center justify-center px-2 group-hover:bg-accent group-hover:text-accent-foreground">
+         {symbol ?? <Copy />}
+      </span>
+    </Button>
+  );
+};
+
+const Email: React.FC<EmailProps> = ({ email }) => {
+  const spanRef = useRef<HTMLSpanElement>(null);
+
+  // função para copiar o conteúdo renderizado dentro do <span>
+  const copiar = () => {
+    if (spanRef.current) {
+      const content = spanRef.current.innerText;
       navigator.clipboard
         .writeText(content)
         .then(() => {
@@ -36,7 +87,7 @@ const Email: React.FC<EmailProps> = ({ email }) => {
     >
       <span className="h-full w-full px-1 inline-flex items-center group-hover:bg-background text-destaque hover:underline">
         <a href={`mailto:${email}`} target="_blank" rel="noopener noreferrer">
-          <span ref={preRef}>{email}</span>
+          <span ref={spanRef} className="px-1">{email}</span>
         </a>
       </span>
       <span className="border-l h-full w-full inline-flex items-center justify-center px-2 group-hover:bg-accent group-hover:text-accent-foreground">
@@ -45,12 +96,6 @@ const Email: React.FC<EmailProps> = ({ email }) => {
     </Button>
   );
 };
-
-// Tipagem das props do Campo
-interface FieldProps {
-  titulo?: string;
-  children: ReactNode;
-}
 
 const Field: React.FC<FieldProps> = ({ titulo, children }) => {
   const preRef = useRef<HTMLDivElement>(null);
@@ -91,4 +136,6 @@ const Field: React.FC<FieldProps> = ({ titulo, children }) => {
   );
 };
 
-export { Field, Email };
+
+
+export { Copyable, Email, Field };
