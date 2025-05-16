@@ -9,7 +9,6 @@ import { SearchForm } from "@/components/sidebar/search-form"
 import {
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
@@ -23,7 +22,7 @@ import { Logo } from "../logo";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 flex w-full items-center bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/60 border-b">
+    <header className="sticky h-16 top-0 z-50 flex w-full items-center bg-background/95 backdrop-blur-sm supports-backdrop-filter:bg-background/60 border-b">
       <div className="flex h-(--header-height) w-full items-center gap-2 px-4">
         <Logo />
 
