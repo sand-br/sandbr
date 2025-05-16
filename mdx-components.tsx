@@ -16,6 +16,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ul: ({ children }) => (
       <ul className="list-disc ml-4">{children}</ul>
     ),
+    ol: ({ children }) => (
+      <ol className="list-decimal ml-4">{children}</ol>
+    ),
     a: ({ children, href }) => (
       <a
         href={href}
@@ -31,6 +34,11 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ),
     p: ({ children }) => (
       <p className="text-base leading-7 mb-2">{children}</p>
+    ),
+    code: ({ children }) => (
+      <code className="text-sandbr rounded-md px-1 py-0.5">
+        {children}
+      </code>
     ),
     ...components,
   }
