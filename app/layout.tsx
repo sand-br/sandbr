@@ -33,7 +33,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Sandbr',
+    template: '%s - Sandbr',
     default: 'Sandbr',
   },
   description: "A enciclopédia brasileira sobre Brandon Sanderson",
