@@ -536,7 +536,7 @@ function TableCellActionMenuContainer({
           <PopoverTrigger asChild>
             <button
               type="button"
-              className="relative inline-block flex cursor-pointer items-center justify-center bg-none"
+              className="relative flex cursor-pointer items-center justify-center bg-none"
               onClick={(e) => {
                 e.stopPropagation()
                 setIsMenuOpen(!isMenuOpen)
