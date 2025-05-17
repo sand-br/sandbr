@@ -21,9 +21,9 @@ export function SiteHeader() {
 
         <Separator orientation="vertical" className="mr-2 h-4" />
         
-        <SearchForm className="w-full sm:ml-auto sm:w-auto" />
-        <Button asChild variant="outline" className="h-8">
-          <Link href="/docs/contribuir">Contribua</Link>
+        
+        <Button variant="outline" className="h-8 w-full sm:ml-auto sm:w-auto">
+          Salvar
         </Button>
         <Toggle />
       </div>
