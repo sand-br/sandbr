@@ -196,7 +196,7 @@ export function AutoEmbedDialog({
             onClick={onClick}
             data-test-id={`${embedConfig.type}-embed-modal-submit-btn`}
           >
-            Embed
+            Anexar
           </Button>
         </DialogFooter>
       </div>

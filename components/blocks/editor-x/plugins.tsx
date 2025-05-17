@@ -41,21 +41,12 @@ import { LinkToolbarPlugin } from "@/components/editor/plugins/toolbar/link-tool
 import { SubSuperToolbarPlugin } from "@/components/editor/plugins/toolbar/subsuper-toolbar-plugin";
 
 import { ActionsPlugin } from "@/components/editor/plugins/actions/actions-plugin";
-import { CharacterLimitPlugin } from "@/components/editor/plugins/actions/character-limit-plugin";
 import { ClearEditorActionPlugin } from "@/components/editor/plugins/actions/clear-editor-plugin";
 import { CounterCharacterPlugin } from "@/components/editor/plugins/actions/counter-character-plugin";
 import { EditModeTogglePlugin } from "@/components/editor/plugins/actions/edit-mode-toggle-plugin";
-import { ImportExportPlugin } from "@/components/editor/plugins/actions/import-export-plugin";
-import { MarkdownTogglePlugin } from "@/components/editor/plugins/actions/markdown-toggle-plugin";
-import { MaxLengthPlugin } from "@/components/editor/plugins/actions/max-length-plugin";
-import { ShareContentPlugin } from "@/components/editor/plugins/actions/share-content-plugin";
-import { SpeechToTextPlugin } from "@/components/editor/plugins/actions/speech-to-text-plugin";
-import { TreeViewPlugin } from "@/components/editor/plugins/actions/tree-view-plugin";
 import { AutoLinkPlugin } from "@/components/editor/plugins/auto-link-plugin";
 import { CodeActionMenuPlugin } from "@/components/editor/plugins/code-action-menu-plugin";
 import { CodeHighlightPlugin } from "@/components/editor/plugins/code-highlight-plugin";
-import { CollapsiblePlugin } from "@/components/editor/plugins/collapsible-plugin";
-
 import { ContextMenuPlugin } from "@/components/editor/plugins/context-menu-plugin";
 import { DragDropPastePlugin } from "@/components/editor/plugins/drag-drop-paste-plugin";
 import { DraggableBlockPlugin } from "@/components/editor/plugins/draggable-block-plugin";
@@ -193,8 +184,6 @@ export function Plugins({}) {
         />
 
         <LayoutPlugin />
-
-        <CollapsiblePlugin />
 
         <AutoEmbedPlugin />
         <TwitterPlugin />

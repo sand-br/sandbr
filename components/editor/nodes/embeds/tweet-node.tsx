@@ -17,6 +17,7 @@ import type {
   NodeKey,
   Spread,
 } from 'lexical'
+import { Loading } from '@/components/loading'
 
 const WIDGET_SCRIPT_URL = 'https://platform.twitter.com/widgets.js'
 
@@ -197,7 +198,7 @@ export class TweetNode extends DecoratorBlockNode {
       <TweetComponent
         className={className}
         format={this.__format}
-        loadingComponent="Loading..."
+        loadingComponent={<Loading texto='Trazendo o post.'/>}
         nodeKey={this.getKey()}
         tweetID={this.__id}
       />

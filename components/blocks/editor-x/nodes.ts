@@ -14,9 +14,6 @@ import {
   TextNode,
 } from 'lexical'
 
-import { CollapsibleContainerNode } from '@/components/editor/nodes/collapsible-container-node'
-import { CollapsibleContentNode } from '@/components/editor/nodes/collapsible-content-node'
-import { CollapsibleTitleNode } from '@/components/editor/nodes/collapsible-title-node'
 import { TweetNode } from '@/components/editor/nodes/embeds/tweet-node'
 import { YouTubeNode } from '@/components/editor/nodes/embeds/youtube-node'
 import { EmojiNode } from '@/components/editor/nodes/emoji-node'
@@ -49,9 +46,6 @@ export const nodes: ReadonlyArray<Klass<LexicalNode> | LexicalNodeReplacement> =
     KeywordNode,
     LayoutContainerNode,
     LayoutItemNode,
-    CollapsibleContainerNode,
-    CollapsibleContentNode,
-    CollapsibleTitleNode,
     AutoLinkNode,
     TweetNode,
     YouTubeNode,

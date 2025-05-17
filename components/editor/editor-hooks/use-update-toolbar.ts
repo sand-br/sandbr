@@ -28,7 +28,7 @@ export function useUpdateToolbarHandler(
       },
       COMMAND_PRIORITY_CRITICAL
     )
-  }, [editor, callback])
+  }, [editor, callback, activeEditor])
 
   useEffect(() => {
     activeEditor.getEditorState().read(() => {
