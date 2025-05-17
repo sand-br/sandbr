@@ -60,7 +60,6 @@ import {
 } from '@/components/ui/popover'
 
 import { useEditorModal } from '@/components/editor/editor-hooks/use-modal'
-import ColorPicker from '@/components/editor/editor-ui/colorpicker'
 
 function computeSelectionCount(selection: TableSelection): {
   columns: number
@@ -250,7 +249,7 @@ function TableActionMenu({
 
         const tableObserver = getTableObserverFromTableElement(tableElement)
         if (tableObserver !== null) {
-          tableObserver.clearHighlight()
+          tableObserver.$clearHighlight()
         }
 
         tableNode.markDirty()
@@ -355,134 +354,18 @@ function TableActionMenu({
     })
   }, [editor, onClose])
 
-  const toggleTableRowIsHeader = useCallback(() => {
-    editor.update(() => {
-      const tableNode = $getTableNodeFromLexicalNodeOrThrow(tableCellNode)
-
-      const tableRowIndex = $getTableRowIndexFromTableCellNode(tableCellNode)
-
-      const tableRows = tableNode.getChildren()
-
-      if (tableRowIndex >= tableRows.length || tableRowIndex < 0) {
-        throw new Error('Expected table cell to be inside of table row.')
-      }
-
-      const tableRow = tableRows[tableRowIndex]
-
-      if (!$isTableRowNode(tableRow)) {
-        throw new Error('Expected table row')
-      }
-
-      const newStyle =
-        tableCellNode.getHeaderStyles() ^ TableCellHeaderStates.ROW
-      tableRow.getChildren().forEach((tableCell) => {
-        if (!$isTableCellNode(tableCell)) {
-          throw new Error('Expected table cell')
-        }
-
-        tableCell.setHeaderStyles(newStyle, TableCellHeaderStates.ROW)
-      })
-
-      clearTableSelection()
-      onClose()
-    })
-  }, [editor, tableCellNode, clearTableSelection, onClose])
-
-  const toggleTableColumnIsHeader = useCallback(() => {
-    editor.update(() => {
-      const tableNode = $getTableNodeFromLexicalNodeOrThrow(tableCellNode)
-
-      const tableColumnIndex =
-        $getTableColumnIndexFromTableCellNode(tableCellNode)
-
-      const tableRows = tableNode.getChildren<TableRowNode>()
-      const maxRowsLength = Math.max(
-        ...tableRows.map((row) => row.getChildren().length)
-      )
-
-      if (tableColumnIndex >= maxRowsLength || tableColumnIndex < 0) {
-        throw new Error('Expected table cell to be inside of table row.')
-      }
-
-      const newStyle =
-        tableCellNode.getHeaderStyles() ^ TableCellHeaderStates.COLUMN
-      for (let r = 0; r < tableRows.length; r++) {
-        const tableRow = tableRows[r]
-
-        if (!$isTableRowNode(tableRow)) {
-          throw new Error('Expected table row')
-        }
-
-        const tableCells = tableRow.getChildren()
-        if (tableColumnIndex >= tableCells.length) {
-          // if cell is outside of bounds for the current row (for example various merge cell cases) we shouldn't highlight it
-          continue
-        }
-
-        const tableCell = tableCells[tableColumnIndex]
-
-        if (!$isTableCellNode(tableCell)) {
-          throw new Error('Expected table cell')
-        }
-
-        tableCell.setHeaderStyles(newStyle, TableCellHeaderStates.COLUMN)
-      }
-      clearTableSelection()
-      onClose()
-    })
-  }, [editor, tableCellNode, clearTableSelection, onClose])
-
-  const toggleRowStriping = useCallback(() => {
-    editor.update(() => {
-      if (tableCellNode.isAttached()) {
-        const tableNode = $getTableNodeFromLexicalNodeOrThrow(tableCellNode)
-        if (tableNode) {
-          tableNode.setRowStriping(!tableNode.getRowStriping())
-        }
-      }
-      clearTableSelection()
-      onClose()
-    })
-  }, [editor, tableCellNode, clearTableSelection, onClose])
-
-  const handleCellBackgroundColor = useCallback(
-    (value: string) => {
-      editor.update(() => {
-        const selection = $getSelection()
-        if ($isRangeSelection(selection) || $isTableSelection(selection)) {
-          const [cell] = $getNodeTriplet(selection.anchor)
-          if ($isTableCellNode(cell)) {
-            cell.setBackgroundColor(value)
-          }
-
-          if ($isTableSelection(selection)) {
-            const nodes = selection.getNodes()
-
-            for (let i = 0; i < nodes.length; i++) {
-              const node = nodes[i]
-              if ($isTableCellNode(node)) {
-                node.setBackgroundColor(value)
-              }
-            }
-          }
-        }
-      })
-    },
-    [editor]
-  )
-
   let mergeCellButton: null | JSX.Element = null
   if (cellMerge) {
     if (canMergeCells) {
       mergeCellButton = (
         <CommandItem onSelect={() => mergeTableCellsAtSelection()}>
-          Merge cells
+          Mesclar
         </CommandItem>
       )
     } else if (canUnmergeCell) {
       mergeCellButton = (
         <CommandItem onSelect={() => unmergeTableCellsAtSelection()}>
-          Unmerge cells
+          Separar
         </CommandItem>
       )
     }
@@ -495,72 +378,46 @@ function TableActionMenu({
         <CommandList>
           <CommandGroup>
             {mergeCellButton}
-            <CommandItem className="flex justify-between">
-              Background color
-              <ColorPicker
-                color={backgroundColor}
-                onChange={handleCellBackgroundColor}
-                icon={<PaintBucketIcon className="size-4" />}
-              />
-            </CommandItem>
-            <CommandItem onSelect={() => toggleRowStriping()}>
-              Toggle row striping
-            </CommandItem>
-            <CommandSeparator />
             <CommandItem onSelect={() => insertTableRowAtSelection(false)}>
-              Insert{' '}
+              Inserir{' '}
               {selectionCounts.rows === 1
-                ? 'row'
-                : `${selectionCounts.rows} rows`}{' '}
-              above
+                ? 'linha'
+                : `${selectionCounts.rows} linhas`}{' '}
+              acima
             </CommandItem>
             <CommandItem onSelect={() => insertTableRowAtSelection(true)}>
-              Insert{' '}
+              Inserir{' '}
               {selectionCounts.rows === 1
-                ? 'row'
-                : `${selectionCounts.rows} rows`}{' '}
-              below
+                ? 'linha'
+                : `${selectionCounts.rows} linhas`}{' '}
+              abaixo
             </CommandItem>
             <CommandSeparator />
             <CommandItem onSelect={() => insertTableColumnAtSelection(false)}>
-              Insert{' '}
+              Inserir{' '}
               {selectionCounts.columns === 1
-                ? 'column'
-                : `${selectionCounts.columns} columns`}{' '}
-              left
+                ? 'coluna'
+                : `${selectionCounts.columns} colunas`}{' '}
+              à esquerda
             </CommandItem>
             <CommandItem onSelect={() => insertTableColumnAtSelection(true)}>
-              Insert{' '}
+              Inserir{' '}
               {selectionCounts.columns === 1
-                ? 'column'
-                : `${selectionCounts.columns} columns`}{' '}
-              right
+                ? 'coluna'
+                : `${selectionCounts.columns} colunas`}{' '}
+              à direita
             </CommandItem>
             <CommandSeparator />
             <CommandItem onSelect={() => deleteTableColumnAtSelection()}>
-              Delete column
+              Excluir coluna
             </CommandItem>
             <CommandItem onSelect={() => deleteTableRowAtSelection()}>
-              Delete row
+              Excluir linha
             </CommandItem>
             <CommandItem onSelect={() => deleteTableAtSelection()}>
-              Delete table
+              Excluir tabela
             </CommandItem>
             <CommandSeparator />
-            <CommandItem onSelect={() => toggleTableRowIsHeader()}>
-              {(tableCellNode.__headerState & TableCellHeaderStates.ROW) ===
-              TableCellHeaderStates.ROW
-                ? 'Remove'
-                : 'Add'}{' '}
-              row header
-            </CommandItem>
-            <CommandItem onSelect={() => toggleTableColumnIsHeader()}>
-              {(tableCellNode.__headerState & TableCellHeaderStates.COLUMN) ===
-              TableCellHeaderStates.COLUMN
-                ? 'Remove'
-                : 'Add'}{' '}
-              column header
-            </CommandItem>
           </CommandGroup>
         </CommandList>
       </Command>

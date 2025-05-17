@@ -35,19 +35,19 @@ export function ClearEditorActionPlugin() {
             </Button>
           </DialogTrigger>
         </TooltipTrigger>
-        <TooltipContent>Clear Editor</TooltipContent>
+        <TooltipContent>Descatar</TooltipContent>
       </Tooltip>
 
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Clear Editor</DialogTitle>
+          <DialogTitle>Descatar</DialogTitle>
           <DialogDescription>
-            Are you sure you want to clear the editor?
+            Você está prestes a descartar o que escreveu, tem certeza?
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>
           <DialogClose asChild>
-            <Button variant="outline">Cancel</Button>
+            <Button variant="outline">Cancelar</Button>
           </DialogClose>
 
           <DialogClose asChild>
@@ -57,7 +57,7 @@ export function ClearEditorActionPlugin() {
                 editor.dispatchCommand(CLEAR_EDITOR_COMMAND, undefined)
               }}
             >
-              Clear
+              Sim
             </Button>
           </DialogClose>
         </DialogFooter>

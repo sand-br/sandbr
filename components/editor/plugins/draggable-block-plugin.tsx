@@ -26,12 +26,12 @@ export function DraggableBlockPlugin({
   return (
     <DraggableBlockPlugin_EXPERIMENTAL
       anchorElem={anchorElem}
-      menuRef={menuRef}
-      targetLineRef={targetLineRef}
+      menuRef={menuRef as unknown as React.RefObject<HTMLElement>}
+      targetLineRef={targetLineRef as unknown as React.RefObject<HTMLElement>}
       menuComponent={
         <div
           ref={menuRef}
-          className="draggable-block-menu absolute left-0 top-0 cursor-grab rounded-sm px-[1px] py-0.5 opacity-0 will-change-transform hover:bg-gray-100 active:cursor-grabbing"
+          className="draggable-block-menu absolute left-0 top-0 cursor-grab rounded-sm px-[1px] py-0.5 opacity-0 will-change-transform hover:bg-gray-100 dark:hover:bg-gray-800 active:cursor-grabbing"
         >
           <GripVerticalIcon className="size-4 opacity-30" />
         </div>

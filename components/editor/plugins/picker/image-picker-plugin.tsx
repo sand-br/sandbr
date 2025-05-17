@@ -6,7 +6,7 @@ import { ComponentPickerOption } from "@/components/editor/plugins/picker/compon
 
 export function ImagePickerPlugin() {
 
-  return new ComponentPickerOption('Image', {
+  return new ComponentPickerOption('Imagem', {
     icon: <ImageIcon className="size-4" />,
     keywords: ['image', 'photo', 'picture', 'file'],
     onSelect: (_, editor, showModal) =>

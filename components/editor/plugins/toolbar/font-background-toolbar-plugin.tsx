@@ -11,7 +11,7 @@ import { PaintBucketIcon } from 'lucide-react'
 
 import { useToolbarContext } from '@/components/editor/context/toolbar-context'
 import { useUpdateToolbarHandler } from '@/components/editor/editor-hooks/use-update-toolbar'
-import ColorPicker from '@/components/editor/editor-ui/colorpicker'
+
 
 export function FontBackgroundToolbarPlugin() {
   const { activeEditor } = useToolbarContext()

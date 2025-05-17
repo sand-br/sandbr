@@ -3,7 +3,7 @@
 import { useState } from 'react'
 
 import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext'
-import { LockIcon, UnlockIcon } from 'lucide-react'
+import { Eye, Pencil } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import {
@@ -25,20 +25,20 @@ export function EditModeTogglePlugin() {
             editor.setEditable(!editor.isEditable())
             setIsEditable(editor.isEditable())
           }}
-          title="Read-Only Mode"
+          title="Modo do editor"
           aria-label={`${!isEditable ? 'Unlock' : 'Lock'} read-only mode`}
           size={'sm'}
           className="p-2"
         >
           {isEditable ? (
-            <LockIcon className="size-4" />
+            <Eye className="size-4" />
           ) : (
-            <UnlockIcon className="size-4" />
+            <Pencil className="size-4" />
           )}
         </Button>
       </TooltipTrigger>
       <TooltipContent>
-        {isEditable ? 'View Only Mode' : 'Edit Mode'}
+        {isEditable ? 'Alterar para modo de visualização' : 'Alterar para modo de edição'}
       </TooltipContent>
     </Tooltip>
   )

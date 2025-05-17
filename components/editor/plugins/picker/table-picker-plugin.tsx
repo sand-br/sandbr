@@ -5,7 +5,7 @@ import { InsertTableDialog } from "@/components/editor/plugins/table-plugin";
 import { ComponentPickerOption } from "@/components/editor/plugins/picker/component-picker-option";
 
 export function TablePickerPlugin() {
-  return new ComponentPickerOption('Table', {
+  return new ComponentPickerOption('Tabela', {
     icon: <TableIcon className="size-4" />,
     keywords: ['table', 'grid', 'spreadsheet', 'rows', 'columns'],
     onSelect: (_, editor, showModal) =>

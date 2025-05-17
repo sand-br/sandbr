@@ -10,7 +10,7 @@ export function HeadingPickerPlugin({
 }: {
   n: 1 | 2 | 3
 }) {
-  return new ComponentPickerOption(`Heading ${n}`, {
+  return new ComponentPickerOption(`Título ${n}`, {
     icon: <HeadingIcons n={n} />,
     keywords: ['heading', 'header', `h${n}`],
     onSelect: (_, editor) =>

@@ -5,7 +5,7 @@ import { INSERT_UNORDERED_LIST_COMMAND } from "@lexical/list";
 import { ComponentPickerOption } from "@/components/editor/plugins/picker/component-picker-option";
 
 export function BulletedListPickerPlugin() {
-  return new ComponentPickerOption('Bulleted List', {
+  return new ComponentPickerOption('Lista', {
     icon: <ListIcon className="size-4" />,
     keywords: ['bulleted list', 'unordered list', 'ul'],
     onSelect: (_, editor) =>

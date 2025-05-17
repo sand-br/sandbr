@@ -22,7 +22,7 @@ export function InsertTable() {
     >
       <div className="flex items-center gap-1">
         <TableIcon className="size-4" />
-        <span>Table</span>
+        <span>Tabela</span>
       </div>
     </SelectItem>
   )

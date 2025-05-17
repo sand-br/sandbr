@@ -59,17 +59,17 @@ export function ContextMenuPlugin(): JSX.Element {
 
   const defaultOptions = useMemo(() => {
     return [
-      new ContextMenuOption(`Copy`, {
+      new ContextMenuOption(`Copiar`, {
         onSelect: (_node) => {
           editor.dispatchCommand(COPY_COMMAND, null)
         },
       }),
-      new ContextMenuOption(`Cut`, {
+      new ContextMenuOption(`Recortar`, {
         onSelect: (_node) => {
           editor.dispatchCommand(CUT_COMMAND, null)
         },
       }),
-      new ContextMenuOption(`Paste`, {
+      new ContextMenuOption(`Colar`, {
         onSelect: (_node) => {
           navigator.clipboard.read().then(async function (...args) {
             const data = new DataTransfer()
@@ -99,7 +99,7 @@ export function ContextMenuPlugin(): JSX.Element {
           })
         },
       }),
-      new ContextMenuOption(`Paste as Plain Text`, {
+      new ContextMenuOption(`Colar sem formatação`, {
         onSelect: (_node) => {
           navigator.clipboard.read().then(async function (...args) {
             const permission = await navigator.permissions.query({
@@ -123,7 +123,7 @@ export function ContextMenuPlugin(): JSX.Element {
           })
         },
       }),
-      new ContextMenuOption(`Delete Node`, {
+      new ContextMenuOption(`Excluir parágrafo`, {
         onSelect: (_node) => {
           const selection = $getSelection()
           if ($isRangeSelection(selection)) {

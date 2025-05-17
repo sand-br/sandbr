@@ -5,7 +5,7 @@ import { $setBlocksType } from "@lexical/selection"
 import { ComponentPickerOption } from "@/components/editor/plugins/picker/component-picker-option";
 
 export function ParagraphPickerPlugin() {
-  return new ComponentPickerOption('Paragraph', {
+  return new ComponentPickerOption('Parágrafo', {
     icon: <TextIcon className="size-4" />,
     keywords: ['normal', 'paragraph', 'p', 'text'],
     onSelect: (_, editor) =>

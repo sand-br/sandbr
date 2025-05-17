@@ -10,7 +10,7 @@ export function EmbedsPickerPlugin({
 }) {
   const embedConfig = EmbedConfigs.find((config) => config.type === embed) as CustomEmbedConfig
 
-  return new ComponentPickerOption(`Embed ${embedConfig.contentName}`, {
+  return new ComponentPickerOption(`Inserir ${embedConfig.contentName}`, {
     icon: embedConfig.icon,
     keywords: [...embedConfig.keywords, 'embed'],
     onSelect: (_, editor) =>

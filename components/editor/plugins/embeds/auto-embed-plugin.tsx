@@ -93,7 +93,7 @@ export const YoutubeEmbedConfig: CustomEmbedConfig = {
 
 export const TwitterEmbedConfig: CustomEmbedConfig = {
   // e.g. Tweet or Google Map.
-  contentName: 'Tweet',
+  contentName: 'Post do X',
 
   exampleUrl: 'https://twitter.com/jack/status/20',
 

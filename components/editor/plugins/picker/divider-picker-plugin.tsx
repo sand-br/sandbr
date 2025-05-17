@@ -4,7 +4,7 @@ import { INSERT_HORIZONTAL_RULE_COMMAND } from "@lexical/react/LexicalHorizontal
 import { ComponentPickerOption } from "@/components/editor/plugins/picker/component-picker-option";
 
 export function DividerPickerPlugin() {
-  return new ComponentPickerOption('Divider', {
+  return new ComponentPickerOption('Divisor', {
     icon: <MinusIcon className="size-4" />,
     keywords: ['horizontal rule', 'divider', 'hr'],
     onSelect: (_, editor) =>
