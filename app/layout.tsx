@@ -19,6 +19,7 @@ const averia = Averia_Serif_Libre({
   weight: "400",
   style: "normal",
   variable: "--font-averia",
+  subsets: ["latin"]
 });
 
 const geistSans = Geist({
