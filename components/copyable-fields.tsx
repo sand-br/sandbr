@@ -116,7 +116,7 @@ const Field: React.FC<FieldProps> = ({ titulo, children }) => {
   };
 
   return (
-    <div className="border rounded-md max-w-[90vw] my-2 lg:max-w-[66%] bg-background dark:bg-input/30">
+    <div className="border rounded-md max-w-[90vw] my-2  bg-background dark:bg-input/30">
       <div className="border-b p-3 select-none flex items-center justify-between">
         {titulo === undefined ? <p>Copie</p> : <p>{titulo}</p>}
         <Button variant="outline" onClick={copiar}>
