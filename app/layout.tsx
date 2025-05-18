@@ -12,6 +12,7 @@ import "./globals.css";
 // importações de componentes:
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Toaster } from "@/components/ui/sonner"
+import { Progress } from "@/components/progress";
  
 // ↑ FIM DAS IMPORTAÇÕES ↑.
 
@@ -60,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning className="scroll-smooth">
       <body
         className={`${averia.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -72,6 +73,7 @@ export default function RootLayout({
         >
           {children}
           <Toaster />
+          <Progress />
         </ThemeProvider>
       </body>
     </html>
