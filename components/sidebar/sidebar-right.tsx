@@ -24,7 +24,7 @@ import { useIndex, Topico } from "@/contexts/indexContext";
 // ↑ FIM DAS IMPORTAÇÕES ↑
 
 export function SidebarRight() {
-  const { indice, titulo, ...props } = useIndex();
+  const { indice, titulo } = useIndex();
 
   const montarIndice = indice.map((item: Topico) => ({
     topico: item.topico,
@@ -38,7 +38,7 @@ export function SidebarRight() {
   return (
     <Sidebar
       collapsible="none"
-      className="sticky top-(--header-height) h-[calc(100svh-var(--header-height))]! hidden lg:flex border-l"
+      className="sticky top-(--header-height) h-[calc(100dvh-var(--header-height))]! hidden lg:flex border-l"
     >
       <SidebarContent>
         <SidebarGroup>
