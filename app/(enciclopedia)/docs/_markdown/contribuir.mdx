@@ -5,6 +5,7 @@ import Image from "next/image"
 {/* importações de componentes: */}
 import { Button } from "@/components/ui/button";
 import { Copyable, Email, Field } from "@/components/copyable-fields"
+import { Donates } from "@/components/donates"
 
 {/* importações de ícones */}
 import { MessageCircleQuestion, ThumbsUp } from "lucide-react";
@@ -72,7 +73,8 @@ Nosso acervo cresce com resumos, análises, infográficos, linhas do tempo, cita
 
 Use o e-mail oficial: <Email email="conteudo@sandbr.org"/> (ou envie um PR direto no repositório com a tag `conteudo`, se preferir (ex.: `conteudo: Foto_do_Adolin_sem_camisa.png`).
 
-### No corpo do e-mail, envie:
+### Envie
+No corpo do e-mail, anexe:
 
 1. Arquivo(s) em anexo ou link público (Drive, Dropbox etc.).
 2. Título sugerido.
@@ -129,10 +131,19 @@ Se você quer ajudar financeiramente, considere fazer uma doação. Todo valor �
   }}
   className="data-[loaded=false]:animate-pulse data-[loaded=false]:bg-gray-100/10 border ml-4 my-4"
 />
+
+- **Doações via Liberapay, Ko-fi ou GitHub Sponsors**. Eles são plataformas de financiamento coletivo sem taxas sobre as doações, pensadas para apoiar projetos livres, colaborativos e sem fins lucrativos (como a <span className="font-averia">sandbr</span>). Use-as se você quiser apoiar-nos usando cartão de crédito ou de forma *recorrente*.
+
+  <Donates />
+
+- **Outras formas?** Optamos por não usar plataformas como o [APOIA.se](https://apoia.se/) porque elas cobram taxas sobre as doações e, no fim das contas, uma parte do que você doa acaba indo para terceiros — não para o projeto.
+
+  Se quiser ajudar de outro jeito, sempre precisamos de apoio para cobrir despesas como domínio, hospedagem ou assinaturas de serviços essenciais que mantêm o site funcionando. Se topar ajudar nessas frentes, é só entrar em contato. Toda contribuição direta faz uma diferença enorme e vai 100% para manter a <span className="font-averia">sandbr</span> viva (e sem anúncios, como a gente gosta).
+
 ---
 
 ## Considerações finais
 
-Valeu por pensar em ajudar a <span className="font-averia">sandbr</span>. Cada PR, e-mail ou seed conta para manter vivo o maior compêndio em português sobre Brandon Sanderson.
+Valeu por pensar em ajudar a <span className="font-averia">sandbr</span>. Toda ajuda conta para manter vivo o maior compêndio em português sobre Brandon Sanderson.
 
-Em caso de dúvidas, grite em <Email email="contato@sandbr.org"/>.
+Ficou em dúvida ou tem outra ideia de como contribuir? Fala com a gente no <Email email="contato@sandbr.org"/>.
