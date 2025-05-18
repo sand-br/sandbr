@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@bprogress/next": "^3.2.12",
     "@excalidraw/excalidraw": "^0.18.0",
     "@icons-pack/react-simple-icons": "^12.8.0",
     "@lexical/code": "^0.31.1",
