@@ -24,7 +24,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-blue-700 dark:text-blue-400 hover:underline"
+        className="text-sandbr hover:underline"
       >
         {children}
       </a>
@@ -36,7 +36,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <p className="text-base leading-7 mb-2">{children}</p>
     ),
     code: ({ children }) => (
-      <code className="text-sandbr rounded-md px-1 py-0.5">
+      <code className="px-1 py-0.5 font-mono">
         {children}
       </code>
     ),
