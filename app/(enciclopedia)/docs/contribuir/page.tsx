@@ -20,22 +20,16 @@ export default function Page() {
       {
         topico: "Ajude no desenvolvimento",
         subtopicos: [
-          { subtopico: "Como você pode ajudar" }
+          { subtopico: "Como ajudar" }
         ]
       },
       {
-        topico: "Envie livros",
+        topico: "Envie conteúdo",
         subtopicos: [
+          { subtopico: "O que aceitamos" },
           { subtopico: "Como enviar" },
-          { subtopico: "Criptografia de e-mail" },
-          { subtopico: "Processo de revisão" },
-        ]
-      },
-      {
-        topico: "Semeie via Torrent",
-        subtopicos: [
-          { subtopico: "Por que semear?" },
-          { subtopico: "Como semear" }
+          { subtopico: "Envie" },
+          { subtopico: "Criptografia opcional" },
         ]
       },
       {
