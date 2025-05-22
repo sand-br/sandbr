@@ -45,7 +45,7 @@ export function IndexProvider({ children, className }: IndexProviderProps) {
 export function useIndex(): IndexContextType {
   const context = useContext(IndexContext);
   if (!context) {
-    throw new Error("useIndex must be used within an IndexProvider");
+    throw new Error("useIndex deve ser usado junto ao IndexProvider");
   }
   return context;
 }
