@@ -6,22 +6,21 @@ import { useIndex } from "@/contexts/indexContext";
 
 // importações de componentes:
 import Contribuir from "@/app/(enciclopedia)/docs/_markdown/contribuir.mdx";
+import { useWay } from "@/contexts/wayContext";
 
 export default function Page() {
-  const { setIndice } = useIndex();
-  const { setTitulo } = useIndex();
+  const { setIndice, setTitulo } = useIndex();
+  const { setCategoria, setPaginas } = useWay();
 
   useEffect(() => {
     setTitulo("Como contribuir?");
-  }, [setTitulo])
+  }, [setTitulo]);
 
   useEffect(() => {
     setIndice([
       {
         topico: "Ajude no desenvolvimento",
-        subtopicos: [
-          { subtopico: "Como ajudar" }
-        ]
+        subtopicos: [{ subtopico: "Como ajudar" }],
       },
       {
         topico: "Envie conteúdo",
@@ -30,16 +29,21 @@ export default function Page() {
           { subtopico: "Como enviar" },
           { subtopico: "Envie" },
           { subtopico: "Criptografia opcional" },
-        ]
+        ],
       },
       {
-        topico: "Contribua financeiramente"
+        topico: "Contribua financeiramente",
       },
       {
-        topico: "Considerações finais"
-      }
+        topico: "Considerações finais",
+      },
     ]);
   }, [setIndice]);
+
+  useEffect(() => {
+    setCategoria("Docs");
+    setPaginas(["Como contribuir?"]);
+  }, [setCategoria, setPaginas]);
 
   return <Contribuir />;
 }
