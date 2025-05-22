@@ -4,7 +4,7 @@ import { AtSign } from "lucide-react";
 
 export function SocialButtons(){
   return(
-    <div className="flex gap-2 mt-8 self-center">
+    <div className="flex gap-2 self-center pb-2">
       <Button asChild size="icon" variant="outline" className="hover:text-[#5865F2]">
         <a href="http://instagram.com/sandbr-enc" target="_blank" rel="noopener noreferrer"><SiDiscord /></a>
       </Button>
