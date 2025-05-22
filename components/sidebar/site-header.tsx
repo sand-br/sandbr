@@ -1,22 +1,16 @@
-"use client"
+"use client";
 
 // ↓ IMPORTAÇÕES ↓
-// importações de dependências: 
-import Link from "next/link"
+// importações de dependências:
+import Link from "next/link";
 
 // importações de componentes:
-import { SearchForm } from "@/components/sidebar/search-form"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
+import { SearchForm } from "@/components/sidebar/search-form";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
-import { Toggle } from "@/components/ui/theme-toggle"
+import { Toggle } from "@/components/ui/theme-toggle";
 import { Logo } from "../logo";
+import { Way } from "../way";
 
 // ↑ FIM DAS IMPORTAÇÕES ↑.
 
@@ -27,17 +21,8 @@ export function SiteHeader() {
         <Logo />
 
         <Separator orientation="vertical" className="mr-2 h-4" />
-        <Breadcrumb className="hidden sm:block">
-          <BreadcrumbList>
-            <BreadcrumbItem className="select-none">
-              Enciclopédia
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>Data Fetching</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
+        <Way />
+
         <SearchForm className="w-full sm:ml-auto sm:w-auto" />
         <Button asChild variant="outline" className="h-8">
           <Link href="/docs/contribuir">Contribua</Link>
@@ -45,5 +30,5 @@ export function SiteHeader() {
         <Toggle />
       </div>
     </header>
-  )
+  );
 }
