@@ -11,6 +11,7 @@ import {
   DrawerContent,
   DrawerTrigger,
 } from "@/components/ui/drawer"
+import { Marquee } from "@/components/magicui/marquee";
 import {
   Tooltip,
   TooltipContent,
@@ -23,8 +24,14 @@ import { WordRotate } from "@/components/magicui/word-rotate";
 import { MoveRight } from "lucide-react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
+// importação de arquivos:
+import Kaladin from "@/public/imgs/kaladin.webp"
+import Kelsier from "@/public/imgs/kelsier.jpg"
+import Siri from "@/public/imgs/siri.jpg"
+import Szeth from "@/public/imgs/szeth.jpg"
+import Tress from "@/public/imgs/tress-e-charlie.jpg"
+import Vasher from "@/public/imgs/vasher.png"
 import Vin from "@/public/imgs/vin.jpg"
-import { Marquee } from "@/components/magicui/marquee";
 
 export default function Home() {
   const palavras = ["Brandon Sanderson.", "o Cosmere.", "Nascidos da Bruma.", "Os relatos da Guerra das Tempestades.", "Warbreaker - O sopro dos deuses.","Tress, a Garota do Mar Esmeralda.","Executores.","Elantris.","o Hoid."]
@@ -34,9 +41,8 @@ export default function Home() {
       <div className="w-full select-none border-b">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-8 items-center md:grid-cols-2">
-            <div className="flex gap-4 flex-col">
+            <div className="flex gap-4 flex-col lg:pl-12">
               <div>
-                
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger className="cursor-help hidden lg:block">
@@ -59,8 +65,6 @@ export default function Home() {
                   </DrawerClose>
                 </DrawerContent>
               </Drawer>
-
-                
               </div>
               
               <div className="flex gap-4 flex-col">
@@ -80,8 +84,9 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="flex w-full flex-col items-center justify-center overflow-hidden">
-              <Marquee vertical={true} className="max-h-dvh">
+
+            <div className="relative flex max-h-dvh items-center justify-center overflow-hidden">
+              <Marquee vertical pauseOnHover={true} className="max-h-dvh">
                   <Image
                     src={Vin}
                     alt="Vin"
@@ -90,24 +95,45 @@ export default function Home() {
                     height={300}
                   />
                   <Image
-                    src={Vin}
-                    alt="Vin"
+                    src={Siri}
+                    alt="Siri"
+                    className="rounded-lg object-cover aspect-square"
+                    width={300}
+                    
+                  />
+                  <Image
+                    src={Kaladin}
+                    alt="Kaladin"
+                    className="rounded-lg object-cover"
+                    width={300}
+                    height={300}
+                  />
+                   <Image
+                    src={Kelsier}
+                    alt="Kelsier"
                     className="rounded-lg object-cover"
                     width={300}
                     height={300}
                   />
               </Marquee>
-              <Marquee vertical={true} className="max-h-dvh">
+              <Marquee vertical pauseOnHover={true} reverse className="max-h-dvh">
                   <Image
-                    src={Vin}
-                    alt="Vin"
+                    src={Tress}
+                    alt="Tress"
                     className="rounded-lg object-cover"
                     width={300}
                     height={300}
                   />
                   <Image
-                    src={Vin}
-                    alt="Vin"
+                    src={Szeth}
+                    alt="Szeth"
+                    className="rounded-lg object-cover"
+                    width={300}
+                    height={300}
+                  />
+                  <Image
+                    src={Vasher}
+                    alt="Vasher"
                     className="rounded-lg object-cover"
                     width={300}
                     height={300}
