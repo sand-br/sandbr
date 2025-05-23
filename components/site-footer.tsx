@@ -1,10 +1,9 @@
-"use client"
-
 // importações de dependências::
 import Link from "next/link";
 
 // importação de componentes: 
 import { Logo } from "./logo";
+import { CopyrightWithYear } from "./copyright-with-year";
 
 interface IrProps {
   destino: string,
@@ -18,8 +17,6 @@ const Ir = ({ destino, texto }: IrProps ) => {
 }
 
 export function Footer() {
-  const ano = new Date().getFullYear()
-
   return (
     <footer className="border-t border-border">
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
@@ -36,10 +33,10 @@ export function Footer() {
         </div>
 
       </div>
-        <hr className=" border-mborder " />
-        <span className="block sm:text-center font-averia text-muted-foreground my-6">
-          © {ano} <Link href="/" className="hover:underline ">SandBR</Link>.
-        </span>
+        <hr className=" border-mborder" />
+        <div className="w-full flex items-center justify-center py-6">
+          <CopyrightWithYear />
+        </div>
     </footer>
   );
 };
