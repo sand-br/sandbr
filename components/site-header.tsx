@@ -1,11 +1,6 @@
 "use client"
 
 // ↓ IMPORTAÇÕES ↓
-// importações de dependências: 
-import Link from "next/link"
-
-// importações de componentes:
-import { SearchForm } from "@/components/sidebar/search-form"
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { Toggle } from "@/components/ui/theme-toggle"

@@ -10,12 +10,6 @@ interface IrProps {
   texto: string
 }
 
-const Ir = ({ destino, texto }: IrProps ) => {
-  return (
-    <a href={destino} target="_blank" rel="noopener noreferrer" className="hover:underline me-4 md:me-6">{texto}</a>
-  )
-}
-
 export function Footer() {
   return (
     <footer className="border-t border-border">

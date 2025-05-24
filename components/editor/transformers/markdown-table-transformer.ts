@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import { $isParagraphNode, $isTextNode, LexicalNode } from 'lexical'
 import {
   $convertFromMarkdownString,
@@ -22,7 +24,6 @@ import {
   TableRowNode,
 } from '@lexical/table'
 
-import { EMOJI } from '@/components/editor/transformers/markdown-emoji-transformer'
 import { HR } from '@/components/editor/transformers/markdown-hr-transformer'
 import { IMAGE } from '@/components/editor/transformers/markdown-image-transformer'
 import { TWEET } from '@/components/editor/transformers/markdown-tweet-transformer'
@@ -34,7 +35,6 @@ const TABLE_ROW_DIVIDER_REG_EXP = /^(\| ?:?-*:? ?)+\|\s?$/
 const OTHER_MARKDOWN_TRANSFORMERS = [
   HR,
   IMAGE,
-  EMOJI,
   TWEET,
   CHECK_LIST,
   ...ELEMENT_TRANSFORMERS,

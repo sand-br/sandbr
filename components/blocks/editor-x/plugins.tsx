@@ -53,8 +53,6 @@ import { DraggableBlockPlugin } from "@/components/editor/plugins/draggable-bloc
 import { AutoEmbedPlugin } from "@/components/editor/plugins/embeds/auto-embed-plugin";
 import { TwitterPlugin } from "@/components/editor/plugins/embeds/twitter-plugin";
 import { YouTubePlugin } from "@/components/editor/plugins/embeds/youtube-plugin";
-import { EmojiPickerPlugin } from "@/components/editor/plugins/emoji-picker-plugin";
-import { EmojisPlugin } from "@/components/editor/plugins/emojis-plugin";
 import { FloatingLinkEditorPlugin } from "@/components/editor/plugins/floating-link-editor-plugin";
 import { FloatingTextFormatToolbarPlugin } from "@/components/editor/plugins/floating-text-format-plugin";
 import { ImagesPlugin } from "@/components/editor/plugins/images-plugin";
@@ -85,7 +83,6 @@ import { DividerPickerPlugin } from "@/components/editor/plugins/picker/divider-
 import { ImagePickerPlugin } from "@/components/editor/plugins/picker/image-picker-plugin";
 
 import { ComponentPickerMenuPlugin } from "@/components/editor/plugins/component-picker-menu-plugin";
-import { EMOJI } from "@/components/editor/transformers/markdown-emoji-transformer";
 import { HR } from "@/components/editor/transformers/markdown-hr-transformer";
 import { IMAGE } from "@/components/editor/transformers/markdown-image-transformer";
 import { TABLE } from "@/components/editor/transformers/markdown-table-transformer";
@@ -173,7 +170,6 @@ export function Plugins({}) {
 
         <DraggableBlockPlugin anchorElem={floatingAnchorElem} />
         <KeywordsPlugin />
-        <EmojisPlugin />
         <ImagesPlugin />
 
         <TableCellResizerPlugin />
@@ -197,7 +193,6 @@ export function Plugins({}) {
             TABLE,
             HR,
             IMAGE,
-            EMOJI,
 
             TWEET,
             CHECK_LIST,
@@ -235,7 +230,7 @@ export function Plugins({}) {
 
         <ContextMenuPlugin />
         <DragDropPastePlugin />
-        <EmojiPickerPlugin />
+  
 
         <FloatingLinkEditorPlugin anchorElem={floatingAnchorElem} />
         <FloatingTextFormatToolbarPlugin anchorElem={floatingAnchorElem} />

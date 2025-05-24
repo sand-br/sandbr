@@ -1,5 +1,7 @@
 'use client'
 
+/* eslint-disable no-unused-vars */
+
 /**
  * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
@@ -60,18 +62,18 @@ export function ContextMenuPlugin(): JSX.Element {
   const defaultOptions = useMemo(() => {
     return [
       new ContextMenuOption(`Copiar`, {
-        onSelect: (_node) => {
+        onSelect: () => {
           editor.dispatchCommand(COPY_COMMAND, null)
         },
       }),
       new ContextMenuOption(`Recortar`, {
-        onSelect: (_node) => {
+        onSelect: () => {
           editor.dispatchCommand(CUT_COMMAND, null)
         },
       }),
       new ContextMenuOption(`Colar`, {
-        onSelect: (_node) => {
-          navigator.clipboard.read().then(async function (...args) {
+        onSelect: () => {
+          navigator.clipboard.read().then(async function () {
             const data = new DataTransfer()
 
             const items = await navigator.clipboard.read()
@@ -100,8 +102,8 @@ export function ContextMenuPlugin(): JSX.Element {
         },
       }),
       new ContextMenuOption(`Colar sem formatação`, {
-        onSelect: (_node) => {
-          navigator.clipboard.read().then(async function (...args) {
+        onSelect: () => {
+          navigator.clipboard.read().then(async function () {
             const permission = await navigator.permissions.query({
               // @ts-expect-error These types are incorrect.
               name: 'clipboard-read',
@@ -124,7 +126,7 @@ export function ContextMenuPlugin(): JSX.Element {
         },
       }),
       new ContextMenuOption(`Excluir parágrafo`, {
-        onSelect: (_node) => {
+        onSelect: () => {
           const selection = $getSelection()
           if ($isRangeSelection(selection)) {
             const currentNode = selection.anchor.getNode()
@@ -163,7 +165,7 @@ export function ContextMenuPlugin(): JSX.Element {
         if ($isLinkNode(parent)) {
           newOptions = [
             new ContextMenuOption(`Remove Link`, {
-              onSelect: (_node) => {
+              onSelect: () => {
                 editor.dispatchCommand(TOGGLE_LINK_COMMAND, null)
               },
             }),
@@ -192,6 +194,7 @@ export function ContextMenuPlugin(): JSX.Element {
       }}
       menuRenderFn={(
         anchorElementRef,
+
         { options: _options, selectOptionAndCleanUp },
         { setMenuRef }
       ) => {

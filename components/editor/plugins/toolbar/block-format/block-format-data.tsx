@@ -1,11 +1,9 @@
 import {
-  CodeIcon,
   Heading1Icon,
   Heading2Icon,
   Heading3Icon,
   ListIcon,
   ListOrderedIcon,
-  ListTodoIcon,
   QuoteIcon,
   TextIcon,
 } from 'lucide-react'

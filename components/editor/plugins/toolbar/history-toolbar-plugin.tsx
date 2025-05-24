@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useImperativeHandle, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { useLexicalComposerContext } from '@lexical/react/LexicalComposerContext'
 import { mergeRegister } from '@lexical/utils'
@@ -8,7 +8,6 @@ import {
   CAN_REDO_COMMAND,
   CAN_UNDO_COMMAND,
   COMMAND_PRIORITY_CRITICAL,
-  LexicalEditor,
   REDO_COMMAND,
   UNDO_COMMAND,
 } from 'lexical'

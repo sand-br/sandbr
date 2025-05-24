@@ -1,5 +1,7 @@
 'use client'
 
+/* eslint-disable no-unused-vars */
+
 /**
  * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
@@ -17,19 +19,14 @@ import {
   $deleteTableRow__EXPERIMENTAL,
   $getNodeTriplet,
   $getTableCellNodeFromLexicalNode,
-  $getTableColumnIndexFromTableCellNode,
   $getTableNodeFromLexicalNodeOrThrow,
-  $getTableRowIndexFromTableCellNode,
   $insertTableColumn__EXPERIMENTAL,
   $insertTableRow__EXPERIMENTAL,
   $isTableCellNode,
-  $isTableRowNode,
   $isTableSelection,
   $unmergeCell,
   HTMLTableElementWithWithTableSelectionState,
-  TableCellHeaderStates,
   TableCellNode,
-  TableRowNode,
   TableSelection,
   getTableObserverFromTableElement,
 } from '@lexical/table'
@@ -43,7 +40,7 @@ import {
   $isRangeSelection,
   $isTextNode,
 } from 'lexical'
-import { ChevronDownIcon, PaintBucketIcon } from 'lucide-react'
+import { ChevronDownIcon } from 'lucide-react'
 import { createPortal } from 'react-dom'
 
 import {

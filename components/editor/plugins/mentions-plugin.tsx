@@ -638,7 +638,7 @@ export function MentionsPlugin(): JSX.Element | null {
   )
 
   return (
-    // @ts-ignore
+    // @ts-expect-error
     <LexicalTypeaheadMenuPlugin<MentionTypeaheadOption>
       onQueryChange={setQueryString}
       onSelectOption={onSelectOption}
