@@ -194,8 +194,8 @@ export function ContextMenuPlugin(): JSX.Element {
       }}
       menuRenderFn={(
         anchorElementRef,
-        
-        /* eslint-disable no-unused-vars */
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         { options: _options, selectOptionAndCleanUp },
         { setMenuRef }
       ) => {
