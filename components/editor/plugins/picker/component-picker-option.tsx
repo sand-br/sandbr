@@ -12,7 +12,7 @@ export class ComponentPickerOption extends MenuOption {
   // TBD
   keyboardShortcut?: string
   // What happens when you select this option?
-  onSelect: (queryString: string, editor: LexicalEditor, showModal: (title: string, showModal: (onClose: () => void) => JSX.Element) => void) => void
+  onSelect: (queryString: string, editor: LexicalEditor, showModal: (title: string, showModal: (onClose: () => void) => ReactNode) => void) => void
 
   constructor(
     title: string,
@@ -20,7 +20,7 @@ export class ComponentPickerOption extends MenuOption {
       icon?: ReactNode
       keywords?: Array<string>
       keyboardShortcut?: string
-      onSelect: (queryString: string, editor: LexicalEditor, showModal: (title: string, showModal: (onClose: () => void) => JSX.Element) => void) => void
+      onSelect: (queryString: string, editor: LexicalEditor, showModal: (title: string, showModal: (onClose: () => void) => ReactNode ) => void) => void
     }
   ) {
     super(title)
