@@ -7,7 +7,7 @@
  * LICENSE file in the root directory of this source tree.
  *
  */
-import { useMemo, useState, JSX, ReactNode } from 'react'
+import { useMemo, useState, JSX, ReactElement } from 'react'
 
 import {
   AutoEmbedOption,
@@ -45,7 +45,7 @@ export interface CustomEmbedConfig extends EmbedConfig {
   contentName: string
 
   // Icon for display.
-  icon?: ReactNode
+  icon?: ReactElement
 
   // An example of a matching url https://twitter.com/jack/status/20
   exampleUrl: string

@@ -11,7 +11,7 @@
  * LICENSE file in the root directory of this source tree.
  *
  */
-import { useCallback, useMemo, useState, JSX, ReactNode, ReactElement } from 'react'
+import { useCallback, useMemo, useState, ReactElement } from 'react'
 import { createPortal } from 'react-dom'
 
 import dynamic from 'next/dynamic'
