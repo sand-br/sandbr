@@ -28,7 +28,6 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Hoid from "@/public/home_imgs/hoid.jpg";
 import Ishikk from "@/public/home_imgs/ishikk.jpg";
 import Kaladin from "@/public/home_imgs/kaladin.webp";
-import Licenses from "@/public/licenças.svg"
 import Kelsier from "@/public/home_imgs/kelsier.jpg";
 import Siri from "@/public/home_imgs/siri.jpg";
 import Szeth from "@/public/home_imgs/szeth.jpg";
@@ -39,18 +38,23 @@ import Vin from "@/public/home_imgs/vin.jpg";
 import { Infos, CopyrightTable } from "@/components/copyright-table";
 import { Logo } from "@/components/logo";
 import { CopyrightAndLicences } from "@/components/copyright-with-year";
+import { SocialButtons } from "@/components/social";
+import { FeitoCom } from "@/components/made-with";
+import { Toggle } from "@/components/ui/theme-toggle";
+import { Characters, Fonte } from "@/components/cards/characters";
 
 export default function Home() {
   const palavras = [
     "Brandon Sanderson.",
     "o Cosmere.",
-    "Nascidos da Bruma.",
-    "Os relatos da Guerra das Tempestades.",
-    "Warbreaker - O sopro dos deuses.",
-    "Tress, a Garota do Mar Esmeralda.",
+    "os Nascidos da Bruma.",
+    "os Radiantes.",
+    "Warbreaker.",
+    "a Tress.",
     "Executores.",
     "Elantris.",
     "o Hoid.",
+    "o Sobrevivente.",
   ];
 
   const creditosImagens: Infos[] = [
@@ -82,11 +86,34 @@ export default function Home() {
     
   ];
 
+  const dadosDosPerfis: Fonte[] = [
+    {
+      href: "/personagem/kaladin",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/kaladin.jpg",
+      personagem: "Kaladin"
+    },
+    {
+      href: "/personagem/vin",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/vin.jpg",
+      personagem: "Vin"
+    },
+    {
+      href: "/personagem/kelsier",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/kelsier.jpg",
+      personagem: "Kelsier"
+    },
+    {
+      href: "/personagem/dalinar-kholin",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/dalinar.jpg",
+      personagem: "Dalinar Kholin"
+    }
+  ];
+
   return (
     <section>
-      <div className="w-full select-none border-b">
+      <div className="w-full  border-b">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 gap-8 items-center md:grid-cols-2">
+          <header className="grid grid-cols-1 gap-8 items-center md:grid-cols-2">
             {" "}
             {/* esta div comporta os elementos visuais principais do início */}
             <div className="flex gap-4 flex-col lg:pl-12">
@@ -100,7 +127,7 @@ export default function Home() {
                     <TooltipTrigger className="cursor-help hidden lg:block">
                       <Badge variant="destructive">Alerta de spoilers!</Badge>
                     </TooltipTrigger>
-                    <TooltipContent className="w-80 bg-background border text-white hyphens-auto ml-4">
+                    <TooltipContent className="w-80 border hyphens-auto ml-4">
                       <p>
                         O conteúdo desta enciclopédia contém revelações
                         significativas sobre todas as obras do Brandon
@@ -149,7 +176,7 @@ export default function Home() {
                   </a>
                 </Button>
                 <Button size="lg" asChild>
-                  <Link href="/assuntos" className="gap-4">
+                  <Link href="/#explorar" className="gap-4">
                     Explorar <MoveRight className="w-4 h-4" />
                   </Link>
                 </Button>
@@ -158,86 +185,92 @@ export default function Home() {
             <div className="relative flex max-h-dvh items-center justify-center overflow-hidden">
               {" "}
               {/* esta div comporta o marquee de imagens */}
-              <Marquee vertical pauseOnHover={true} className="max-h-dvh">
-                <Image
-                  src={Hoid}
-                  alt="Kelsier"
-                  className="rounded-lg object-cover"
-                  width={300}
-                  height={300}
-                />
-                <Image
-                  src={Vin}
-                  alt="Vin"
-                  className="rounded-lg object-cover"
-                  width={300}
-                  height={300}
-                />
-                <Image
-                  src={Siri}
-                  alt="Siri"
-                  className="rounded-lg object-cover aspect-square"
-                  width={300}
-                />
-                <Image
-                  src={Kaladin}
-                  alt="Kaladin"
-                  className="rounded-lg object-cover"
-                  width={300}
-                  height={300}
-                />
-                <Image
-                  src={Kelsier}
-                  alt="Kelsier"
-                  className="rounded-lg object-cover"
-                  width={300}
-                  height={300}
-                />
-              </Marquee>
-              <Marquee
-                vertical
-                pauseOnHover={true}
-                reverse
-                className="max-h-dvh"
-              >
-                <Image
-                  src={Ishikk}
-                  alt="Kelsier"
-                  className="rounded-lg object-cover aspect-video"
-                  width={300}
-                />
-                <Image
-                  src={Tress}
-                  alt="Tress"
-                  className="rounded-lg object-cover"
-                  width={300}
-                  height={300}
-                />
-                <Image
-                  src={Szeth}
-                  alt="Szeth"
-                  className="rounded-lg object-cover"
-                  width={300}
-                  height={300}
-                />
-                <Image
-                  src={Vasher}
-                  alt="Vasher"
-                  className="rounded-lg object-cover"
-                  width={300}
-                  height={300}
-                />
-              </Marquee>
               <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-background"></div>
+                <Marquee vertical pauseOnHover={true} className="max-h-dvh">
+                  <Image
+                    src={Hoid}
+                    alt="Kelsier"
+                    className="rounded-lg object-cover"
+                    width={300}
+                    height={300}
+                  />
+                  <Image
+                    src={Vin}
+                    alt="Vin"
+                    className="rounded-lg object-cover"
+                    width={300}
+                    height={300}
+                  />
+                  <Image
+                    src={Siri}
+                    alt="Siri"
+                    className="rounded-lg object-cover aspect-square"
+                    width={300}
+                  />
+                  <Image
+                    src={Kaladin}
+                    alt="Kaladin"
+                    className="rounded-lg object-cover"
+                    width={300}
+                    height={300}
+                  />
+                  <Image
+                    src={Kelsier}
+                    alt="Kelsier"
+                    className="rounded-lg object-cover"
+                    width={300}
+                    height={300}
+                  />
+                </Marquee>
+                <Marquee
+                  vertical
+                  pauseOnHover={true}
+                  reverse
+                  className="max-h-dvh"
+                >
+                  <Image
+                    src={Ishikk}
+                    alt="Kelsier"
+                    className="rounded-lg object-cover aspect-video"
+                    width={300}
+                  />
+                  <Image
+                    src={Tress}
+                    alt="Tress"
+                    className="rounded-lg object-cover"
+                    width={300}
+                    height={300}
+                  />
+                  <Image
+                    src={Szeth}
+                    alt="Szeth"
+                    className="rounded-lg object-cover"
+                    width={300}
+                    height={300}
+                  />
+                  <Image
+                    src={Vasher}
+                    alt="Vasher"
+                    className="rounded-lg object-cover"
+                    width={300}
+                    height={300}
+                  />
+                </Marquee>
               <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background"></div>
             </div>
-          </div>
+          </header>
 
-          <footer className="grid grid-cols-2 border-t py-8">
-            <div className="pr-8">
+          <main className="min-h-dvh " id="explorar">
+            Teste
+            <Characters perfil={dadosDosPerfis}/>
+          </main>
+
+          <footer className="flex border-t py-8">
+            <div className="pl-6 pr-6 w-2/5 flex flex-col gap-2 items-start">
               <Logo />
               <CopyrightAndLicences />
-              <Image src={Licenses} alt="Selos de licenças da SandBR" width={250} className="h-full mt-auto"/>
+              <div className="flex gap-2"><SocialButtons /> <Toggle /></div>
+              <FeitoCom />
             </div>
             <div className="flex flex-col items-center justify-center max-h-[25rem]">
               <p className="self-start pb-4">Atribuição de créditos:</p>
