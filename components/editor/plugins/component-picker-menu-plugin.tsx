@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 
 'use client'
 
@@ -9,7 +11,7 @@
  * LICENSE file in the root directory of this source tree.
  *
  */
-import { useCallback, useMemo, useState, JSX } from 'react'
+import { useCallback, useMemo, useState, JSX, ReactNode, ReactElement } from 'react'
 import { createPortal } from 'react-dom'
 
 import dynamic from 'next/dynamic'
@@ -34,7 +36,7 @@ export function ComponentPickerMenuPlugin({
 }: {
   baseOptions?: Array<ComponentPickerOption>
   dynamicOptionsFn?: ({ queryString }: { queryString: string }) => Array<ComponentPickerOption>
-}): JSX.Element {
+}): ReactElement {
   const [editor] = useLexicalComposerContext()
   const [modal, showModal] = useEditorModal()
   const [queryString, setQueryString] = useState<string | null>(null)
