@@ -5,11 +5,6 @@ import Link from "next/link";
 import { Logo } from "./logo";
 import { CopyrightWithYear } from "./copyright-with-year";
 
-interface IrProps {
-  destino: string,
-  texto: string
-}
-
 export function Footer() {
   return (
     <footer className="border-t border-border">

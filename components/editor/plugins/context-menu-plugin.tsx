@@ -194,7 +194,8 @@ export function ContextMenuPlugin(): JSX.Element {
       }}
       menuRenderFn={(
         anchorElementRef,
-
+        
+        /* eslint-disable no-unused-vars */
         { options: _options, selectOptionAndCleanUp },
         { setMenuRef }
       ) => {

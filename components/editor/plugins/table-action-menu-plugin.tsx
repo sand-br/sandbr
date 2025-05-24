@@ -139,9 +139,11 @@ function TableActionMenu({
     columns: 1,
     rows: 1,
   })
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [modal, showModal] = useEditorModal()
   const [canMergeCells, setCanMergeCells] = useState(false)
   const [canUnmergeCell, setCanUnmergeCell] = useState(false)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [backgroundColor, setBackgroundColor] = useState(
     () => currentCellBackgroundColor(editor) || ''
   )
