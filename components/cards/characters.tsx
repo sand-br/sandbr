@@ -1,6 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { ContentCard } from "./content-card";
+import { Button } from "../ui/button";
+import { MoveRight } from "lucide-react";
 
 export interface Fonte {
   href: string;
@@ -18,8 +21,16 @@ export function Characters({ perfil }: Perfis){
   ))
 
   return(
-    <div className="rounded-lg border min-w-dvh flex flex-wrap justify-center items-center gap-4 px-6 py-8">
-      {montarPerfis}
+    <div className="rounded-lg border justify-center items-center px-6">
+      <div className="flex items-center justify-between py-4">
+        <p className="font-semibold">Principais personagens</p>
+        <Button variant="link" asChild>
+          <Link href="/personagens">Ver todos <MoveRight className="size-4" /></Link>
+        </Button>
+      </div>
+      <div className="min-w-dvh flex flex-wrap gap-4 border-t py-8">
+        {montarPerfis}
+      </div>
     </div>
   )
 }
