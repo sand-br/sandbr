@@ -42,6 +42,7 @@ import { SocialButtons } from "@/components/social";
 import { FeitoCom } from "@/components/made-with";
 import { Toggle } from "@/components/ui/theme-toggle";
 import { Characters, Fonte } from "@/components/cards/characters";
+import { Worlds } from "@/components/cards/worlds";
 
 export default function Home() {
   const palavras = [
@@ -88,6 +89,11 @@ export default function Home() {
 
   const dadosDosPerfis: Fonte[] = [
     {
+      href: "/personagem/hoid",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/hoid.jpg",
+      personagem: "Hoid"
+    },
+    {
       href: "/personagem/kaladin",
       url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/kaladin.jpg",
       personagem: "Kaladin"
@@ -103,10 +109,55 @@ export default function Home() {
       personagem: "Kelsier"
     },
     {
+      href: "/personagem/sazed",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/sazed.jpg",
+      personagem: "Sazed"
+    },
+    {
+      href: "/personagem/shallan",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/shallan.jpg",
+      personagem: "Shallan Davar"
+    },
+    {
+      href: "/personagem/jasnah",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/jasnah.jpg",
+      personagem: "Jasnah Kholin"
+    },
+    {
+      href: "/personagem/tress",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/tress.jpg",
+      personagem: "Tress"
+    },
+    {
+      href: "/personagem/szeth",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/szeth.jpg",
+      personagem: "Szeth"
+    },
+    {
       href: "/personagem/dalinar-kholin",
       url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/dalinar.jpg",
       personagem: "Dalinar Kholin"
-    }
+    },
+    {
+      href: "/personagem/sisirinah",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/sisirinah.jpg",
+      personagem: "Siri"
+    },
+    {
+      href: "/personagem/vivenna",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/vivenna.jpg",
+      personagem: "Vivenna"
+    },
+    {
+      href: "/personagem/wax",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/wax.jpg",
+      personagem: "Waxillium Ladrian"
+    },
+    {
+      href: "/personagem/elend",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/elend.jpg",
+      personagem: "Elend Venture"
+    },
   ];
 
   return (
@@ -177,7 +228,7 @@ export default function Home() {
                 </Button>
                 <Button size="lg" asChild>
                   <Link href="/#explorar" className="gap-4">
-                    Explorar <MoveRight className="w-4 h-4" />
+                    Explorar <MoveRight className="size-4" />
                   </Link>
                 </Button>
               </div>
@@ -260,9 +311,9 @@ export default function Home() {
             </div>
           </header>
 
-          <main className="min-h-dvh " id="explorar">
-            Teste
+          <main className="min-h-dvh mt-8 flex flex-col gap-8" id="explorar">
             <Characters perfil={dadosDosPerfis}/>
+            <Worlds />
           </main>
 
           <footer className="flex border-t py-8">
