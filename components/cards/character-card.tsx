@@ -3,18 +3,18 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-interface ContentCardProps {
+interface CharacterCardProps {
   href: string;
   url: string;
   personagem: string;
 }
 
-export function ContentCard({ href, url, personagem }: ContentCardProps) {
+function CharacterCard({ href, url, personagem }: CharacterCardProps) {
   return (
-    <Link className="group/card w-40 h-40 overflow-hidden" href={href}>
+    <Link className="group/card w-40 h-40 overflow-hidden rounded-lg border dark:hover:border-white/30" href={href}>
       <div
         className={cn(
-          "overflow-hidden cursor-pointer relative card rounded-lg shadow-xl max-w-sm mx-auto flex justify-between w-full h-full bg-cover"
+          "cursor-pointer relative card shadow-xl max-w-sm mx-auto flex justify-between w-full h-full bg-cover"
         )}
         style={{
           backgroundImage: `url('${url}')`,
@@ -30,3 +30,5 @@ export function ContentCard({ href, url, personagem }: ContentCardProps) {
     </Link>
   );
 }
+
+export { type CharacterCardProps, CharacterCard }
