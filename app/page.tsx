@@ -25,15 +25,15 @@ import { MoveRight } from "lucide-react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 // importação de arquivos:
-import Hoid from "@/public/home_imgs/hoid.jpg";
-import Ishikk from "@/public/home_imgs/ishikk.jpg";
-import Kaladin from "@/public/home_imgs/kaladin.webp";
-import Kelsier from "@/public/home_imgs/kelsier.jpg";
-import Siri from "@/public/home_imgs/siri.jpg";
-import Szeth from "@/public/home_imgs/szeth.jpg";
-import Tress from "@/public/home_imgs/tress-e-charlie.jpg";
-import Vasher from "@/public/home_imgs/vasher.png";
-import Vin from "@/public/home_imgs/vin.jpg";
+import Hoid from "@/public/home_imgs/hoid.avif";
+import Ishikk from "@/public/home_imgs/ishikk.avif";
+import Kaladin from "@/public/home_imgs/kaladin.avif";
+import Kelsier from "@/public/home_imgs/kelsier.avif";
+import Siri from "@/public/home_imgs/siri.avif";
+import Szeth from "@/public/home_imgs/szeth.avif";
+import Tress from "@/public/home_imgs/tress-e-charlie.avif";
+import Vasher from "@/public/home_imgs/vasher.avif";
+import Vin from "@/public/home_imgs/vin.avif";
 
 import { Infos, CopyrightTable } from "@/components/copyright-table";
 import { Logo } from "@/components/logo";
@@ -42,7 +42,7 @@ import { SocialButtons } from "@/components/social";
 import { FeitoCom } from "@/components/made-with";
 import { Toggle } from "@/components/ui/theme-toggle";
 import { Characters, Fonte } from "@/components/cards/characters";
-import { Worlds } from "@/components/cards/worlds";
+import { Worlds } from "@/components/cards/universes";
 
 export default function Home() {
   const palavras = [
