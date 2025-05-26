@@ -90,62 +90,62 @@ export default function Home() {
   const dadosDosPerfis: Fonte[] = [
     {
       href: "/personagem/hoid",
-      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/hoid.jpg",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/hoid.avif",
       personagem: "Hoid"
     },
     {
       href: "/personagem/kaladin",
-      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/kaladin.jpg",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/kaladin.avif",
       personagem: "Kaladin"
     },
     {
       href: "/personagem/vin",
-      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/vin.jpg",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/vin.avif",
       personagem: "Vin"
     },
     {
       href: "/personagem/kelsier",
-      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/kelsier.jpg",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/kelsier.avif",
       personagem: "Kelsier"
     },
     {
       href: "/personagem/sazed",
-      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/sazed.jpg",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/sazed.avif",
       personagem: "Sazed"
     },
     {
       href: "/personagem/shallan",
-      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/shallan.jpg",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/shallan.avif",
       personagem: "Shallan Davar"
     },
     {
       href: "/personagem/jasnah",
-      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/jasnah.jpg",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/jasnah.avif",
       personagem: "Jasnah Kholin"
     },
     {
       href: "/personagem/tress",
-      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/tress.jpg",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/tress.avif",
       personagem: "Tress"
     },
     {
       href: "/personagem/szeth",
-      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/szeth.jpg",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/szeth.avif",
       personagem: "Szeth"
     },
     {
       href: "/personagem/dalinar-kholin",
-      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/dalinar.jpg",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/dalinar.avif",
       personagem: "Dalinar Kholin"
     },
     {
       href: "/personagem/sisirinah",
-      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/sisirinah.jpg",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/sisirinah.avif",
       personagem: "Siri"
     },
     {
       href: "/personagem/vivenna",
-      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/vivenna.jpg",
+      url: "https://raw.githubusercontent.com/sand-br/sandbr/refs/heads/main/public/profiles/vivenna.avif",
       personagem: "Vivenna"
     },
     {
