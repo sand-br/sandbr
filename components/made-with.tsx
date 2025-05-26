@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Heart, Star } from "lucide-react";
 
-export function FeitoCom() {
+export function MadeWith() {
   const [isHeart, setIsHeart] = useState(true);
 
   useEffect(() => {
