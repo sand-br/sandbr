@@ -39,6 +39,8 @@ export const metadata: Metadata = {
     default: 'Sandbr',
   },
   description: "A enciclopédia brasileira sobre Brandon Sanderson",
+  keywords: [ 'brandon sanderson', 'cosmere', 'mistborn', 'stormlight archive', 'elantris', 'warbreaker', 'white sand', 'the reckoners', 'fantasy', 'high fantasy', 'magic systems', 'shardborn', 'roskar', 'scadrial', 'nalthis', 'fan theories', 'sanderson bibliography', 'epic fantasy', 'audiobooks', 'graphic audio', 'stormlight', 'lighteyes', 'radiant', 'eldritch', 'coppermind', 'nascidos da bruma', 'os relatos da guerra das tempestades', 'o caminho dos reis', 'palavras de radiância', 'sacramentadora', 'darkone', 'os executores', 'executores', 'império final', 'poço da ascenção', 'o herói da eras', 'vin wiki', 'vin', 'kelsier', 'kelsier wiki', 'kaladin', 'kaladin wiki', 'fantasia', 'alta fantasia', 'sistemas de magia', 'teorias de fãs', 'bibliografia sanderson', 'livros', 'audiolivros', 'enciclopédia', 'ordem de leitura cosmere', 'cosmere ordem de leitura', 'brandon sanderson ordem de leitura', 'sanderson ordem de leitura', 'stormlight ordem de leitura', 'mistborn ordem de leitura'
+  ],
   icons: {
     icon: [
       {
