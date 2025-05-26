@@ -1,241 +1,38 @@
-// importação de dependências:
-import Image from "next/image";
-import Link from "next/link";
+// componentes do header: 
+import { SpoilerWarning } from "@/components/home/warning";
+import { RenderWelcome } from "@/components/home/welcome";
+import { RenderMarquee } from "@/components/home/marquee/marquee-render";
 
-// importação de componentes:
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
-import { Marquee } from "@/components/magicui/marquee";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { WordRotate } from "@/components/magicui/word-rotate";
-
-// importação de ícones:
-import { MoveRight } from "lucide-react";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
-
-// importação de arquivos:
-import Hoid from "@/public/home_imgs/hoid.avif";
-import Ishikk from "@/public/home_imgs/ishikk.avif";
-import Kaladin from "@/public/home_imgs/kaladin.avif";
-import Kelsier from "@/public/home_imgs/kelsier.avif";
-import Siri from "@/public/home_imgs/siri.avif";
-import Szeth from "@/public/home_imgs/szeth.avif";
-import Tress from "@/public/home_imgs/tress-e-charlie.avif";
-import Vasher from "@/public/home_imgs/vasher.avif";
-import Vin from "@/public/home_imgs/vin.avif";
-
-import { Infos, CopyrightTable } from "@/components/copyright-table";
-import { Logo } from "@/components/logo";
-import { CopyrightAndLicences } from "@/components/copyright-with-year";
-import { SocialButtons } from "@/components/social";
-import { FeitoCom } from "@/components/made-with";
-import { Toggle } from "@/components/ui/theme-toggle";
+// componentes do main:
 import { RenderCharactersField } from "@/components/home/cards/characters-render";
 import { RenderUniversesField } from "@/components/home/cards/universes-render";
 
+// componentes do footer: 
+import { Logo } from "@/components/logo";
+import { CopyrightAndLicences } from "@/components/copyright-with-year";
+import { SocialButtons } from "@/components/social";
+import { Toggle } from "@/components/ui/theme-toggle";
+import { MadeWith } from "@/components/made-with";
+
+export const metadata = {
+  title: 'Página inicial',
+  description: 'O compêndio definitivo sobre Brandon Sanderson, seu Cosmere e todas as suas obras – em Português.',
+};
+
+
+
 export default function Home() {
-  const palavras = [
-    "Brandon Sanderson.",
-    "o Cosmere.",
-    "os Nascidos da Bruma.",
-    "os Radiantes.",
-    "Warbreaker.",
-    "a Tress.",
-    "Executores.",
-    "Elantris.",
-    "o Hoid.",
-    "o Sobrevivente.",
-  ];
-
-  const creditosImagens: Infos[] = [
-    {
-      imagem: "Hoid, 'Worldsinger'",
-      autor: "Ari Ibarra, Brotherwise Games",
-    },
-    {
-      imagem: "Kelsier",
-      autor: "Miranda Meeks, Dragonssteel Entertainment",
-    },
-    {
-      imagem: "Szeth, 'Weep As You Kill'",
-      autor: "Ari Ibarra, Brotherwise Games",
-    },
-    {
-      imagem: "Tress e Charlie, 'Na parede baixa do jardim'",
-      autor: "Howard Lyon, Dragonssteel Entertainment",
-    },
-    {
-      imagem:
-        "Vasher, 'Running through the God King's palace wielding Nightblood'",
-      autor: "Esther Schrader",
-    },
-    {
-      imagem: "Vin",
-      autor: "Deandra Scicluna",
-    },
-    
-  ];
-
   return (
     <section>
       <div className="w-full  border-b">
         <div className="container mx-auto">
           <header className="grid grid-cols-1 gap-8 items-center md:grid-cols-2">
-            {" "}
-            {/* esta div comporta os elementos visuais principais do início */}
             <div className="flex gap-4 flex-col lg:pl-12">
-              {" "}
-              {/* esta div comporta a saudação de boas-vindas e seus elementos complementares*/}
-              <div>
-                {" "}
-                {/* esta é a div que contém o badge e o drawer de aviso de spoilers */}
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger className="cursor-help hidden lg:block">
-                      <Badge variant="destructive">Alerta de spoilers!</Badge>
-                    </TooltipTrigger>
-                    <TooltipContent className="w-80 border hyphens-auto ml-4">
-                      <p>
-                        O conteúdo desta enciclopédia contém revelações
-                        significativas sobre todas as obras do Brandon
-                        Sanderson. Leia por sua conta e risco.
-                      </p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-                <Drawer>
-                  <DrawerTrigger className="lg:hidden">
-                    <Badge variant="destructive">Alerta de spoilers!</Badge>
-                  </DrawerTrigger>
-                  <DrawerContent className="mb-10">
-                    <p className="m-8 hyphens-auto text-center">
-                      O conteúdo desta enciclopédia contém revelações
-                      significativas sobre todas as obras do Brandon Sanderson.
-                      Leia por sua conta e risco.
-                    </p>
-                    <DrawerClose>
-                      <Button>Estou ciente</Button>
-                    </DrawerClose>
-                  </DrawerContent>
-                </Drawer>
-              </div>
-              <div className="flex gap-4 flex-col">
-                <h1 className="text-5xl md:text-7xl max-w-lg tracking-tighter text-left font-regular">
-                  bem-vindo(a) à{" "}
-                  <span className="text-[#e73720] font-averia">sandbr</span>!
-                </h1>
-                <p className="text-xl tracking-tight text-muted-foreground max-w-md text-left leading-none">
-                  A enciclopédia brasileira sobre{" "}
-                  <WordRotate
-                    words={palavras.sort(() => Math.random() - 0.5)}
-                    duration={5000}
-                  />
-                </p>
-              </div>
-              <div className="flex flex-row gap-4">
-                <Button size="lg" className="gap-4" variant="outline" asChild>
-                  <a
-                    href="https://github.com/sand-br/sandbr"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Contribua <GitHubLogoIcon className="size-4" />
-                  </a>
-                </Button>
-                <Button size="lg" asChild>
-                  <Link href="/#explorar" className="gap-4">
-                    Explorar <MoveRight className="size-4" />
-                  </Link>
-                </Button>
-              </div>
+              <SpoilerWarning />
+              <RenderWelcome />
             </div>
-            <div className="relative flex max-h-dvh items-center justify-center overflow-hidden">
-              {" "}
-              {/* esta div comporta o marquee de imagens */}
-              <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-background"></div>
-                <Marquee vertical pauseOnHover={true} className="max-h-dvh">
-                  <Image
-                    src={Hoid}
-                    alt="Kelsier"
-                    className="rounded-lg object-cover"
-                    width={300}
-                    height={300}
-                  />
-                  <Image
-                    src={Vin}
-                    alt="Vin"
-                    className="rounded-lg object-cover"
-                    width={300}
-                    height={300}
-                  />
-                  <Image
-                    src={Siri}
-                    alt="Siri"
-                    className="rounded-lg object-cover aspect-square"
-                    width={300}
-                  />
-                  <Image
-                    src={Kaladin}
-                    alt="Kaladin"
-                    className="rounded-lg object-cover"
-                    width={300}
-                    height={300}
-                  />
-                  <Image
-                    src={Kelsier}
-                    alt="Kelsier"
-                    className="rounded-lg object-cover"
-                    width={300}
-                    height={300}
-                  />
-                </Marquee>
-                <Marquee
-                  vertical
-                  pauseOnHover={true}
-                  reverse
-                  className="max-h-dvh"
-                >
-                  <Image
-                    src={Ishikk}
-                    alt="Kelsier"
-                    className="rounded-lg object-cover aspect-video"
-                    width={300}
-                  />
-                  <Image
-                    src={Tress}
-                    alt="Tress"
-                    className="rounded-lg object-cover"
-                    width={300}
-                    height={300}
-                  />
-                  <Image
-                    src={Szeth}
-                    alt="Szeth"
-                    className="rounded-lg object-cover"
-                    width={300}
-                    height={300}
-                  />
-                  <Image
-                    src={Vasher}
-                    alt="Vasher"
-                    className="rounded-lg object-cover"
-                    width={300}
-                    height={300}
-                  />
-                </Marquee>
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background"></div>
-            </div>
+
+            <RenderMarquee />
           </header>
 
           <main className="min-h-dvh mt-8 flex flex-col gap-8" id="explorar">
@@ -248,11 +45,7 @@ export default function Home() {
               <Logo />
               <CopyrightAndLicences />
               <div className="flex gap-2"><SocialButtons /> <Toggle /></div>
-              <FeitoCom />
-            </div>
-            <div className="flex flex-col items-center justify-center max-h-[25rem]">
-              <p className="self-start pb-4">Atribuição de créditos:</p>
-              <CopyrightTable info={creditosImagens} />
+              <MadeWith />
             </div>
           </footer>
         </div>
