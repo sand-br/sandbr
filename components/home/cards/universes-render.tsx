@@ -1,7 +1,7 @@
 import {
   UniverseCardProps,
   UniversesField,
-} from "@/components/cards/universes-field";
+} from "@/components/home/cards/universes-field";
 
 function RenderUniversesField() {
   const universesData: UniverseCardProps[] = [

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { CharacterCard, CharacterCardProps } from "@/components/cards/character-card";
+import { CharacterCard, CharacterCardProps } from "@/components/home/cards/character-card";
 
 import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";

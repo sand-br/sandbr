@@ -1,7 +1,7 @@
 import {
   CharacterCardProps,
   CharactersField
-} from "@/components/cards/characters-field";
+} from "@/components/home/cards/characters-field";
 
 function RenderCharactersField() {
   const profilesData: CharacterCardProps[] = [

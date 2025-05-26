@@ -41,8 +41,8 @@ import { CopyrightAndLicences } from "@/components/copyright-with-year";
 import { SocialButtons } from "@/components/social";
 import { FeitoCom } from "@/components/made-with";
 import { Toggle } from "@/components/ui/theme-toggle";
-import { RenderCharactersField } from "@/components/cards/characters-render";
-import { RenderUniversesField } from "@/components/cards/universes-render";
+import { RenderCharactersField } from "@/components/home/cards/characters-render";
+import { RenderUniversesField } from "@/components/home/cards/universes-render";
 
 export default function Home() {
   const palavras = [

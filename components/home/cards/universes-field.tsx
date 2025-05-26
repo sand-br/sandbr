@@ -1,7 +1,7 @@
 import { ShootingStars } from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 
-import { UniverseCardProps, UniverseCard } from "@/components/cards/universe-card";
+import { UniverseCardProps, UniverseCard } from "@/components/home/cards/universe-card";
 
 interface UniversesFieldProps {
   universes: UniverseCardProps[];
