@@ -22,7 +22,7 @@ function UniverseCard({ href, src, alt, title, description }: UniverseCardProps 
         height={413}
       />
 
-      <div className="absolute self-end px-6 pb-6 hyphens-auto z-50">
+      <div className="absolute self-end px-6 pb-6 hyphens-auto z-50 text-white">
         <h4 className="text-2xl font-semibold group-hover/meucard:text-sandbr">{title}</h4>
         <h5>
           {description}
