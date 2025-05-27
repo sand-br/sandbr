@@ -1,12 +1,11 @@
-"use client";
-import Link from "next/link";
 
-const ano = new Date().getFullYear()
+import Link from "next/link";
+import { Year } from "./copyright/year";
 
 export const CopyrightWithYear = () => {
   return (
     <span className="block text-muted-foreground">
-      © {ano} <Link href="/" className="hover:underline">SandBR</Link>.
+      © <Year /> <Link href="/" className="hover:underline">SandBR</Link>.
     </span>
   );
 };
@@ -15,7 +14,7 @@ export const CopyrightAndLicences = () => {
   return (
     <div className="text-muted-foreground">
       <p>
-        © {ano} <Link href="/" className="hover:underline">sandbr</Link> & <a href="http://github.com/raave-aires" target="_blank" rel="noopener noreferrer" className="hover:underline">raave aires</a>.
+        © <Year /> <Link href="/" className="hover:underline">sandbr</Link> & <a href="http://github.com/raave-aires" target="_blank" rel="noopener noreferrer" className="hover:underline">raave aires</a>.
       </p>
       <ul className="list-disc list-inside">
         <li>
