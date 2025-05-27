@@ -1,28 +1,21 @@
 import createMDX from '@next/mdx'
- 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  // Configure `pageExtensions` to include markdown and MDX files
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-}
- 
+import { NextConfig } from 'next'
+
 const withMDX = createMDX({
+  extension: /\.mdx?$/,
+  // aqui tu pode botar remark/rehype plugins se quiser
 })
 
-module.exports = {
+const nextConfig: NextConfig = {
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   images: {
-    formats: ['image/avif', 'image/webp'], 
+    formats: ['image/avif', 'image/webp'],
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'raw.githubusercontent.com'
-      },
-      {
-        protocol: 'https',
-        hostname: 'awvvhcrihm7n6tuv.public.blob.vercel-storage.com'
-      }
+      { protocol: 'https', hostname: 'raw.githubusercontent.com' },
+      { protocol: 'https', hostname: 'awvvhcrihm7n6tuv.public.blob.vercel-storage.com' },
     ],
   },
+  // se tiver mais configs coloca aqui
 }
 
 export default withMDX(nextConfig)
