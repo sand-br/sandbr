@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface CharacterCardProps {
   href: string;
@@ -11,24 +12,26 @@ interface CharacterCardProps {
 
 function CharacterCard({ href, url, personagem }: CharacterCardProps) {
   return (
-    <Link className="group/card w-40 h-40 overflow-hidden rounded-lg border dark:hover:border-white/30" href={href}>
-      <div
-        className={cn(
-          "cursor-pointer relative card shadow-xl max-w-sm mx-auto flex justify-between w-full h-full bg-cover"
-        )}
-        style={{
-          backgroundImage: `url('${url}')`,
-        }}
-      >
-        <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
-        <div className="text content place-self-end bg-black/30 backdrop-blur-md border border-white/30 shadow-small py-1 px-2 rounded-md ml-2 mb-2">
-          <h4 className="font-bold text-sm text-gray-50 relative z-10 ">
-            {personagem}
-          </h4>
-        </div>
+    <Link
+      className="relative w-40 h-40 overflow-hidden border dark:hover:border-white/30 rounded-lg group/card cursor-pointer flex"
+      href={href}
+    >
+      <Image
+        src={url}
+        alt={personagem}
+        width={160}
+        height={160}
+        className="absolute z-10"
+      />
+      <div className="absolute z-40 w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
+      
+      <div className="text content place-self-end bg-black/30 backdrop-blur-md border border-white/30 shadow-small py-1 px-2 rounded-md ml-2 mb-2 absolute z-50">
+        <h4 className="font-bold text-sm text-gray-50">
+          {personagem}
+        </h4>
       </div>
     </Link>
   );
 }
 
-export { type CharacterCardProps, CharacterCard }
+export { type CharacterCardProps, CharacterCard };
