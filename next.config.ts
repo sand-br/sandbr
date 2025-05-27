@@ -3,7 +3,6 @@ import { NextConfig } from 'next'
 
 const withMDX = createMDX({
   extension: /\.mdx?$/,
-  // aqui tu pode botar remark/rehype plugins se quiser
 })
 
 const nextConfig: NextConfig = {
@@ -15,7 +14,6 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'awvvhcrihm7n6tuv.public.blob.vercel-storage.com' },
     ],
   },
-  // se tiver mais configs coloca aqui
 }
 
 export default withMDX(nextConfig)
